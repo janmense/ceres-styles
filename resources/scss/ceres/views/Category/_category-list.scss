@@ -1,3 +1,10 @@
+.categoriegrid {
+    & > .col-xs-12 {
+        padding-left:0;
+        padding-right:0;
+    }
+}
+
 .categories-list{}
 
 .page-infos{

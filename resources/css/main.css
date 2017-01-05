@@ -1,7 +1,2 @@
-body {
-    background-color: #0d1217 !important;
-}
-
-.top-bar {
-    background-color: red;
-}
+.top-bar{display:none}body{background-color:red}footer{color:#000}
+/*# sourceMappingURL=main.css.map */

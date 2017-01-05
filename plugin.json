@@ -1,17 +1,22 @@
 {
-  "name"              :"CeresStylePlugin",
-  "description"       :"Plentymarkets test template plugin",
-  "namespace"         :"CeresStylePlugin",
-  "author"            :"plentymarkets GmbH",
-  "keywords"          : ["plentymarkets", "plugins", "ceres", "style", "template"],
-  "type"              :"template",
+  "name"              :"CeresDark",
+  "description"       :"Plentymarkets Ceres dark theme",
+  "namespace"         :"CeresDark",
+  "author"            :"Frontend Studios",
+  "keywords"          : ["plentymarkets", "plugins", "ceres", "style", "template", "theme"],
+  "type"              :"theme",
   "require"           : [],
-  "serviceProvider"   :"CeresStylePlugin\\Providers\\CeresStylePluginServiceProvider",
+  "serviceProvider"   :"CeresDark\\Providers\\CeresDarkServiceProvider",
   "dataProviders"     :
   [
     {
-      "key":"CeresStylePlugin\\Containers\\CeresStylePluginContainer",
-      "name":"CeresStylePlugin",
+      "key":"CeresDark\\Containers\\CeresDarkCss",
+      "name":"CeresDarkCss",
+      "description":""
+    },
+    {
+      "key":"CeresDark\\Containers\\CeresDarkSingleItem",
+      "name":"CeresDarkSingleItem",
       "description":""
     }
   ]

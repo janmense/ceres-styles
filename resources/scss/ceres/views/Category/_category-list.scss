@@ -3,10 +3,8 @@
         padding-left:0;
         padding-right:0;
     }
-    h1.h4 {
-        font-size: 2rem;
-    }
 }
+
 
 .categories-list{}
 
@@ -41,11 +39,6 @@
 
 	display: flex;
 	flex-flow: row wrap;
-
-//	li{
-//        @include make-col-ready(12);
-//        @include make-col(12);
-//	}
 }
 
 .lazy{
@@ -76,6 +69,29 @@
         li{
             //@include make-col(4);
             display: flex;
+
+            display:block;
+            width: 48%;
+            float:left;
+            .cmp {
+                .thumb-inner {
+                    .thumb-image {
+                        width: 20%;
+                        float: left;
+                        display: block;
+                    }
+                    .thumb-content {
+                        float: left;
+                        width: 79%;
+                        .thumb-title {
+                            text-align: left;
+                        }
+                        .thumb-meta {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
         }
     }
 }

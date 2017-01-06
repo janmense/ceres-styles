@@ -40,12 +40,14 @@
 
     .thumb-controls{
         position: absolute;
-        width: calc(100% - 120px);
+        // width: calc(100% - 120px);
         bottom: 0;
         right: 0;
-        text-align: center;
+        text-align: right;
         overflow: hidden;
         transition: all 200ms 100ms ease-in-out;
+        height: auto;
+        z-index: 100;
     }
 
     .thumb-inner{
@@ -75,6 +77,7 @@
         right: auto;
         bottom: auto;
         left: 0;
+
         padding: .5rem 0;
 
         .special-tag,
@@ -82,10 +85,8 @@
             display: block;
             padding: .3em .5em .2rem;
             font-size: .9rem;
-            font-family: $font-family-sans-serif;
-            text-transform: uppercase;
-            font-weight: bold;
-            box-shadow:none;
+            font-weight: 300;
+            box-shadow: none;
         }
     }
 
@@ -96,27 +97,24 @@
         width: calc( 100% - 120px );
         height: auto;
         padding: 0 .8rem;
-        padding-bottom: 2rem;
         margin-left: -.3em;
         background-color: white;
-        opacity: 1;
+
         transition: all 200ms ease-in-out;
     }
 
     .thumb-title{
         display: block;
         position: relative;
-        text-align:left;
+        text-align:center;
         font-weight: 700;
         color: $gray;
     }
 
     .thumb-meta{
         margin-top: .5rem;
-        text-align:right;
-        position: absolute;
-        right: .8rem;
-        top: 0;
+        text-align:center;
+        margin-top: -.75rem;
 
     }
 
@@ -151,7 +149,7 @@
             display: flex;
             flex-flow: column nowrap;
             border-right: 2px solid transparent;
-
+            display: none;
             ul{
                 flex: 1 1 auto;
                 overflow: auto;
@@ -170,20 +168,19 @@
         }
 
         .thumb-controls{
-            left: 0;
-            width: 100%;
-            height: 0;
+            bottom: .5rem;
+            
         }
 
         .thumb-btn-buy{
             min-height: 2rem;
+            margin-right: .5rem;
         }
 
         .thumb-content{
             padding: .8rem;
             width: 100%;
             margin: 0;
-            padding-bottom: 2rem;
         }
 
         .thumb-title{
@@ -192,6 +189,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            font-size: 1rem;
         }
 
         .thumb-image{
@@ -203,34 +201,21 @@
 
             .thumb-background{
                 transform: scaleX(1) scaleY(1);
-                box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+                box-shadow: none;
             }
 
             .thumb-extras{
-                display: none;
                 transform: translate(-100% , 0);
                 height: 115%;
-
+                display: none;
                 transition: transform 200ms,
                             height 100ms 100ms;
             }
 
             .thumb-controls{
-                transform: translate(0 , 0);
-                z-index: 1;
-                bottom:0;
-                .thumb-btn-buy {
-                    position: absolute;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    left: 50%;
-                }
+                transform: none;
+                height: auto;
             }
-            .thumb-content {
-                opacity: 0;
-                transition:all .3s ease;
-            }
-
         }
 
     }

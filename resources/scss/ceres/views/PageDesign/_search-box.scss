@@ -1,6 +1,6 @@
 .cmp-search-box {
-  background-color: $gray;
-  border-bottom: 1px solid transparent;
+  background-color: $gray-lightest;
+  border-bottom: 1px solid $gray-lighter;
   padding: 0px 15px;
 
   .search-box-inner {

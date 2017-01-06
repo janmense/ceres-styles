@@ -1,27 +1,16 @@
-
+body {
+    background-color:$body-bg !important;
+}
 .main{
 
 }
 
+
 .page-content{
     @extend .p-t-1;
-    background-color: $gray-light; 
-    color: $white;
-    padding-left: 0;
-    padding-right: 0;
-    &.basket,
-    &.checkout,
-    &.myaccount {
-        background-color:$white;
-        color: $gray-darker;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+    background-color: white; 
 }
 
-hr {
-    border-top:1px solid $gray-lighter;
-}
 
 .container-max{
     @extend .container-fluid;
@@ -29,10 +18,11 @@ hr {
     z-index: auto;
 }
 
-.modal {
-    color: $gray-darker;
-}
 
+h1,.h1,h2,.h2,h3,.h3,h4,.h4 {
+    font-family: $font-family-heading;
+    text-transform: uppercase;
+}
 
 
 // .shariff .orientation-horizontal li{

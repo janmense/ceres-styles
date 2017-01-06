@@ -10,7 +10,8 @@
     padding-left: 0;
     padding-right: 0;
     &.basket,
-    &.checkout {
+    &.checkout,
+    &.myaccount {
         background-color:$white;
         color: $gray-darker;
         padding-left: 15px;

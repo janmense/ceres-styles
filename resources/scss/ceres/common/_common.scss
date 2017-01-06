@@ -9,6 +9,13 @@
     color: $white;
     padding-left: 0;
     padding-right: 0;
+    &.basket,
+    &.checkout {
+        background-color:$white;
+        color: $gray-darker;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 hr {
@@ -21,6 +28,9 @@ hr {
     z-index: auto;
 }
 
+.modal {
+    color: $gray-darker;
+}
 
 
 

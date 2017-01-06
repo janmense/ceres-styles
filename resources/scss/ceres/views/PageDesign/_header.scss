@@ -180,8 +180,15 @@
 				.navbar-nav {
 					.nav-item {
 						& > .nav-link {
+							min-width: 140px;
+							border-right:1px solid $gray;
 							text-align: center;
 							border-bottom:1px solid transparent;
+						}
+						&:last-child {
+							.nav-link {
+								border-right:0;
+							}
 						}
 						.nav-link.dropdown-toggle::after {
 							display: none;

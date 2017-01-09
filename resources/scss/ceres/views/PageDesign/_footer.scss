@@ -1,7 +1,7 @@
 .to-top {
     display: block;
     height: 4rem;
-    background-color: $gray;
+    background-color: $gray-dark;
     color: white;
     text-align: center;
     padding: .5rem .5rem;
@@ -10,28 +10,27 @@
     transition: all 200ms;
     
     &:hover {
-        background-color: $gray-darker;
+        background-color: $gray-light;
     }
 }
 
 .footertop{
 	display: block;
-	background-color: $gray;
+	background-color: $gray-lighter;
 }
 
 .footer{
 	display: block;
-	background-color: $gray-dark;
-	color:$white;
+	background-color: $gray-lightest;
 	
 	a{
-		color: $white;
+		color: $gray-dark;
 	}
 
 	.footer-features{
-		border-top: 1px solid $gray;
-		background-color: $gray-dark;
-		color: $white;
+		border-top: 1px solid $gray-lighter;
+		background-color: white;
+		color: $gray-dark;
 	}
 
 	.footer-content{
@@ -75,7 +74,6 @@
 
 		h5{
 			font-weight: 700;
-			color: $white;
 		}
 	}
 

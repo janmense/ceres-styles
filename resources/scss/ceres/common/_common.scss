@@ -5,9 +5,23 @@
 
 .page-content{
     @extend .p-t-1;
-    background-color: white; 
+    background-color: $gray-dark; 
+    color: $white;
+    padding-left: 0;
+    padding-right: 0;
+    &.basket,
+    &.checkout,
+    &.myaccount {
+        background-color:$white;
+        color: $gray-darker;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
+hr {
+    border-top:1px solid $gray-lighter;
+}
 
 .container-max{
     @extend .container-fluid;
@@ -15,6 +29,9 @@
     z-index: auto;
 }
 
+.modal {
+    color: $gray-darker;
+}
 
 
 

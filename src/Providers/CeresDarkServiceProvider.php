@@ -1,10 +1,10 @@
 <?php
 
-namespace CeresDefault\Providers;
+namespace CeresDark\Providers;
 
 use Plenty\Plugin\ServiceProvider;
 
-class CeresDefaultServiceProvider extends ServiceProvider
+class CeresDarkServiceProvider extends ServiceProvider
 {
 
     /**

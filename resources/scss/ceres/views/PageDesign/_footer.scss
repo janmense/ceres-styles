@@ -21,16 +21,25 @@
 
 .footer{
 	display: block;
-	background-color: $gray-lightest;
-	
+	background-color: $custom-pastelblue;
+	>.container-max {
+		background-color:$custom-blue;		
+		hr {
+			border-top:1px solid $custom-pastelblue;
+		}
+	}	
+
 	a{
-		color: $gray-dark;
+		color: $white;
 	}
 
 	.footer-features{
-		border-top: 1px solid $gray-lighter;
-		background-color: white;
-		color: $gray-dark;
+		border-top: 1px solid $custom-pastelblue;
+		background-color: $custom-orange;
+		color: $white;
+		i {
+			color:$white!important;
+		}
 	}
 
 	.footer-content{
@@ -74,6 +83,14 @@
 
 		h5{
 			font-weight: 700;
+			color: $white;
+		}
+		ul {
+			li{
+				a {
+					color:$white;
+				}
+			}
 		}
 	}
 
@@ -93,6 +110,13 @@
 			background-color: $gray-light;
 		}
 	}
+
+	.copyright {
+		small {
+			color:$white;
+		}
+	}
+
 
 	@include media-breakpoint-up(sm){
 		.footer-services{

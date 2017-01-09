@@ -6,6 +6,12 @@
     .basket-header{
         flex: 0 0 auto;
         border-bottom: 1px solid $gray-lighter;
+        background-color: $custom-blue;
+        h3 {
+            font-family: $font-family-serif;
+            color: $white;
+            font-size: 2.25rem;
+        }
     } 
 
     .list{
@@ -20,6 +26,7 @@
 	    display: flex;
 	    flex-flow: column nowrap;
         border-top: 1px solid $gray-lighter;
+        background-color: $custom-pastelblue;
         @extend .small;
 
         dd, dt{

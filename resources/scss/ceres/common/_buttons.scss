@@ -130,3 +130,15 @@
 		}
 	}
 }
+
+
+.btn-primary {
+	background-color:$custom-purple;
+	border: 1px solid $custom-purple;
+	border-radius: 5px;
+		&:hover {
+			background-color:$white;
+			color:$custom-purple;
+			border: 1px solid $custom-purple;			
+		}
+}

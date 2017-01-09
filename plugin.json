@@ -1,17 +1,17 @@
 {
-  "name"              :"CeresDark",
-  "description"       :"Plentymarkets Ceres dark theme",
-  "namespace"         :"CeresDark",
+  "name"              :"CeresDefault",
+  "description"       :"Plentymarkets Ceres default theme",
+  "namespace"         :"CeresDefault",
   "author"            :"Frontend Studios",
   "keywords"          : ["plentymarkets", "plugins", "ceres", "style", "template", "theme"],
   "type"              :"theme",
   "require"           : [],
-  "serviceProvider"   :"CeresDark\\Providers\\CeresDarkServiceProvider",
+  "serviceProvider"   :"CeresDefault\\Providers\\CeresDefaultServiceProvider",
   "dataProviders"     :
   [
     {
-      "key":"CeresDark\\Containers\\CeresDarkCss",
-      "name":"CeresDarkCss",
+      "key":"CeresDefault\\Containers\\CeresDefault",
+      "name":"CeresDefaultTheme",
       "description":""
     }
   ]

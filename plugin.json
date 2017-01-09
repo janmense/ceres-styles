@@ -1,17 +1,17 @@
 {
-  "name"              :"CeresColorful",
-  "description"       :"Plentymarkets Ceres colorful theme",
-  "namespace"         :"CeresColorful",
+  "name"              :"CeresKids",
+  "description"       :"Plentymarkets Ceres Kids theme",
+  "namespace"         :"CeresKids",
   "author"            :"Frontend Studios",
   "keywords"          : ["plentymarkets", "plugins", "ceres", "style", "template", "theme"],
   "type"              :"theme",
   "require"           : [],
-  "serviceProvider"   :"CeresColorful\\Providers\\CeresColorfulServiceProvider",
+  "serviceProvider"   :"CeresKids\\Providers\\CeresKidsServiceProvider",
   "dataProviders"     :
   [
     {
-      "key":"CeresColorful\\Containers\\CeresColorful",
-      "name":"CeresColorful",
+      "key":"CeresKids\\Containers\\CeresKids",
+      "name":"CeresKids",
       "description":""
     }
   ]

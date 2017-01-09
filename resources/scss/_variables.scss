@@ -71,18 +71,15 @@ $grid-gutter-width: 30px;
 //## Gray and brand colors for use across Bootstrap.
 
 
-$gray-darker:           #111;
-$gray-dark:             #383639;
-$gray:                  #484848;
+$gray-darker:           #282d2f;
+$gray-dark:             #4D4F4D;
+$gray:                  #7a7f7f;
 $gray-light:            #b2b1a7;
 $gray-lighter:          #dcdbd8;
 $gray-lighter2:         #f4f4f4;
 $gray-lightest:         #f7f7f9;
 
-$white:                 #fff;
-$black:                 #000;
-
-$brand-primary:         #57b58a;
+$brand-primary:         #008ebd;
 $brand-secondary:       #d4021d;
 
 $brand-success:         #7ED321;
@@ -106,10 +103,10 @@ $availability_5:        $brand-danger;
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               $gray-dark;
-$body-color:            white;
+$body-bg:               white;
+//$body-color:            $gray-dark;
 //** Global text color on `<body>`.
-$text-color:            white;
+$text-color:            $gray-dark;
 
 //** Global textual link color.
 $link-color:            $brand-primary;
@@ -121,19 +118,16 @@ $link-hover-color:      darken($link-color, 15%);
 //
 // Settings for the `<body>` element.
 
-// font-family: 'Fjalla One', sans-serif;
-// font-family: 'Playfair Display', serif;
 
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
 $font-family-sans-serif:'Open Sans', Helvetica, Arial, sans-serif;
 $font-family-helvetica: $font-family-sans-serif;
-$font-family-serif:     'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+$font-family-serif:     Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
-$font-family-base:      $font-family-serif;
-$font-family-heading:   'Fjalla One', sans-serif;
+$font-family-base:      $font-family-sans-serif;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px;
@@ -204,9 +198,9 @@ $list-inline-padding: 5px;
 $line-height-lg:         (4 / 3);
 $line-height-sm:         1.5;
 
-$border-radius:          0rem;
-$border-radius-sm:       0rem;
-$border-radius-lg:       0rem;
+$border-radius:          .1rem;
+$border-radius-sm:       .15rem;
+$border-radius-lg:       .2rem;
 
 $component-active-color: #fff;
 $component-active-bg:    $brand-primary;

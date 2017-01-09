@@ -4,7 +4,7 @@ namespace CeresKids\Providers;
 
 use Plenty\Plugin\ServiceProvider;
 
-class CeresKids extends ServiceProvider
+class CeresKidsServiceProvider extends ServiceProvider
 {
 
     /**

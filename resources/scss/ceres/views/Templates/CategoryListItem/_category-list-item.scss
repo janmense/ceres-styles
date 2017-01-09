@@ -1,8 +1,15 @@
+.categoriegrid {
+    .row:first-child {
+        display:none;
+    }
+}
+
 .cmp-product-thumb{
     padding: .8rem;
     width: 100%;
     overflow: visible;
     border: 1px solid $gray-lighter;
+    border-radius:10px;
     margin-bottom: $grid-gutter-width/2;
 
     .thumb-background{
@@ -14,10 +21,9 @@
         background-color: white;
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
         border: 1px solid transparent;
-
+        border-radius: 10px;
         transform-origin: top right;
         transform: scaleX(1) scaleY(1);
-
         transition: all 200ms ease-in-out;
     }
 
@@ -40,14 +46,12 @@
 
     .thumb-controls{
         position: absolute;
-        // width: calc(100% - 120px);
+        width: calc(100% - 120px);
         bottom: 0;
         right: 0;
-        text-align: right;
+        text-align: center;
         overflow: hidden;
         transition: all 200ms 100ms ease-in-out;
-        height: auto;
-        z-index: 100;
     }
 
     .thumb-inner{
@@ -68,6 +72,7 @@
         @include img-contain();
         position: absolute;
         background-color: white;
+        border-radius:10px 10px 0px 0px;
     }
 
     //TODO create separate mixin
@@ -78,7 +83,7 @@
         bottom: auto;
         left: 0;
 
-        padding: .5rem 0;
+        padding: .5rem;
 
         .special-tag,
         .tag{
@@ -86,7 +91,11 @@
             padding: .3em .5em .2rem;
             font-size: .9rem;
             font-weight: 300;
-            box-shadow: none;
+            box-shadow: 0 0 3px 0 rgba(0,0,0,.4);
+            border-radius:5px;
+            &.bg-primary {
+                background-color: darken( $custom-blue, 10% )!important;
+            }
         }
     }
 
@@ -99,7 +108,7 @@
         padding: 0 .8rem;
         margin-left: -.3em;
         background-color: white;
-
+        border-radius:0px 0px 10px 10px;
         transition: all 200ms ease-in-out;
     }
 
@@ -114,18 +123,17 @@
     .thumb-meta{
         margin-top: .5rem;
         text-align:center;
-        margin-top: -.75rem;
 
     }
 
     .crossprice{
         font-size: .81em;
         font-weight: 700;
-        color: $gray-light;
+        color: $custom-orange;
     }
 
     .price {
-        color: $gray;
+        color: $custom-blue;
         line-height: 1.1;
         font-weight: 700;
         font-size: 1.2rem;
@@ -135,13 +143,16 @@
         display: block;
     }
 
+   
+
+
     @include media-breakpoint-up(sm){
         padding: 0;
         margin-bottom: $grid-gutter-width;
 
 
         .thumb-background{
-            border: 1px solid $gray-lighter;
+            border: 1px solid $custom-blue;
             display: block;
         }
 
@@ -149,7 +160,7 @@
             display: flex;
             flex-flow: column nowrap;
             border-right: 2px solid transparent;
-            display: none;
+
             ul{
                 flex: 1 1 auto;
                 overflow: auto;
@@ -168,19 +179,20 @@
         }
 
         .thumb-controls{
-            bottom: .5rem;
-            
+            left: 0;
+            width: 100%;
+            height: 0;
         }
 
         .thumb-btn-buy{
             min-height: 2rem;
-            margin-right: .5rem;
         }
 
         .thumb-content{
             padding: .8rem;
             width: 100%;
             margin: 0;
+            font-size: 1rem;
         }
 
         .thumb-title{
@@ -189,7 +201,6 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            font-size: 1rem;
         }
 
         .thumb-image{
@@ -200,21 +211,21 @@
             z-index: 1000;
 
             .thumb-background{
-                transform: scaleX(1) scaleY(1);
-                box-shadow: none;
+                transform: scaleX(1.33) scaleY(1.15);
+                box-shadow: 0 0 5px 0 rgba(5,156,202, .3);
             }
 
             .thumb-extras{
                 transform: translate(-100% , 0);
                 height: 115%;
-                display: none;
+
                 transition: transform 200ms,
                             height 100ms 100ms;
             }
 
             .thumb-controls{
-                transform: none;
-                height: auto;
+                transform: translate(0 , 100%);
+                height: 15%;
             }
         }
 

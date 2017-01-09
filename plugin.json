@@ -1,17 +1,17 @@
 {
-  "name"              :"CeresElectronic",
-  "description"       :"Plentymarkets Ceres electronic theme",
-  "namespace"         :"CeresElectronic",
+  "name"              :"CeresColorful",
+  "description"       :"Plentymarkets Ceres colorful theme",
+  "namespace"         :"CeresColorful",
   "author"            :"Frontend Studios",
   "keywords"          : ["plentymarkets", "plugins", "ceres", "style", "template", "theme"],
   "type"              :"theme",
   "require"           : [],
-  "serviceProvider"   :"CeresElectronic\\Providers\\CeresElectronicServiceProvider",
+  "serviceProvider"   :"CeresColorful\\Providers\\CeresColorfulServiceProvider",
   "dataProviders"     :
   [
     {
-      "key":"CeresElectronic\\Containers\\CeresElectronic",
-      "name":"CeresElectronic",
+      "key":"CeresColorful\\Containers\\CeresColorful",
+      "name":"CeresColorful",
       "description":""
     }
   ]

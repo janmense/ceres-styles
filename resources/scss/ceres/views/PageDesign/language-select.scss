@@ -1,6 +1,6 @@
 .cmp-country-settings{
-	background-color: $gray-lighter2;
-	border-bottom: 1px solid $gray-lighter;
+	background-color: darken( $custom-blue, 10% );
+	border-bottom: 1px solid $custom-pastelblue;
 
 	.country-settings-inner{
 		padding: 1rem;
@@ -17,7 +17,10 @@
 	}
 
 	.list-title{
-
+		color:$white;
+		hr {
+			color: $custom-pastelblue;
+		}
 	}
 
 	ul{
@@ -32,11 +35,12 @@
 			a{
 				display: inline-block;
 				padding: .8rem;
+				color: darken( $custom-blue, 10% );
 			}
 
 			&.active{
 				a{
-					background-color: $gray-lighter;
+					background-color: $white;					
 				}
 			}
 		}

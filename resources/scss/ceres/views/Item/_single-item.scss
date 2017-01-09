@@ -51,6 +51,8 @@
             float: none;
             .nav-link {
                 border:1px solid $nav-tabs-border-color;
+                font-family: $font-family-serif;
+                font-size: 1.5rem;
                 &.active,
                 &:hover {
                     border:1px solid $nav-tabs-border-color;
@@ -62,6 +64,26 @@
                 margin-left: 0;
             }
         }
+    }
+    .crossprice {
+        .text-muted {
+            color:$custom-orange!important;
+        }
+    }
+    .price {
+        color:$custom-blue;
+    }
+    .input-group {
+        .input-group-btn:first-child {
+            .btn-secondary {
+                border-radius: 5px 0px 0px 5px;
+            }
+        }
+        .input-group-btn:last-child {
+            .btn-secondary:first-child {
+                border-radius: 0px 5px 5px 0px;
+            }
+        }     
     }
 }
 
@@ -99,11 +121,11 @@
 .owl-carousel-preview {
     .owl-item {
         .owl_item{
-            padding: 5px;
+            padding: 1px;
             margin:5px 0;
             cursor: pointer;
             &.synced {
-                background:$brand-primary;
+                background:$custom-green;
             }
         }
 

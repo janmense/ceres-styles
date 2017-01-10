@@ -1,10 +1,10 @@
 <?php
 
-namespace CeresDefault\Providers;
+namespace CeresHipster\Providers;
 
 use Plenty\Plugin\ServiceProvider;
 
-class CeresDefaultServiceProvider extends ServiceProvider
+class CeresHipsterServiceProvider extends ServiceProvider
 {
 
     /**

@@ -100,7 +100,7 @@
                 <div class="row m-y-1">
 
                     {{ LayoutContainer.show("PluginCeres::SingleItem.BeforeAddToBasket") }}
-                    <add-item-to-basket :item="{{ item | json_encode() }}" :show-quantity="true" template="#vue-add-item-to-basket"></add-item-to-basket>
+                    <add-item-to-basket :item="{{ item | json_encode() }}" :show-quantity="true" template="#vue-add-item-to-basket-fes"></add-item-to-basket>
 
                     {{ LayoutContainer.show("PluginCeres::SingleItem.AfterAddToBasket") }}
                 </div>
@@ -295,5 +295,7 @@
         {#</div>#}
 
     </div>
+
+   {% include "CeresElectronic::components.CeresElectronicAddToBasket.twig" %}
 
 {% endblock %}

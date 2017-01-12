@@ -1,5 +1,5 @@
 .categoriegrid {
-    .row:first-child {
+    & > .row:first-child {
         display:none;
     }
 }

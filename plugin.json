@@ -6,7 +6,7 @@
   "keywords"          : ["plentymarkets", "plugins", "ceres", "style", "template", "theme"],
   "type"              :"theme",
   "require"           : [],
-  "serviceProvider"   :"CeresHipster\\Providers\\CeresDefaultServiceProvider",
+  "serviceProvider"   :"CeresHipster\\Providers\\CeresHipsterServiceProvider",
   "dataProviders"     :
   [
     {

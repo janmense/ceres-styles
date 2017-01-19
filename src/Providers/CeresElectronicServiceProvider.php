@@ -18,8 +18,14 @@ class CeresElectronicServiceProvider extends ServiceProvider
 
     public function boot (Twig $twig, Dispatcher $eventDispatcher)
     {
-  		$eventDispatcher->listen('tpl.item', function(TemplateContainer $container, $templateData) {
-			$container->setTemplate("CeresElectronic::CeresElectronicSingleItem.twig");
-		}, -1);
+         // provide template to use for single items
+        $eventDispatcher->listen('tpl.item', function(TemplateContainer $container,  $templateData) {
+            $container->setTemplate("CeresElectronic::Item.SingleItem");
+        }, 100);
+
+        // provide template to use for homepage
+        $eventDispatcher->listen('tpl.home', function(TemplateContainer $container, $templateData) {
+            $container->setTemplate("CeresElectronic::Homepage.Homepage");
+        }, 100);
     }
 }

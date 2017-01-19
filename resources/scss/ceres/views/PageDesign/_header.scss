@@ -1,6 +1,12 @@
 //header scss
 .wrapper-main.isSticky.sticky {
-
+	.top-bar {
+		background: rgba(0,0,0,.75);
+		transition: all .3s ease;
+		.navbar {
+			
+		}
+	}
 }
 .top-bar{
 	position: fixed;
@@ -11,6 +17,7 @@
 	z-index: $zIndex-6;
 	color: $gray-dark;
 	background-color: $top-bar-bg;
+	transition: all .3s ease;
 	max-width: 1200px;
     margin: 0 auto;
 	a{
@@ -197,7 +204,7 @@
 					}
 					&:hover {
 						.nav-link {
-							background: darken($brand-primary,20%);
+							background: $brand-primary;
 							color:$white;
 							cursor: pointer;
 							&.dropdown-toggle::after {
@@ -218,7 +225,7 @@
 							    border-top: .5em solid;
 							    border-right: .5em solid transparent;
 							    border-left: .5em solid transparent;
-							    color: darken($brand-primary,20%);
+							    color: $brand-primary;
 							    position: absolute;
 							    top: 0;
 							    left: 50%;

@@ -81,7 +81,7 @@ $gray-lightest:         #f7f7f9;
 
 $white:                 #fff;
 
-$brand-primary:         #0b8ebe;
+$brand-primary:         #222;
 $brand-secondary:       #1195c6;
 
 $brand-success:         #7ED321;
@@ -93,12 +93,12 @@ $custom-colors: (
   "gelb": "#ffff00",
 );
 
-$top-bar-bg:            $gray-dark;
+$top-bar-bg:            transparent;
 $top-bar-color:         #fff;
 $top-bar-basket-btn:    $top-bar-bg;
 $top-bar-basket-color:  #fff;
 
-$footer-bg:             $brand-primary;
+$footer-bg:             transparent;
 $footer-color:          #fff;
 
 $footer-features-bg:    transparent;
@@ -454,7 +454,7 @@ $zindex-modal:             $zIndex-8;
 
 
 // Navbar
-$navbar-background-color:           $brand-primary;
+$navbar-background-color:           transparent;
 $navbar-border-radius:              0;
 $navbar-padding-x:                  $spacer;
 $navbar-padding-y:                  ($spacer / 2);

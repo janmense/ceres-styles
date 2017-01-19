@@ -21,16 +21,20 @@
 
 .footer{
 	display: block;
-	background-color: $gray-lightest;
+	background-color: $footer-bg;
+	color:$footer-color;
+	max-width:1200px;
+	margin:0 auto;
+	padding-left:15px;
+	padding-right:15px;
 	
 	a{
-		color: $gray-dark;
+		color: $footer-color;
 	}
 
 	.footer-features{
-		border-top: 1px solid $gray-lighter;
-		background-color: white;
-		color: $gray-dark;
+		background-color: $footer-features-bg;
+		color: $footer-features-color;
 	}
 
 	.footer-content{

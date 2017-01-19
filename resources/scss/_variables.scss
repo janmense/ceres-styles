@@ -81,8 +81,8 @@ $gray-lightest:         #f7f7f9;
 
 $white:                 #fff;
 
-$brand-primary:         #FFAD00;
-$brand-secondary:       #075159;
+$brand-primary:         #0b8ebe;
+$brand-secondary:       #1195c6;
 
 $brand-success:         #7ED321;
 $brand-info:            #5bc0de;
@@ -92,6 +92,17 @@ $brand-danger:          #d9534f;
 $custom-colors: (
   "gelb": "#ffff00",
 );
+
+$top-bar-bg:            $gray-dark;
+$top-bar-color:         #fff;
+$top-bar-basket-btn:    $top-bar-bg;
+$top-bar-basket-color:  #fff;
+
+$footer-bg:             $brand-primary;
+$footer-color:          #fff;
+
+$footer-features-bg:    transparent;
+$footer-features-color: #fff;
 
 $availability_1:        $brand-success;
 $availability_2:        $brand-success;
@@ -443,7 +454,7 @@ $zindex-modal:             $zIndex-8;
 
 
 // Navbar
-$navbar-background-color:           $brand-secondary;
+$navbar-background-color:           $brand-primary;
 $navbar-border-radius:              0;
 $navbar-padding-x:                  $spacer;
 $navbar-padding-y:                  ($spacer / 2);
@@ -735,7 +746,7 @@ $breadcrumb-padding-y:          .5rem;
 $breadcrumb-padding-x:          1rem;
 $breadcrumb-item-padding:       .5rem;
 
-$breadcrumb-bg:                 $gray-lighter;
+$breadcrumb-bg:                 $gray-lightest;
 $breadcrumb-divider-color:      $gray-light;
 $breadcrumb-active-color:       $gray-light;
 $breadcrumb-divider:            "/";

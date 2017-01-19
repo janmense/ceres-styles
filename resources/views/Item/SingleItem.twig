@@ -16,10 +16,20 @@
     <resource name="currentVariation" data="{{ item | json_encode() }}"></resource>
     <div class="single container-max page-content">
         <div class="row is-flex">
-            <div class="col-md-10 .push-md-2">
+            <div class="col-md-10 push-md-2">
                 <div class="row">
+
+                    <div class="col-md-6 push-md-6">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <variation-image-list template="#vue-variation-image-list"></variation-image-list>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <!-- ITEM DETAIL -->
-                    <div class="col-md-6 m-t-1">
+                    <div class="col-md-6 m-t-1 pull-md-6">
 
                         <h6 class="producertag">
                             <a href="#" class="producer text-muted">{{ item.itemBase.producer }}</a>
@@ -121,14 +131,6 @@
 
                     </div>
                     <!-- ./ITEM DETAIL -->
-
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <variation-image-list template="#vue-variation-image-list"></variation-image-list>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- ITEM DESCRIPTION -->
                     <div class="col-md-12 m-y-3">
@@ -268,7 +270,7 @@
                     <!-- ./ITEM DESCRIPTION -->
                 </div>
             </div>
-            <div class="col-md-2 category-menu .pull-md-10">
+            <div class="col-md-2 category-menu pull-md-10">
                 <ul>
                     <li><a href="#">Computer</a></li>
                     <li><a href="#">Notebooks</a></li>

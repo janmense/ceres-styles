@@ -21,7 +21,7 @@ class CeresElectronicServiceProvider extends ServiceProvider
          // provide template to use for single items
         $eventDispatcher->listen('tpl.item', function(TemplateContainer $container,  $templateData) {
             $container->setTemplate("CeresElectronic::Item.SingleItem");
-        }, 100);
+        }, 99);
 
         // provide template to use for homepage
         $eventDispatcher->listen('tpl.home', function(TemplateContainer $container, $templateData) {

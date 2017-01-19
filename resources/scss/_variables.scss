@@ -79,8 +79,10 @@ $gray-lighter:          #dcdbd8;
 $gray-lighter2:         #f4f4f4;
 $gray-lightest:         #f7f7f9;
 
-$brand-primary:         #008ebd;
-$brand-secondary:       #d4021d;
+$white:                 #fff;
+
+$brand-primary:         #0b8ebe;
+$brand-secondary:       #1195c6;
 
 $brand-success:         #7ED321;
 $brand-info:            #5bc0de;
@@ -90,6 +92,17 @@ $brand-danger:          #d9534f;
 $custom-colors: (
   "gelb": "#ffff00",
 );
+
+$top-bar-bg:            $gray-dark;
+$top-bar-color:         #fff;
+$top-bar-basket-btn:    $top-bar-bg;
+$top-bar-basket-color:  #fff;
+
+$footer-bg:             $brand-primary;
+$footer-color:          #fff;
+
+$footer-features-bg:    transparent;
+$footer-features-color: #fff;
 
 $availability_1:        $brand-success;
 $availability_2:        $brand-success;
@@ -103,7 +116,7 @@ $availability_5:        $brand-danger;
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               white;
+$body-bg:               #e4e4e4;
 //$body-color:            $gray-dark;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark;
@@ -128,6 +141,8 @@ $font-family-serif:     Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:      $font-family-sans-serif;
+
+$font-family-heading:   'Abel', sans-serif;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px;
@@ -439,7 +454,7 @@ $zindex-modal:             $zIndex-8;
 
 
 // Navbar
-$navbar-background-color:           $gray-lightest;
+$navbar-background-color:           $brand-primary;
 $navbar-border-radius:              0;
 $navbar-padding-x:                  $spacer;
 $navbar-padding-y:                  ($spacer / 2);
@@ -731,7 +746,7 @@ $breadcrumb-padding-y:          .5rem;
 $breadcrumb-padding-x:          1rem;
 $breadcrumb-item-padding:       .5rem;
 
-$breadcrumb-bg:                 $gray-lighter;
+$breadcrumb-bg:                 $gray-lightest;
 $breadcrumb-divider-color:      $gray-light;
 $breadcrumb-active-color:       $gray-light;
 $breadcrumb-divider:            "/";

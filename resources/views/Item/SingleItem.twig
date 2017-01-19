@@ -26,16 +26,9 @@
                     <li><a href="#">Sonstiges</a></li>
                 </ul>
             </div>
-            <div class="col-md-5 single-leftside">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <variation-image-list template="#vue-variation-image-list"></variation-image-list>
-                    </div>
-                </div>
-            </div>
 
             <!-- ITEM DETAIL -->
-            <div class="col-md-5 single-rightside-alt m-t-1">
+            <div class="col-md-5 m-t-1">
 
                 <h6 class="producertag">
                     <a href="#" class="producer text-muted">{{ item.itemBase.producer }}</a>
@@ -123,7 +116,7 @@
                         </a>
                     </div> -->
                 </div>
-            <!-- ./ITEM DETAIL -->
+            
 
                 <div class="shariff" data-theme="white" data-services='["twitter","facebook","googleplus","pinterest"]'
                      data-url="" style="max-width:100%;overflow:auto;" data-media-url=""></div>
@@ -135,6 +128,15 @@
                     <a href="#" title="{{ trans("PluginCeres::Template.itemShippingCosts") }}">{{ trans("PluginCeres::Template.itemShippingCosts") }}</a>
                 </span>
 
+            </div>
+            <!-- ./ITEM DETAIL -->
+            
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <variation-image-list template="#vue-variation-image-list"></variation-image-list>
+                    </div>
+                </div>
             </div>
 
             <!-- ITEM DESCRIPTION -->

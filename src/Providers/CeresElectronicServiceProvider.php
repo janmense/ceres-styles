@@ -26,6 +26,6 @@ class CeresElectronicServiceProvider extends ServiceProvider
         // provide template to use for homepage
         $eventDispatcher->listen('tpl.home', function(TemplateContainer $container, $templateData) {
             $container->setTemplate("CeresElectronic::Homepage.Homepage");
-        }, 100);
+        }, 99);
     }
 }

@@ -15,21 +15,8 @@
 
     <resource name="currentVariation" data="{{ item | json_encode() }}"></resource>
     <div class="single container-max page-content">
-        <div class="row is-flex m-t-3">
-
-
-            <div class="col-md-2 category-menu">
-                <ul>
-                    <li><a href="#">Computer</a></li>
-                    <li><a href="#">Notebooks</a></li>
-                    <li><a href="#">Tablets</a></li>
-                    <li><a href="#">Handys</a></li>
-                    <li><a href="#">Zubehör</a></li>
-                    <li><a href="#">Sonstiges</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-10">
+        <div class="row is-flex">
+            <div class="col-md-10 .push-md-2">
                 <div class="row">
                     <!-- ITEM DETAIL -->
                     <div class="col-md-6 m-t-1">
@@ -280,6 +267,16 @@
                     </div>
                     <!-- ./ITEM DESCRIPTION -->
                 </div>
+            </div>
+            <div class="col-md-2 category-menu .pull-md-10">
+                <ul>
+                    <li><a href="#">Computer</a></li>
+                    <li><a href="#">Notebooks</a></li>
+                    <li><a href="#">Tablets</a></li>
+                    <li><a href="#">Handys</a></li>
+                    <li><a href="#">Zubehör</a></li>
+                    <li><a href="#">Sonstiges</a></li>
+                </ul>
             </div>
         </div>
         

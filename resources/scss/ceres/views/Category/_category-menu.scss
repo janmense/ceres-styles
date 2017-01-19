@@ -1,4 +1,7 @@
 .category-menu {
+	background:$gray-dark;
+	padding-left:0;
+	padding-right:0;
 	ul {
 		padding: 0;
 		margin:0;
@@ -7,15 +10,14 @@
 
 			a {
 				display: block;
-				border:1px solid $gray-lighter;
-				padding: .5em 1em;
-				border-bottom:0;
-				color:$gray-dark;
+				border-bottom:1px solid $gray;
+				padding: .75em 1em;
+				color:$white;
 				transition: all .2s ease;
 			}
 			&:last-child {
 				a {
-					border-bottom:1px solid $gray-lighter;
+					border-bottom:0;
 				}
 			}
 			&:hover {
@@ -28,24 +30,5 @@
 				}
 			}
 		}
-	}
-}
-.single {
-	.row.is-flex {
-	    display: flex;
-	    flex-wrap: wrap;
-	}
-	.row.is-flex > [class*='col-'] {
-	    display: flex;
-	    flex-direction: column;
-	}
-	.row.is-flex {
-	    display: flex;
-	    flex-wrap: wrap;
-	}
-
-	.row.is-flex > [class*='col-'] {
-	    display: flex;
-	    flex-direction: column;
 	}
 }

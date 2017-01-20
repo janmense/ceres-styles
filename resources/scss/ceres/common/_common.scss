@@ -58,4 +58,22 @@ dt {
     border-left: 1px solid $gray-dark;
 }
 
+@include media-breakpoint-up(md) {
+    .row.is-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .row.is-flex > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+    }
+    .row.is-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
+    .row.is-flex > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+    }
+}

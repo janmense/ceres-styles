@@ -14,7 +14,9 @@ class CeresElectronicServiceProvider extends ServiceProvider
      * Register the service provider.
      */
 
-    public function register() {}
+    public function register() {
+         $this->getApplication()->register(CeresElectronicRouteServiceProvider::class);
+    }
 
     public function boot (Twig $twig, Dispatcher $eventDispatcher)
     {
@@ -31,6 +33,11 @@ class CeresElectronicServiceProvider extends ServiceProvider
         // provide template to use for item categories
         $eventDispatcher->listen('tpl.category.item', function(TemplateContainer $container, $templateData) {
             $container->setTemplate("CeresElectronic::Category.Item.CategoryItem");
+        }, 99);
+
+        // provide template to use for item categories
+        $eventDispatcher->listen('tpl.special-offers', function(TemplateContainer $container, $templateData) {
+            $container->setTemplate("CeresElectronic::Homepage.Homepage");
         }, 99);
     }
 }

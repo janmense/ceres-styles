@@ -71,7 +71,7 @@
 						border:0;
 						border-top: 1px solid $gray-lighter;
 						display: block;
-						color: $top-bar-color;
+						color: $top-bar-bg;
 						&:first-child {
 							border-top:0;
 						}
@@ -84,6 +84,7 @@
 			.account-menu {
 				padding:0;
 				margin:0;
+
 			}
 		}
 

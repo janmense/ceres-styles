@@ -27,5 +27,10 @@ class CeresElectronicServiceProvider extends ServiceProvider
         $eventDispatcher->listen('tpl.home', function(TemplateContainer $container, $templateData) {
             $container->setTemplate("CeresElectronic::Homepage.Homepage");
         }, 99);
+
+        // provide template to use for item categories
+        $eventDispatcher->listen('tpl.category.item', function(TemplateContainer $container, $templateData) {
+            $container->setTemplate("CeresElectronic::Category.Item.CategoryItem");
+        }, 99);
     }
 }

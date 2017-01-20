@@ -1,23 +1,7 @@
 
 .single{
     padding-top:0 !important;
-    .row.is-flex {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .row.is-flex > [class*='col-'] {
-        display: flex;
-        flex-direction: column;
-    }
-    .row.is-flex {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .row.is-flex > [class*='col-'] {
-        display: flex;
-        flex-direction: column;
-    }
+    
 
     .main-image{
         img{
@@ -212,6 +196,23 @@
 
 @include media-breakpoint-up(md) {
     .single {
+        .row.is-flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .row.is-flex > [class*='col-'] {
+            display: flex;
+            flex-direction: column;
+        }
+        .row.is-flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .row.is-flex > [class*='col-'] {
+            display: flex;
+            flex-direction: column;
+        }
         .nav-tabs {
             .nav-item {
                 float: left;

@@ -36,8 +36,8 @@ class CeresElectronicServiceProvider extends ServiceProvider
         }, 99);
 
         // provide template to use for item categories
-        $eventDispatcher->listen('tpl.special-offers', function(TemplateContainer $container, $templateData) {
-            $container->setTemplate("CeresElectronic::test");
+        $eventDispatcher->listen('tpl.PageNotFound', function(TemplateContainer $container, $templateData) {
+            $container->setTemplate("CeresElectronic::PageNotFound");
         }, 99);
     }
 }

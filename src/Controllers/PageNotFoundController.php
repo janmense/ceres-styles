@@ -8,16 +8,16 @@ use IO\Controllers\LayoutController;
 * Class SpecialOffersController
 * @package CeresElectronic\Controllers
 */
-class SpecialOffersController extends LayoutController
+class PageNotFoundController extends LayoutController
 {
 	/**
 	* Prepare and render the data for the homepage
 	* @return string
 	*/
-	public function showSpecialOffers():string
+	public function showPageNotFound():string
 	{
 		return $this->renderTemplate(
-		"tpl.special-offers",
+		"tpl.PageNotFound",
 		[
 			"object" => ""
 		]

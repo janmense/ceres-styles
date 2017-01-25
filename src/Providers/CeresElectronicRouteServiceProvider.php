@@ -14,6 +14,6 @@ class CeresElectronicRouteServiceProvider extends RouteServiceProvider
 	*/
 	public function map(Router $router)
 	{
-		$router->get('special-offers', 'CeresElectronic\Controllers\SpecialOffersController@showSpecialOffers');
+		$router->get('PageNotFound', 'CeresElectronic\Controllers\PageNotFoundController@showPageNotFound');
 	}
 }

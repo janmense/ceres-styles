@@ -32,9 +32,12 @@
 
 	a{
 		color: $footer-color;
-		img.plenty-brand path {
-			fill: $footer-color;
-		}
+	}
+	.svg.plenty-brand path {
+		fill: $footer-color;
+	}
+	.svg.plenty-brand {
+		padding:0 .5em;
 	}
 
 	.footer-features{

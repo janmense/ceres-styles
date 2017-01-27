@@ -100,11 +100,11 @@
 
 		.control-search{
 
-			.dropdown-menu{
-				width: 320px;
-			    padding: 0;
-			    border: none;
-				position: absolute;
+			& > a[aria-expanded=true] {
+				background:#000;
+			}
+			& > a[aria-expanded=false] {
+				background:transparent;
 			}
 		}
 
@@ -154,9 +154,6 @@
 }
 
 .wrapper-main {
-	.page-header .collapse.in {
-		padding-top:117px;
-	}
 	#page-body {
 		margin-top: 117px;
 	}
@@ -316,6 +313,7 @@
 	top: 50%;
 	right: 1rem;
 	transform: translate(0, -50%);
+	background: white;
 }
 
 // Mobile only

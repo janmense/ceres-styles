@@ -21,24 +21,26 @@
 
 .footer{
 	display: block;
-	background-color: $custom-pastelblue;
+	background-color: $footer-bg;
+	max-width:1200px;
+	margin:0 auto;
 	>.container-max {
-		background-color:$custom-blue;		
+		background-color:$footer-bg;	
 		hr {
-			border-top:1px solid $custom-pastelblue;
+			border-top:1px solid white;
 		}
 	}	
 
 	a{
-		color: $white;
+		color: $footer-color;
 	}
 
 	.footer-features{
-		border-top: 1px solid $custom-pastelblue;
+		border-top: 0;
 		background-color: $custom-orange;
-		color: $white;
+		color: $footer-color;
 		i {
-			color:$white!important;
+			color:$footer-color !important;
 		}
 	}
 

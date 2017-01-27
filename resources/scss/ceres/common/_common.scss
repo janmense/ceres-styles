@@ -19,12 +19,10 @@ body {
 }
 
 
-
-
-// .shariff .orientation-horizontal li{
-//     min-width: 0;
-//     max-width: none;
-// }
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+    font-family: $font-family-heading;
+    text-transform: uppercase;
+}
 
 
 .rating{

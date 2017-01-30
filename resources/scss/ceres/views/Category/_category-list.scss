@@ -64,6 +64,7 @@
 }
 
 @include media-breakpoint-up(md){
+    
     .product-list.grid{
 
         li{
@@ -86,6 +87,33 @@
                         }
                         .thumb-meta {
                             text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .home {
+        .product-list.grid{
+
+            li{
+                .cmp {
+                    .thumb-inner {
+                        .thumb-controls {
+                            display: none;
+                        }
+                        .thumb-image {
+                            width: 100%;
+                        }
+                        .thumb-content {
+                            width: 100%;
+                            .thumb-title {
+                                text-align: center;
+                            }
+                            .thumb-meta {
+                                text-align: center;
+                                margin-top: 0;
+                            }
                         }
                     }
                 }

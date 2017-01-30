@@ -106,7 +106,7 @@ $availability_5:        $brand-danger;
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               $gray-dark;
+$body-bg:               #101010;
 $body-color:            white;
 //** Global text color on `<body>`.
 $text-color:            white;
@@ -123,7 +123,7 @@ $link-hover-color:      darken($link-color, 15%);
 
 // font-family: 'Fjalla One', sans-serif;
 // font-family: 'Playfair Display', serif;
-
+@import url('https://fonts.googleapis.com/css?family=Slackey');
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
@@ -132,8 +132,8 @@ $font-family-helvetica: $font-family-sans-serif;
 $font-family-serif:     'Playfair Display', Georgia, 'Times New Roman', Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
-$font-family-base:      $font-family-serif;
-$font-family-heading:   'Fjalla One', sans-serif;
+$font-family-base:      $font-family-sans-serif;
+$font-family-heading:   'Slackey', sans-serif;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px;
@@ -445,7 +445,7 @@ $zindex-modal:             $zIndex-8;
 
 
 // Navbar
-$navbar-background-color:           $gray-dark;
+$navbar-background-color:           #101010;
 $navbar-border-radius:              0;
 $navbar-padding-x:                  $spacer;
 $navbar-padding-y:                  ($spacer / 2);

@@ -157,8 +157,8 @@
 	.navbar{
 		font-family:$font-family-heading;
 		text-transform: uppercase;
-		background:$gray-dark;
-		border-bottom:1px solid $gray;
+		background:$navbar-background-color;
+		border-bottom:0;
 		a {
 			color: $white;
 			&:hover {
@@ -185,7 +185,7 @@
 					.nav-link {
 						background:transparent;
 						color:$white;
-						border-bottom:1px solid white;
+						border-bottom:1px solid transparent;
 						cursor: pointer;
 						&.dropdown-toggle::after {
 							display: none;
@@ -226,7 +226,7 @@
 		}
 	}
 	.breadcrumb {
-		background:$gray-dark;
+		
 	}
 }
 

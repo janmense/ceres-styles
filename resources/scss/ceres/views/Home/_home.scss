@@ -1,14 +1,27 @@
 
 
 
-.sale {
-    text-align: center;
-    font-size: 2rem;
-    color: white;
-    text-transform: uppercase;
-    display: block;
-    background-color: red;
+.home {
+    .teaser {
+        margin-top: 13em;
+        color:white;
+        h1 {
+            font-size: 5em;
+            margin-top: .5em;
+        }
+        h3 {
+            font-size: 1.75em;
+            margin-top: .5em;
+        }
+        i {
+            font-size: 10em;
+        }
+    }
+    .page-content {
+        margin-top: 40vh;
+    }
 }
+
 
 @include media-breakpoint-up(sm){        
 

@@ -1,4 +1,9 @@
-
+.home {
+	margin-top:-31px;
+	& > .page-content {
+		padding-top:0 !important;
+	}
+}
 
 
 .sale {

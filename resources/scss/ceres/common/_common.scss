@@ -1,26 +1,14 @@
-
+body {
+    background:url("../images/food-tile.jpg") repeat center center;
+}
 .main{
 
 }
 
 .page-content{
     @extend .p-t-1;
-    background-color: $gray-dark; 
-    color: $white;
-    padding-left: 0;
-    padding-right: 0;
-    &.basket,
-    &.checkout,
-    &.myaccount,
-    &.kontakt,
-    &.single {
-        background-color:$white;
-        color: $gray-darker;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-top: 30px;
-        padding-bottom: 30px;
-    }
+    background-color: $white; 
+    color: $gray-dark;
 }
 
 hr {
@@ -37,7 +25,13 @@ hr {
     color: $gray-darker;
 }
 
-
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
 
 // .shariff .orientation-horizontal li{
 //     min-width: 0;

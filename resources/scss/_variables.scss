@@ -82,7 +82,7 @@ $gray-lightest:         #f7f7f9;
 $white:                 #fff;
 $black:                 #000;
 
-$brand-primary:         #57b58a;
+$brand-primary:         #da5622;
 $brand-secondary:       #d4021d;
 
 $brand-success:         #7ED321;
@@ -93,6 +93,17 @@ $brand-danger:          #d9534f;
 $custom-colors: (
   "gelb": "#ffff00",
 );
+
+$top-bar-bg:            darken($brand-primary, 20%);
+$top-bar-color:         #fff;
+$top-bar-basket-btn:    darken($brand-primary, 10%);
+$top-bar-basket-color:  #fff;
+
+$footer-bg:             darken($brand-primary, 20%);
+$footer-color:          #fff;
+
+$footer-features-bg:    transparent;
+$footer-features-color: #fff;
 
 $availability_1:        $brand-success;
 $availability_2:        $brand-success;
@@ -107,9 +118,9 @@ $availability_5:        $brand-danger;
 
 //** Background color for `<body>`.
 $body-bg:               $gray-dark;
-$body-color:            white;
+$body-color:            #693a2d;
 //** Global text color on `<body>`.
-$text-color:            white;
+$text-color:            #693a2d;
 
 //** Global textual link color.
 $link-color:            $brand-primary;
@@ -132,7 +143,7 @@ $font-family-helvetica: $font-family-sans-serif;
 $font-family-serif:     'Playfair Display', Georgia, 'Times New Roman', Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
-$font-family-base:      $font-family-serif;
+$font-family-base:      $font-family-sans-serif;
 $font-family-heading:   'Fjalla One', sans-serif;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
@@ -445,7 +456,7 @@ $zindex-modal:             $zIndex-8;
 
 
 // Navbar
-$navbar-background-color:           $gray-dark;
+$navbar-background-color:           #da5622;
 $navbar-border-radius:              0;
 $navbar-padding-x:                  $spacer;
 $navbar-padding-y:                  ($spacer / 2);

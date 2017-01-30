@@ -1,17 +1,17 @@
 {
-  "name"              :"CeresFood",
-  "description"       :"Plentymarkets Ceres Food theme",
-  "namespace"         :"CeresFood",
+  "name"              :"CeresColorful",
+  "description"       :"Plentymarkets Ceres Color theme",
+  "namespace"         :"CeresColorful",
   "author"            :"Frontend Studios",
   "keywords"          : ["plentymarkets", "plugins", "ceres", "style", "template", "theme"],
   "type"              :"theme",
   "require"           : [],
-  "serviceProvider"   :"CeresFood\\Providers\\CeresFoodServiceProvider",
+  "serviceProvider"   :"CeresColorful\\Providers\\CeresColorfulServiceProvider",
   "dataProviders"     :
   [
     {
-      "key":"CeresFood\\Containers\\CeresFood",
-      "name":"CeresFood",
+      "key":"CeresColorful\\Containers\\CeresColorful",
+      "name":"CeresColorful",
       "description":""
     }
   ]

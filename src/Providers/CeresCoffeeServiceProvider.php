@@ -1,13 +1,13 @@
 <?php
 
-namespace CeresFood\Providers;
+namespace CeresCoffee\Providers;
 
 use IO\Helper\TemplateContainer;
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
 
-class CeresFoodServiceProvider extends ServiceProvider
+class CeresCoffeeServiceProvider extends ServiceProvider
 {
 
     /**
@@ -23,7 +23,7 @@ class CeresFoodServiceProvider extends ServiceProvider
 
         // provide template to use for homepage
         $eventDispatcher->listen('tpl.home', function(TemplateContainer $container, $templateData) {
-            $container->setTemplate("CeresFood::Homepage.Homepage");
+            $container->setTemplate("CeresCoffee::Homepage.Homepage");
         }, 99);
     }
 }

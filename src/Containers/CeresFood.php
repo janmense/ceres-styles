@@ -1,13 +1,13 @@
 <?php
 
-namespace CeresDark\Containers;
+namespace CeresFood\Containers;
 
 use Plenty\Plugin\Templates\Twig;
 
-class CeresDark
+class CeresFood
 {
     public function call(Twig $twig):string
     {
-        return $twig->render('CeresDark::CeresDark');
+        return $twig->render('CeresFood::CeresFood');
     }
 }

@@ -1,13 +1,13 @@
 <?php
 
-namespace CeresDark\Providers;
+namespace CeresRockstar\Providers;
 
 use IO\Helper\TemplateContainer;
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
 
-class CeresDarkServiceProvider extends ServiceProvider
+class CeresRockstarServiceProvider extends ServiceProvider
 {
 
     /**
@@ -23,7 +23,7 @@ class CeresDarkServiceProvider extends ServiceProvider
 
         // provide template to use for homepage
         $eventDispatcher->listen('tpl.home', function(TemplateContainer $container, $templateData) {
-            $container->setTemplate("CeresDark::Homepage.Homepage");
+            $container->setTemplate("CeresRockstar::Homepage.Homepage");
         }, 99);
     }
 }

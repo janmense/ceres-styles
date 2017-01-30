@@ -1,3 +1,23 @@
+.c-edge-l {
+    position: absolute;
+    display: block;
+    width: 379px;
+    height: 340px;
+    background:url("../images/c-edge-l.png");
+    top: 101px;
+}
+.c-edge-r {
+    position: absolute;
+    display: block;
+    width: 340px;
+    height: 379px;
+    background:url("../images/c-edge-r.png");
+    top: 0;
+    transform:translateY(100%);
+    right: 0;
+}
+
+
 .home {
     .teaser {
         margin-top: 13em;

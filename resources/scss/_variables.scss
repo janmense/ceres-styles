@@ -82,7 +82,7 @@ $gray-lightest:         #f7f7f9;
 $white:                 #fff;
 $black:                 #000;
 
-$brand-primary:         #da5622;
+$brand-primary:         #583930;
 $brand-secondary:       #d4021d;
 
 $brand-success:         #7ED321;
@@ -94,15 +94,15 @@ $custom-colors: (
   "gelb": "#ffff00",
 );
 
-$top-bar-bg:            darken($brand-primary, 20%);
+$top-bar-bg:            darken($brand-primary, 10%);
 $top-bar-color:         #fff;
-$top-bar-basket-btn:    darken($brand-primary, 10%);
+$top-bar-basket-btn:    darken($brand-primary, 20%);
 $top-bar-basket-color:  #fff;
 
-$footer-bg:             darken($brand-primary, 20%);
+$footer-bg:             darken($brand-primary, 10%);
 $footer-color:          #fff;
 
-$footer-features-bg:    transparent;
+$footer-features-bg:    darken($brand-primary, 20%);
 $footer-features-color: #fff;
 
 $availability_1:        $brand-success;
@@ -117,10 +117,10 @@ $availability_5:        $brand-danger;
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               $gray-dark;
-$body-color:            #693a2d;
+$body-bg:               #a0cfb7;
+$body-color:            #583930;
 //** Global text color on `<body>`.
-$text-color:            #693a2d;
+$text-color:            #583930;
 
 //** Global textual link color.
 $link-color:            $brand-primary;
@@ -456,7 +456,7 @@ $zindex-modal:             $zIndex-8;
 
 
 // Navbar
-$navbar-background-color:           #da5622;
+$navbar-background-color:           #583930;
 $navbar-border-radius:              0;
 $navbar-padding-x:                  $spacer;
 $navbar-padding-y:                  ($spacer / 2);

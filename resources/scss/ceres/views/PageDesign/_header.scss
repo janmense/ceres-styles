@@ -5,14 +5,10 @@
 .top-bar{
 	position: fixed;
 	width: 100%;
-	left: 50%;
-	transform: translateX(-50%);
 	
 	z-index: $zIndex-6;
 	color: $top-bar-color;
 	background-color: $top-bar-bg;
-	max-width: 1200px;
-    margin: 0 auto;
 	a{
 		text-decoration: none;
 		transition: all 300ms;
@@ -155,9 +151,8 @@
 	    z-index: 1000;
 	    display: block;
 	    width: 100%;
-	    left: 50%;
-	    transform: translateX(-50%);
 	    top:101px;
+	    max-width: 100%;
 	}
 	.navbar{
 		font-family:$font-family-heading;
@@ -227,9 +222,6 @@
 				}
 			}
 		}
-	}
-	.breadcrumb {
-		background:$gray-dark;
 	}
 }
 

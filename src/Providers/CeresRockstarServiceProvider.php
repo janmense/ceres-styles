@@ -2,10 +2,14 @@
 
 namespace CeresRockstar\Providers;
 
+use IO\Extensions\Functions\Partial;
+use IO\Helper\CategoryKey;
+use IO\Helper\CategoryMap;
 use IO\Helper\TemplateContainer;
-use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
+use Plenty\Plugin\Events\Dispatcher;
+use Plenty\Plugin\ConfigRepository;
 
 class CeresRockstarServiceProvider extends ServiceProvider
 {
@@ -18,12 +22,8 @@ class CeresRockstarServiceProvider extends ServiceProvider
          
     }
 
-    public function boot (Twig $twig, Dispatcher $eventDispatcher)
+    public function boot(Twig $twig, Dispatcher $eventDispatcher, ConfigRepository $config)
     {
 
-        // provide template to use for homepage
-        $eventDispatcher->listen('tpl.home', function(TemplateContainer $container, $templateData) {
-            $container->setTemplate("CeresRockstar::Homepage.Homepage");
-        }, 99);
     }
 }

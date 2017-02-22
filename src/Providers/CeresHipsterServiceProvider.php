@@ -22,8 +22,9 @@ class CeresHipsterServiceProvider extends ServiceProvider
     {
 
         // provide template to use for homepage
-        $eventDispatcher->listen('tpl.home', function(TemplateContainer $container, $templateData) {
+        $eventDispatcher->listen('IO.tpl.home', function(TemplateContainer $container, $templateData) {
             $container->setTemplate("CeresHipster::Homepage.Homepage");
-        }, 99);
+            return false;
+        });
     }
 }

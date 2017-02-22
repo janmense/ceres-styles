@@ -1,0 +1,6 @@
+# Support
+
+Frontend Studios GmbH
+<a href="www.frontend-studios.de" target="_blank">www.frontend-studios.de</a>
+E-Mail: <a href="mailto:dev@frontend-studios.de">dev@frontend-studios.de</a>
+Tel.: +49 561 9885097-0

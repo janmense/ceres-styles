@@ -1,18 +1,27 @@
 {
-  "name"              :"CeresKids",
-  "description"       :"Plentymarkets Ceres Kids theme",
-  "namespace"         :"CeresKids",
-  "author"            :"Frontend Studios",
-  "keywords"          : ["plentymarkets", "plugins", "ceres", "style", "template", "theme"],
-  "type"              :"theme",
-  "require"           : [],
-  "serviceProvider"   :"CeresKids\\Providers\\CeresKidsServiceProvider",
-  "dataProviders"     :
-  [
-    {
-      "key":"CeresKids\\Containers\\CeresKids",
-      "name":"CeresKids",
-      "description":""
-    }
-  ]
+    "version"           : "0.9.9",
+    "name"              : "Ceres Kids Theme",
+    "description"       : "This is a Kids Theme (beta) for Ceres",
+    "author"            : "Frontend Studios GmbH",
+    "license"           : "AGPL-3.0",
+    "pluginIcon"        : "icon_plugin_xs.png",
+    "price"             : 0.00,
+    "shortDescription"  : {"de": "Das ist ein Kinder Theme (beta) für Ceres"},
+    "authorIcon"        : "icon_author_xs.png",
+    "categories"        : ["3518"],
+    "email"             : "dev@frontend-studios.de",
+    "phone"             : "+49 561 9885097-0",
+    "keywords"          : ["plentymarkets", "plugins", "layout", "theme", "ceres", "kids", "frontend studios"],
+    "type"              : "theme",
+    "require"           : ["Ceres", "IO"],
+    "namespace"         : "CeresKids",
+    "serviceProvider"   : "CeresKids\\Providers\\CeresKidsServiceProvider",
+    "dataProviders"     :
+    [
+      {
+        "key":"CeresKids\\Containers\\CeresKids",
+        "name":"CeresKids",
+        "description":"Kids Theme for Ceres"
+      }
+    ]
 }

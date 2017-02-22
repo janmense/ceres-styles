@@ -1,18 +1,27 @@
 {
-  "name"              :"CeresHipster",
-  "description"       :"Plentymarkets Ceres Hipster theme",
-  "namespace"         :"CeresHipster",
-  "author"            :"Frontend Studios",
-  "keywords"          : ["plentymarkets", "plugins", "ceres", "style", "template", "theme"],
-  "type"              :"theme",
-  "require"           : [],
-  "serviceProvider"   :"CeresHipster\\Providers\\CeresHipsterServiceProvider",
-  "dataProviders"     :
-  [
-    {
-      "key":"CeresHipster\\Containers\\CeresHipster",
-      "name":"CeresHipster",
-      "description":""
-    }
-  ]
+    "version"           : "0.9.9",
+    "name"              : "Ceres Hipster Theme",
+    "description"       : "This is a Hipster Theme (beta) for Ceres",
+    "author"            : "Frontend Studios GmbH",
+    "license"           : "AGPL-3.0",
+    "pluginIcon"        : "icon_plugin_xs.png",
+    "price"             : 0.00,
+    "shortDescription"  : {"de": "Das ist ein Hipster Theme (beta) für Ceres"},
+    "authorIcon"        : "icon_author_xs.png",
+    "categories"        : ["3518"],
+    "email"             : "dev@frontend-studios.de",
+    "phone"             : "+49 561 9885097-0",
+    "keywords"          : ["plentymarkets", "plugins", "layout", "theme", "ceres", "hipster", "frontend studios"],
+    "type"              : "theme",
+    "require"           : ["Ceres", "IO"],
+    "namespace"         : "CeresHipster",
+    "serviceProvider"   : "CeresHipster\\Providers\\CeresHipsterServiceProvider",
+    "dataProviders"     :
+    [
+      {
+        "key":"CeresHipster\\Containers\\CeresHipster",
+        "name":"CeresHipster",
+        "description":"Hipster Theme for Ceres"
+      }
+    ]
 }

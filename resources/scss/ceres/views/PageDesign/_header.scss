@@ -106,7 +106,7 @@
 	.navbar{
 		font-family:$font-family-heading;
 		background:$navbar-background-color;
-		border-bottom:1px solid darken($gray-lighter2, 2%);
+		border-bottom:0;
 		a {
 			color: $white;
 			&:hover {
@@ -131,7 +131,7 @@
 				&:hover {
 					.nav-link {
 						background:transparent;
-						color: $gray-darker;
+						color: $white;
 						cursor: pointer;
 						&.dropdown-toggle::after {
 							display: none;

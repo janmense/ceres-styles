@@ -134,7 +134,7 @@ $link-hover-color:      darken($link-color, 15%);
 
 // font-family: 'Fjalla One', sans-serif;
 // font-family: 'Playfair Display', serif;
-@import url('https://fonts.googleapis.com/css?family=Slackey');
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
@@ -144,7 +144,7 @@ $font-family-serif:     'Playfair Display', Georgia, 'Times New Roman', Times, s
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:      $font-family-sans-serif;
-$font-family-heading:   'Slackey', sans-serif;
+$font-family-heading:   'Rock Salt', sans-serif;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px !default;

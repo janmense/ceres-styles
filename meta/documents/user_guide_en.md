@@ -4,9 +4,6 @@
 
 ## Activate Rockstar Theme
 
-Im plentymarkets Backend in der Plugin-Liste das Rockstar Plugin in Productive bereitstellen und den Mandant zuweisen.
-Anschließend im Tab "Content" im Bereich "CeresRockstar" den Haken bei "Template: Style" setzen, speichern, fertig!
-
 Go to plentymarkets Backend Plugin Area. You have to provide the rockstar theme in productive and assign the client (store). Switch to "Content" tab and check the "Template: Style" entry in "CeresRockstar" section. Save, finished!
 
 <div class="alert alert-info" role="alert">

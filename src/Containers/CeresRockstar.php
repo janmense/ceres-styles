@@ -1,10 +1,10 @@
 <?php
- 
+
 namespace CeresRockstar\Containers;
- 
+
 use Plenty\Plugin\Templates\Twig;
- 
-class CeresRockstarContainer
+
+class CeresRockstar
 {
     public function call(Twig $twig):string
     {

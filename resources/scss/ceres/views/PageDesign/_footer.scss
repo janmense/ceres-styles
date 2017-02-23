@@ -1,22 +1,18 @@
+
 .to-top {
     display: block;
-    height: 4rem;
     background-color: $gray-dark;
-    color: white;
     text-align: center;
     padding: .5rem .5rem;
     text-decoration:none!important;
-
-    transition: all 200ms;
-    
     &:hover {
-        background-color: $gray-light;
+    	background-color: $gray-darker;
     }
-}
-
-.footertop{
-	display: block;
-	background-color: $gray-lighter;
+    i {
+    	color: white;
+	    font-size: 1.5em;
+	    padding: .5em 0;
+    }
 }
 
 .footer .svg.plenty-brand path {
@@ -39,6 +35,13 @@
 	a{
 		color: $footer-color;
 	}
+
+	.svg.plenty-brand {
+ 		padding:0 .5em;
+ 		path {
+ 			fill: $white;
+ 		}
+ 	}
 
 	.footer-features{
 		border-top: 0;
@@ -138,4 +141,17 @@
 	@include media-breakpoint-up(lg){
 
 	}
+}
+
+.plenty-brand {
+	height: 30px;
+	margin: 2em 0 0.2em;
+}
+
+.static-link-list {
+	margin-bottom: -15px;
+}
+
+.static-link-list a {
+	margin-right: 10px;
 }

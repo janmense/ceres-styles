@@ -96,7 +96,7 @@
 //navigation scss
 .wrapper-main {
 	#page-body {
-		margin-top: 118px;
+		margin-top: 129px;
 	}
 	.navbar{
 		font-family:$font-family-heading;
@@ -184,6 +184,11 @@
   	img {
     	max-height: 3rem;
   	}
+  	svg {
+  		path {
+ 			fill: $white;
+  		}
+  	}
 }
 
 .navbar-nav {
@@ -252,10 +257,19 @@
 			}
 		}
 	}
-
+	.wrapper-main {
+		#page-body {
+			margin-top: 150px;
+		}
+	}
 }
 
 @include media-breakpoint-up(md){
+	.wrapper-main {
+		#page-body {
+			margin-top: 129px;
+		}
+	}
 	.wrapper-main .navbar .navbar-nav .nav-item:hover .dropdown-menu {
 		text-align: left;
 	}

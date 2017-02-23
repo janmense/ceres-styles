@@ -9,21 +9,18 @@ use Plenty\Plugin\Templates\Twig;
 
 class CeresCoffeeServiceProvider extends ServiceProvider
 {
-
     /**
      * Register the service provider.
      */
-
     public function register() {
          
     }
-
     public function boot (Twig $twig, Dispatcher $eventDispatcher)
     {
-
         // provide template to use for homepage
-        $eventDispatcher->listen('tpl.home', function(TemplateContainer $container, $templateData) {
+        $eventDispatcher->listen('IO.tpl.home', function(TemplateContainer $container, $templateData) {
             $container->setTemplate("CeresCoffee::Homepage.Homepage");
-        }, 99);
+            return false;
+        });
     }
 }

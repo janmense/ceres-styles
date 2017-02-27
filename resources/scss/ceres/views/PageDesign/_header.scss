@@ -108,7 +108,7 @@
 
 .wrapper-main {
 	#page-body {
-		margin-top: 129px;
+		margin-top: 95px;
 	}
 	.navbar{
 		& > .container-max {
@@ -163,6 +163,7 @@
 						    border-top: .5em solid;
 						    border-right: .5em solid transparent;
 						    border-left: .5em solid transparent;
+						    border-bottom:0;
 						    color: darken($brand-primary,20%);
 						    position: absolute;
 						    top: 0;
@@ -194,11 +195,16 @@
 .navbar-brand {
 
 	float: none;
-	padding: 1rem 0rem;
+	padding: 1rem 0rem 1rem 15px;
   	display: inline-block;
 
   	img {
     	max-height: 3rem;
+  	}
+  	svg {
+  		path {
+  			fill: $white;
+  		}
   	}
 }
 
@@ -252,7 +258,7 @@
 @include media-breakpoint-up(sm){
 	.wrapper-main {
 		#page-body {
-			margin-top: 150px;
+			margin-top: 120px;
 		}
 	}
 	.top-bar{
@@ -276,6 +282,11 @@
 }
 
 @include media-breakpoint-up(md){
+	.wrapper-main {
+		#page-body {
+			margin-top: 117px;
+		}
+	}
 	.sticky {
 		.header {
 			.navbar {

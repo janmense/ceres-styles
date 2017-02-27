@@ -268,7 +268,7 @@
             </div>
             
             <div class="col-md-2 category-menu pull-md-10">
-                {{ services.category.getNavigationTree(string $type = "all", string $lang = "de") }}
+                {{ services.category.getNavigationTree("all", services.sessionStorage.getLang()) | json_encode }}
             </div>
         </div>
 

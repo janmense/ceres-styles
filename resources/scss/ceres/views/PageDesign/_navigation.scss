@@ -5,7 +5,9 @@
 	}
 }
 
-
+.navbar {
+	padding:0 1rem;
+}
 nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
 	display: block;
 	margin-top: 0px;

@@ -70,19 +70,18 @@ $grid-gutter-width: 30px !default;
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:           #111;
-$gray-dark:             #383639;
-$gray:                  #484848;
+$gray-darker:           #282d2f;
+$gray-dark:             #4D4F4D;
+$gray:                  #7a7f7f;
 $gray-light:            #b2b1a7;
 $gray-lighter:          #dcdbd8;
 $gray-lighter2:         #f4f4f4;
 $gray-lightest:         #f7f7f9;
 
 $white:                 #fff;
-$black:                 #000;
 
-$brand-primary:         #583930;
-$brand-secondary:       #d4021d;
+$brand-primary:         #0b8ebe;
+$brand-secondary:       #1195c6;
 
 $brand-success:         #7ED321;
 $brand-info:            #5bc0de;
@@ -93,15 +92,15 @@ $custom-colors: (
   "gelb": "#ffff00",
 );
 
-$top-bar-bg:            darken($brand-primary, 10%);
+$top-bar-bg:            $gray-dark;
 $top-bar-color:         #fff;
-$top-bar-basket-btn:    darken($brand-primary, 20%);
+$top-bar-basket-btn:    $top-bar-bg;
 $top-bar-basket-color:  #fff;
 
-$footer-bg:             darken($brand-primary, 10%);
+$footer-bg:             $brand-primary;
 $footer-color:          #fff;
 
-$footer-features-bg:    darken($brand-primary, 20%);
+$footer-features-bg:    transparent;
 $footer-features-color: #fff;
 
 $availability_1:        $brand-success;
@@ -111,16 +110,15 @@ $availability_4:        $brand-warning;
 $availability_5:        $brand-danger;
 
 
-
 //== Scaffolding
 //
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #a0cfb7;
-$body-color:            #583930;
+$body-bg:               #e4e4e4;
+//$body-color:            $gray-dark;
 //** Global text color on `<body>`.
-$text-color:            #583930;
+$text-color:            $gray-dark;
 
 //** Global textual link color.
 $link-color:            $brand-primary;
@@ -132,19 +130,20 @@ $link-hover-color:      darken($link-color, 15%);
 //
 // Settings for the `<body>` element.
 
-// font-family: 'Fjalla One', sans-serif;
-// font-family: 'Playfair Display', serif;
 
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
 $font-family-sans-serif:'Open Sans', Helvetica, Arial, sans-serif;
 $font-family-helvetica: $font-family-sans-serif;
-$font-family-serif:     'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+$font-family-serif:     Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:      $font-family-sans-serif;
-$font-family-heading:   'Fjalla One', sans-serif;
+
+$font-family-heading:   'Abel', sans-serif;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px !default;
@@ -455,7 +454,7 @@ $zindex-modal-bg:          $zIndex-7 !default;
 $zindex-modal:             $zIndex-8 !default;
 
 // Navbar
-$navbar-background-color:           #583930;
+$navbar-background-color:           $brand-primary;
 $navbar-border-radius:              0;
 $navbar-padding-x:                  $spacer;
 $navbar-padding-y:                  ($spacer / 2);
@@ -740,14 +739,13 @@ $thumbnail-box-shadow:        0 1px 2px rgba(0,0,0,.075) !default;
 
 $figure-caption-font-size: 90% !default;
 
-
 // Breadcrumbs
 
 $breadcrumb-padding-y:          .5rem;
 $breadcrumb-padding-x:          1rem;
 $breadcrumb-item-padding:       .5rem;
 
-$breadcrumb-bg:                 #dac9a9;
+$breadcrumb-bg:                 $gray-lightest;
 $breadcrumb-divider-color:      $gray-light;
 $breadcrumb-active-color:       $gray-light;
 $breadcrumb-divider:            "/";
@@ -806,95 +804,3 @@ $pre-bg:                      #f7f7f9 !default;
 $pre-color:                   $gray-dark !default;
 $pre-border-color:            #ccc !default;
 $pre-scrollable-max-height:   340px !default;
-
-$gray-darker:           #282d2f;
-$gray-dark:             #4D4F4D;
-$gray:                  #7a7f7f;
-$gray-light:            #b2b1a7;
-$gray-lighter:          #dcdbd8;
-$gray-lighter2:         #f4f4f4;
-$gray-lightest:         #f7f7f9;
-
-$white:                 #fff;
-
-$brand-primary:         #0b8ebe;
-$brand-secondary:       #1195c6;
-
-$brand-success:         #7ED321;
-$brand-info:            #5bc0de;
-$brand-warning:         #f0ad4e;
-$brand-danger:          #d9534f;
-
-$custom-colors: (
-  "gelb": "#ffff00",
-);
-
-$top-bar-bg:            $gray-dark;
-$top-bar-color:         #fff;
-$top-bar-basket-btn:    $top-bar-bg;
-$top-bar-basket-color:  #fff;
-
-$footer-bg:             $brand-primary;
-$footer-color:          #fff;
-
-$footer-features-bg:    transparent;
-$footer-features-color: #fff;
-
-$availability_1:        $brand-success;
-$availability_2:        $brand-success;
-$availability_3:        $brand-warning;
-$availability_4:        $brand-warning;
-$availability_5:        $brand-danger;
-
-
-//== Scaffolding
-//
-// ## Settings for some of the most global styles.
-
-//** Background color for `<body>`.
-$body-bg:               #e4e4e4;
-//$body-color:            $gray-dark;
-//** Global text color on `<body>`.
-$text-color:            $gray-dark;
-
-//** Global textual link color.
-$link-color:            $brand-primary;
-//** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%);
-
-
-// Body
-//
-// Settings for the `<body>` element.
-
-
-//== Typography
-//
-//## Font, line-height, and color for body text, headings, and more.
-@import url('https://fonts.googleapis.com/css?family=Abel');
-
-$font-family-sans-serif:'Open Sans', Helvetica, Arial, sans-serif;
-$font-family-helvetica: $font-family-sans-serif;
-$font-family-serif:     Georgia, "Times New Roman", Times, serif;
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
-$font-family-base:      $font-family-sans-serif;
-
-$font-family-heading:   'Abel', sans-serif;
-
-
-
-// Navbar
-$navbar-background-color:           $brand-primary;
-
-
-// Breadcrumbs
-
-$breadcrumb-padding-y:          .5rem;
-$breadcrumb-padding-x:          1rem;
-$breadcrumb-item-padding:       .5rem;
-
-$breadcrumb-bg:                 $gray-lightest;
-$breadcrumb-divider-color:      $gray-light;
-$breadcrumb-active-color:       $gray-light;
-$breadcrumb-divider:            "/";

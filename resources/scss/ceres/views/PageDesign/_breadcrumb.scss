@@ -1,15 +1,17 @@
 @include media-breakpoint-up(md){
 	.wrapper-main {
 		& > nav.container-max {
-			padding-left:0;
-			padding-right:0;
+			padding-left:15px;
+			padding-right:15px;
 			position: absolute;
 		    z-index: 1000;
 		    display: block;
 		    width: 100%;
-		    max-width: 100%;
+		    max-width: 1200px;
+		    left: 50%;
+    		transform: translateX(-50%);
 		    background:$breadcrumb-bg;
-		    top:124px;
+		    top:90px;
 		}
 		.breadcrumb{
 			margin-bottom: 0;
@@ -30,7 +32,7 @@
 @include media-breakpoint-up(lg){
 	.wrapper-main {
 		& > nav.container-max {
-		    top:101px;
+		    top:87px;
 		}
 		.breadcrumb{
 		    padding: .5rem 0 !important;

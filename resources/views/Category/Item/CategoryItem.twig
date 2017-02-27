@@ -45,6 +45,7 @@
                 </ul>
             </div>
             <div class="col-md-2 category-menu pull-md-10">
+            {{ services.category.getNavigationTree("all", services.sessionStorage.getLang()) | json_encode }}
                 <ul>
                     <li><a href="#">Computer</a></li>
                     <li><a href="#">Notebooks</a></li>

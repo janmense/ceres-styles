@@ -1,8 +1,9 @@
 .cmp-product-thumb{
     padding: .8rem;
     width: 100%;
-    overflow: visible;
+    overflow: hidden;
     border: 1px solid $gray-lighter;
+    background-color: #fff;
     margin-bottom: $grid-gutter-width/2;
 
     .thumb-background{
@@ -11,7 +12,7 @@
         right: -1px;
         bottom: -2px;
         left: -1px;
-        background-color: white;
+        background-color: #fff;
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
         border: 1px solid transparent;
 
@@ -19,35 +20,6 @@
         transform: scaleX(1) scaleY(1);
 
         transition: all 200ms ease-in-out;
-    }
-
-    .thumb-extras{
-        display: none;
-        position: absolute; // remove from flow
-        top: 0;
-        left: 0;
-        width: 33.33%;
-        height: 100%;
-        overflow: hidden;
-
-        transition: height 100ms,
-                    transform 200ms 50ms;
-
-        ul{
-            @include reset-list();
-        }
-    }
-
-    .thumb-controls{
-        position: absolute;
-        // width: calc(100% - 120px);
-        bottom: 0;
-        right: 0;
-        text-align: right;
-        overflow: hidden;
-        transition: all 200ms 100ms ease-in-out;
-        height: auto;
-        z-index: 100;
     }
 
     .thumb-inner{
@@ -67,7 +39,7 @@
     .main-image{
         @include img-contain();
         position: absolute;
-        background-color: white;
+        background-color: #fff;
     }
 
     //TODO create separate mixin
@@ -78,7 +50,7 @@
         bottom: auto;
         left: 0;
 
-        padding: .5rem 0;
+        padding: .5rem;
 
         .special-tag,
         .tag{
@@ -86,7 +58,7 @@
             padding: .3em .5em .2rem;
             font-size: .9rem;
             font-weight: 300;
-            box-shadow: none;
+            box-shadow: 0 0 3px 0 rgba(0,0,0,.4);
         }
     }
 
@@ -98,7 +70,7 @@
         height: auto;
         padding: 0 .8rem;
         margin-left: -.3em;
-        background-color: white;
+        background-color: #fff;
 
         transition: all 200ms ease-in-out;
     }
@@ -106,15 +78,15 @@
     .thumb-title{
         display: block;
         position: relative;
-        text-align:center;
+        text-align:left;
         font-weight: 700;
         color: $gray;
+        line-height: 1.1em;
     }
 
     .thumb-meta{
         margin-top: .5rem;
-        text-align:center;
-        margin-top: -1.75rem;
+        text-align:left;
 
     }
 
@@ -135,30 +107,23 @@
         display: block;
     }
 
+    .btn-group {
+        position: absolute;
+        bottom: 0;
+        left: calc(120px + 0.8rem);
+        z-index: 1000;
+        transition:all .3s ease;
+        opacity: 1;
+    }
+
+
     @include media-breakpoint-up(sm){
         padding: 0;
         margin-bottom: $grid-gutter-width;
 
 
         .thumb-background{
-            border: 1px solid $gray-lighter;
             display: block;
-        }
-
-        .thumb-extras{
-            display: flex;
-            flex-flow: column nowrap;
-            border-right: 2px solid transparent;
-            display: none;
-            ul{
-                flex: 1 1 auto;
-                overflow: auto;
-
-                li{
-                    width: 100%;
-                    margin-bottom: 2px;
-                }
-            }
         }
 
         .thumb-scroll-cmd {
@@ -167,14 +132,8 @@
             padding: .4rem;
         }
 
-        .thumb-controls{
-            bottom: .5rem;
-            
-        }
-
         .thumb-btn-buy{
             min-height: 2rem;
-            margin-right: .5rem;
         }
 
         .thumb-content{
@@ -183,40 +142,32 @@
             margin: 0;
         }
 
+        .btn-group {
+            bottom: .8rem;
+            left: auto;
+            right: .8rem;
+        }
+
         .thumb-title{
             font-weight: 400;
-
+            line-height: 1.5em;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            font-size: 1rem;
         }
 
         .thumb-image{
             width: 100%;
         }
 
-        &:hover{
+        .img-fluid{
+            transition: transform .4s cubic-bezier(0, 0, .26, 1), opacity .3s cubic-bezier(0, 0, .26, 1), -webkit-transform .3s cubic-bezier(0, 0, .26, 1);
+        }
+
+        &:hover {
             z-index: 1000;
-
-            .thumb-background{
-                transform: scaleX(1) scaleY(1);
-                box-shadow: none;
-            }
-
-            .thumb-extras{
-                transform: translate(-100% , 0);
-                height: 115%;
-                display: none;
-                transition: transform 200ms,
-                            height 100ms 100ms;
-            }
-            .thumb-basket-frame {
-                display: none;
-            }
-            .thumb-controls{
-                transform: none;
-                height: auto;
+            .img-fluid{
+                transform: scale(1.05);
             }
         }
 
@@ -224,5 +175,17 @@
 
     @include media-breakpoint-up(md){
 
+    }
+    @include media-breakpoint-up(lg){
+        .btn-group {
+            transition:all .3s ease;
+            opacity: 0;
+        }
+        &:hover {
+            .btn-group {
+                transition:all .3s ease;
+                opacity: 1;
+            }
+        }
     }
 }

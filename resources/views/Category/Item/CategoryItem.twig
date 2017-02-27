@@ -33,17 +33,26 @@
         <div class="m-b-3">
             {% include "Ceres::Category.Item.Partials.Pagination" with { 'paginatedResult': paginatedResult } %}
         </div>
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row is-flex">
+            <div class="col-md-10 push-md-2">
 
                 <ul class="product-list row grid">
                     {% for item in paginatedResult.documents %}
-                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <li class="col-xs-12 col-sm-6">
                             {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
                         </li>
                     {% endfor %}
                 </ul>
-
+            </div>
+            <div class="col-md-2 category-menu pull-md-10">
+                <ul>
+                    <li><a href="#">Computer</a></li>
+                    <li><a href="#">Notebooks</a></li>
+                    <li><a href="#">Tablets</a></li>
+                    <li><a href="#">Handys</a></li>
+                    <li><a href="#">Zubehör</a></li>
+                    <li><a href="#">Sonstiges</a></li>
+                </ul>
             </div>
         </div>
     </div>

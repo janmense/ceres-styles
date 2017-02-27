@@ -9,6 +9,7 @@ body {
 .page-content{
     @extend .p-t-1;
     background-color: white; 
+    color: $gray-dark;
 }
 
 
@@ -16,24 +17,27 @@ body {
     @extend .container-fluid;
     max-width: 1200px;
     z-index: auto;
+    &.login {
+        margin-top: 2rem;
+    }
+}
+
+.modal {
+    color: $gray-darker;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
 }
 
 
 h1,.h1,h2,.h2,h3,.h3,h4,.h4 {
     font-family: $font-family-heading;
     text-transform: uppercase;
-}
-
-
-// .shariff .orientation-horizontal li{
-//     min-width: 0;
-//     max-width: none;
-// }
-
-.page-not-found {
-    i.fa-search {
-        font-size: 10em;
-    }
 }
 
 

@@ -45,14 +45,29 @@
                 </ul>
             </div>
             <div class="col-md-2 category-menu pull-md-10">
-            {{ services.category.getNavigationTree("all", services.sessionStorage.getLang()) | json_encode }}
                 <ul>
-                    <li><a href="#">Computer</a></li>
-                    <li><a href="#">Notebooks</a></li>
-                    <li><a href="#">Tablets</a></li>
-                    <li><a href="#">Handys</a></li>
-                    <li><a href="#">Zubehör</a></li>
-                    <li><a href="#">Sonstiges</a></li>
+                    {% for category in services.category.getNavigationTree("item", lang) %}
+                        {% if category.children is empty %}
+                            <li>
+                                <a href="{{ services.category.getURL( category, lang ) }}">{{ category.details.first.name }}</a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a id="{{ category.details.first.name }}_Menu" href="{{ services.category.getURL( category, lang ) }}">
+                                    {{ category.details.first.name }}
+                                </a>
+                                <ul>
+                                    {% for subcat in category.children %}
+                                        <li>
+                                            <a href="{{ services.category.getURL( subcat, lang ) }}">
+                                                {{ subcat.details.first.name }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
                 </ul>
             </div>
         </div>

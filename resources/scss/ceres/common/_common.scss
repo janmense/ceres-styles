@@ -16,6 +16,10 @@ body {
     @extend .container-fluid;
     max-width: 1200px;
     z-index: auto;
+
+    &.login {
+        margin-top: 2rem;
+    }
 }
 
 
@@ -41,7 +45,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     }
 }
 
-
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
 
 
 dt {

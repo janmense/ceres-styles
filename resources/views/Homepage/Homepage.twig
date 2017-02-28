@@ -1,4 +1,10 @@
 {% extends 'Ceres::Homepage.Homepage' %}
+{% set homepageHeadlineDE  = config("Ceres.homepage.homepageHeadlineDE") %}
+{% set homepageHeadlineEN  = config("Ceres.homepage.homepageHeadlineEN") %}
+{% set homepageSublineDE  = config("Ceres.homepage.homepageSublineDE") %}
+{% set homepageSublineEN  = config("Ceres.homepage.homepageSublineEN") %}
+{% set homepageSectionHeadingDE  = config("Ceres.homepage.homepageSectionHeadingDE") %}
+{% set homepageSectionHeadingEN  = config("Ceres.homepage.homepageSectionHeadingEN") %}
 
 {% block ThemeHomepage %}
 
@@ -8,13 +14,19 @@
     <div class="row teaser">
         <div class="col-xs-12 text-xs-center">
             <i class="fa fa-gg-circle fa-5x" aria-hidden="true"></i>
-            <h1>Das ist ein Mega-Hipster Theme</h1>
-            <h3>Weiter unten beginnt erst der Content</h3>
+            <h1>
+                {% if (services.sessionStorage.getLang() = "de" %}
+                    {{ homepageHeadlineDE }}
+                {% else if %}
+                    {{ homepageHeadlineEN }}
+                {% endif %}
+            </h1>
+            <h3>{{ trans("CeresHipster::Template.homepageSubline") }}</h3>
         </div>
     </div>
     <div class="row page-content categoriegrid">
         <div class="col-xs-12 p-y-2">
-            <h1 class="m-b-2">Unsere beliebtesten Hipsters</h1>
+            <h1 class="m-b-2">{{ trans("CeresHipster::Template.homepageSectionHeading") }}</h1>
 <ul class="product-list row grid">
     <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         
@@ -25,7 +37,7 @@
                     <div class="thumb-controls">
                         <span>
                             <button class="btn btn-primary thumb-btn-buy">
-                            In den Warenkorb
+                            {{ trans("Ceres::Template.addToBasket") }}
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             </button>
                         </span>
@@ -73,7 +85,8 @@
                 </div>
                 <!-- ./ITEM DETAILS  -->
             </div>
-        </article>                    </li>
+        </article>
+        </li>
         <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
             
             <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
@@ -83,7 +96,7 @@
                         <div class="thumb-controls">
                             <span>
                                 <button class="btn btn-primary thumb-btn-buy">
-                                In den Warenkorb
+                                {{ trans("Ceres::Template.addToBasket") }}
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 </button>
                             </span>
@@ -150,7 +163,7 @@
                             <div class="thumb-controls">
                                 <span>
                                     <button class="btn btn-primary thumb-btn-buy">
-                                    In den Warenkorb
+                                    {{ trans("Ceres::Template.addToBasket") }}
                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                     </button>
                                 </span>
@@ -208,7 +221,7 @@
                                 <div class="thumb-controls">
                                     <span>
                                         <button class="btn btn-primary thumb-btn-buy">
-                                        In den Warenkorb
+                                        {{ trans("Ceres::Template.addToBasket") }}
                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                         </button>
                                     </span>
@@ -266,7 +279,7 @@
                                     <div class="thumb-controls">
                                         <span>
                                             <button class="btn btn-primary thumb-btn-buy">
-                                            In den Warenkorb
+                                            {{ trans("Ceres::Template.addToBasket") }}
                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                             </button>
                                         </span>
@@ -324,7 +337,7 @@
                                         <div class="thumb-controls">
                                             <span>
                                                 <button class="btn btn-primary thumb-btn-buy">
-                                                In den Warenkorb
+                                                {{ trans("Ceres::Template.addToBasket") }}
                                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                 </button>
                                             </span>
@@ -391,7 +404,7 @@
                                             <div class="thumb-controls">
                                                 <span>
                                                     <button class="btn btn-primary thumb-btn-buy">
-                                                    In den Warenkorb
+                                                    {{ trans("Ceres::Template.addToBasket") }}
                                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                     </button>
                                                 </span>
@@ -408,7 +421,7 @@
                                                     <div>
                                                         <div>
                                                             <a href="/sessel-king-george/124/1022">
-                                                                <img class="img-fluid lazy" data-original="/item/images/124/3000x3000/stock-photo-pyramid-build-from-colored-wooden-rings-w.jpg" src="/item/images/124/3000x3000/stock-photo-pyramid-build-from-colored-wooden-rings-w.jpg" style="display: inline;">
+                                        <img class="img-fluid lazy" data-original="/item/images/109/3000x3000/109-Barhocker-White-SanFrancisco.jpg" src="/item/images/109/3000x3000/109-Barhocker-White-SanFrancisco.jpg" style="display: inline;">
                                                             </a>
                                                         </div>
                                                     </div>
@@ -457,7 +470,7 @@
                                                 <div class="thumb-controls">
                                                     <span>
                                                         <button class="btn btn-primary thumb-btn-buy">
-                                                        In den Warenkorb
+                                                        {{ trans("Ceres::Template.addToBasket") }}
                                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                         </button>
                                                     </span>
@@ -474,7 +487,7 @@
                                                         <div>
                                                             <div>
                                                                 <a href="/sessel-floating-water/123/1021">
-                                                                    <img class="img-fluid lazy" data-original="/item/images/123/3000x3000/stock-photo-colorful-toy-truck-isolated-on-white-back.jpg" src="/item/images/123/3000x3000/stock-photo-colorful-toy-truck-isolated-on-white-back.jpg" style="display: inline;">
+                                                        <img class="img-fluid lazy" data-original="/item/images/114/3000x3000/114-Design-Sessel-BlackundWhite.jpg" src="/item/images/114/3000x3000/114-Design-Sessel-BlackundWhite.jpg" style="display: inline;">
                                                                 </a>
                                                             </div>
                                                         </div>

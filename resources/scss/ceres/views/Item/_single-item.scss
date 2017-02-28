@@ -218,12 +218,12 @@
             .nav-item {
                 float: left;
                 .nav-link {
-                    border:1px solid $gray;
+                    border:1px solid $brand-primary;
                     &.active,
                     &:hover {
-                        border:1px solid $gray;
+                        border:1px solid $brand-primary;
                         color: $white;
-                        background:$gray;
+                        background:$brand-primary;
                     }
                     &.active {
                         border-bottom: 1px solid transparent;

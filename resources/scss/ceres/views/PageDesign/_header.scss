@@ -116,13 +116,14 @@
 //navigation scss
 .wrapper-main {
 	#page-body {
-		margin-top: 131px;
+		margin-top: 87px;
 	}
 	.navbar{
 		font-family:$font-family-heading;
 		text-transform: uppercase;
 		background:$navbar-background-color;
 		border-bottom:0;
+		padding:0 1rem;
 		a {
 			color: $white;
 			&:hover {
@@ -256,7 +257,11 @@
 
 
 @include media-breakpoint-up(sm){
-
+	.wrapper-main {
+		#page-body {
+			margin-top: 112px;
+		}
+	}
 	.top-bar{
 		.controls-list{
 			width: auto;

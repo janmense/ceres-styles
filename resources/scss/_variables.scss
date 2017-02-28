@@ -95,16 +95,16 @@ $brand-danger:          #d9534f !default;
 $white:                 #fff;
 $black:                 #000;
 
-$top-bar-bg:            $gray-dark;
+$top-bar-bg:            darken($brand-primary, 20%);
 $top-bar-color:         #fff;
-$top-bar-basket-btn:    $brand-primary;
+$top-bar-basket-btn:    $top-bar-bg;
 $top-bar-basket-color:  #fff;
 
-$footer-bg:             $gray-lightest;
-$footer-color:          $gray-dark;
+$footer-bg:             darken($brand-primary, 20%);
+$footer-color:          $white;
 
-$footer-features-bg:    darken($gray-lightest, 10%);
-$footer-features-color: $gray-dark;
+$footer-features-bg:    transparent;
+$footer-features-color: $white;
 
 
 $availability_1:        $brand-success !default;
@@ -132,11 +132,11 @@ $link-hover-color:      darken($link-color, 15%) !default;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-@import url('https://fonts.googleapis.com/css?family=Economica|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Ubuntu');
 
 $font-family-sans-serif: 'Ubuntu', 'Open Sans', Helvetica, Arial, sans-serif;
 $font-family-helvetica: $font-family-sans-serif;
-$font-family-serif:     'Economica', sans-serif;
+$font-family-serif:     'Yanone Kaffeesatz', sans-serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:      $font-family-sans-serif;
@@ -744,7 +744,7 @@ $breadcrumb-padding-y:          .5rem !default;
 $breadcrumb-padding-x:          1rem !default;
 $breadcrumb-item-padding:       .5rem !default;
 
-$breadcrumb-bg:                 $gray-lightest !default;
+$breadcrumb-bg:                 $gray-lighter !default;
 $breadcrumb-divider-color:      $gray-light !default;
 $breadcrumb-active-color:       $gray-light !default;
 $breadcrumb-divider:            "/" !default;

@@ -7,7 +7,8 @@
 		    z-index: 1000;
 		    display: block;
 		    width: 100%;
-		    max-width: 100%;
+		    max-width: 1200px;
+		    margin:0 auto;
 		    background:$breadcrumb-bg;
 		    top:97px;
 		}
@@ -16,10 +17,10 @@
 			max-width: 1200px;
 		    margin: 0 auto;
 		    background: transparent;
-		    padding: .5rem 0;
+		    padding: .5rem 15px;
 
 		    a {
-		    	color:$gray-light;
+		    	color:$white;
 		    	&:hover {
 		    		color: $brand-primary;
 		    	}

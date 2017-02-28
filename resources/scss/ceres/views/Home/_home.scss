@@ -11,7 +11,9 @@
 }
 
 @include media-breakpoint-up(sm){        
-
+	.home {
+		margin-top:-32px;
+	}
 }
 
 @include media-breakpoint-up(md){        

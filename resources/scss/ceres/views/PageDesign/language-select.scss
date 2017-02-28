@@ -1,5 +1,5 @@
 .cmp-country-settings{
-	background-color: $gray-darker;
+	background-color: darken($brand-primary, 20%);
 	color: $white;
 	border-bottom: 0;
 
@@ -10,6 +10,8 @@
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
+    max-width: 1200px;
+  	margin:0 auto;
 
 	.country-settings-inner{
 		padding: 1rem;

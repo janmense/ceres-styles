@@ -1,11 +1,32 @@
-.breadcrumb{
-	margin-bottom: 0;
-	background-color: $gray-lightest;
-	padding:.5rem 15px;
-	a {
-		color: $white;
-		&:hover {
-			color: $brand-primary;
+//navigation scss
+
+@include media-breakpoint-up(md){
+	.wrapper-main {
+		& > nav.container-max {
+			padding-left:0;
+			padding-right:0;
+			position: absolute;
+		    z-index: 1000;
+		    display: block;
+		    width: 100%;
+		    max-width: 100%;
+		    background:transparent;
+		    top:96px;
+		}
+		.breadcrumb{
+			margin-bottom: 0;
+			max-width: 1200px;
+		    margin: 0 auto;
+		    background: $breadcrumb-bg;
+		    padding: .5rem 15px;
+		}
+	}
+	
+}
+@include media-breakpoint-up(lg){
+	.wrapper-main {
+		& > nav.container-max {
+		    top:88px;
 		}
 	}
 }

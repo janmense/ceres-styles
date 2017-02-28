@@ -58,17 +58,17 @@
         }
     }
     .nav-tabs {
-        border-bottom:1px solid $gray;
+        border-bottom:1px solid $brand-primary;
         .nav-item {
             float: none;
             .nav-link {
-                border:1px solid $gray;
+                border:1px solid $brand-primary;
                 color: $gray;
                 &.active,
                 &:hover {
-                    border:1px solid $gray;
+                    border:1px solid $brand-primary;
                     color: $white;
-                    background:$gray;
+                    background:$brand-primary;
                 }
             }
             &+.nav-item {

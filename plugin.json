@@ -1,18 +1,27 @@
 {
-  "name"              :"CeresColorful",
-  "description"       :"Plentymarkets Ceres Color theme",
-  "namespace"         :"CeresColorful",
-  "author"            :"Frontend Studios",
-  "keywords"          : ["plentymarkets", "plugins", "ceres", "style", "template", "theme"],
-  "type"              :"theme",
-  "require"           : [],
-  "serviceProvider"   :"CeresColorful\\Providers\\CeresColorfulServiceProvider",
-  "dataProviders"     :
-  [
-    {
-      "key":"CeresColorful\\Containers\\CeresColorful",
-      "name":"CeresColorful",
-      "description":""
-    }
-  ]
+    "version"           : "1.0.0",
+    "name"              : "CeresColorful",
+    "description"       : "Das ist ein Colorful Theme (beta) für Ceres",
+    "author"            : "Frontend Studios GmbH",
+    "license"           : "AGPL-3.0",
+    "pluginIcon"        : "icon_plugin_xs.png",
+    "price"             : 0.00,
+    "shortDescription"  : {"de": "Das ist ein Colorful Theme (beta) für Ceres","en":"This is a Colorful Theme (beta) for Ceres"},
+    "authorIcon"        : "icon_author_xs.png",
+    "categories"        : ["3518"],
+    "email"             : "dev@frontend-studios.de",
+    "phone"             : "+49 561 9885097-0",
+    "keywords"          : ["plentymarkets", "plugins", "layout", "theme", "ceres", "Colorful", "frontend studios"],
+    "type"              : "theme",
+    "require"           : ["Ceres", "IO"],
+    "namespace"         : "CeresColorful",
+    "serviceProvider"   : "CeresColorful\\Providers\\CeresColorfulServiceProvider",
+    "dataProviders"     :
+    [
+      {
+        "key":"CeresColorful\\Containers\\CeresColorful",
+        "name":"CeresColorful",
+        "description":"Colorful Theme for Ceres"
+      }
+    ]
 }

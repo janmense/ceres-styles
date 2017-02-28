@@ -1,5 +1,11 @@
 # Release Notes for Hipster Ceres
 
+## v1.0.1 Beta-Status (2017-02-28)
+
+### Changes
+- CSS Bugfixes in Checkout
+- New Preview Images for Marketplace
+
 ## v1.0.0 Beta-Status (2017-02-28)
 
 ### Features

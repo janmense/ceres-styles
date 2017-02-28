@@ -17,7 +17,7 @@
 .footer{
 	display: block;
 	background-color: $footer-bg;
-	
+	color:$footer-color;
 
 
 	a{
@@ -124,6 +124,6 @@
 }
 
 .static-link-list a {
-	color: black;
+	color: $footer-color;
 	margin-right: 10px;
 }

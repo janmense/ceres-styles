@@ -19,5 +19,33 @@
 	    "label"     : "Text for your Big Headline on Homepage (EN)",
 	    "type"      : "text",
 	    "default"   : "This is a super cool hipster theme!"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageSublineDE",
+	    "label"     : "Text für die zweite Überschrift (DE)",
+	    "type"      : "text",
+	    "default"   : "Weiter unten beginnt erst der Content"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageSublineEN",
+	    "label"     : "Text for second headline (EN)",
+	    "type"      : "text",
+	    "default"   : "Scroll down for more Content"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageSectionHeadingDE",
+	    "label"     : "Text für die Produkt-Übersicht (DE)",
+	    "type"      : "text",
+	    "default"   : "Unsere beliebtesten Hipsters"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageSectionHeadingEN",
+	    "label"     : "Text for product overview (EN)",
+	    "type"      : "text",
+	    "default"   : "Our favorite Hipsters"
 	}
 ]

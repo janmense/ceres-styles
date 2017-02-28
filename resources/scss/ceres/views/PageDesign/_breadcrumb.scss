@@ -9,6 +9,8 @@
 		    width: 100%;
 		    max-width: 1200px;
 		    margin:0 auto;
+		    left: 50%;
+		    transform: translateX(-50%);
 		    background:$breadcrumb-bg;
 		    top:97px;
 		}
@@ -17,7 +19,7 @@
 			max-width: 1200px;
 		    margin: 0 auto;
 		    background: transparent;
-		    padding: .5rem 15px;
+		    padding: .5rem 0;
 
 		    a {
 		    	color:$white;

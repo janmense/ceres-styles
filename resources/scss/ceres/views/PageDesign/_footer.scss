@@ -19,7 +19,8 @@
 	color:$footer-color;
 	display: block;
 	background-color: $footer-bg;
-	
+	max-width:1200px;
+	margin:0 auto;
 	a{
 		color: $footer-color;
 	}

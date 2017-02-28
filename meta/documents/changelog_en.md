@@ -1,0 +1,9 @@
+# Release Notes for Colorful Ceres
+
+## v1.0.0 Beta-Status (2017-02-28)
+
+### Features
+
+- based on basic Ceres Plugin
+- Completley Updatable
+- Redesigned Ceres in Colorful-Style

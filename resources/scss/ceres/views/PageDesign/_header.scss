@@ -84,7 +84,9 @@
 			}
 		}
 
-		.control-languages{
+		.control-languages a[aria-expanded="true"],
+		.control-search a[aria-expanded="true"] {
+			background:$gray-darker;
 
 		}
 
@@ -108,38 +110,11 @@
 				}
 
 				&:hover{
-					background-color: darken($brand-primary, 20%);
+					background-color: darken($brand-primary, 5%);
 				}
 			}
 		}
 	}
-
-	.country-settings{
-		min-width: 200px;
-		max-width: 320px;
-		padding: 0;
-		border: none;
-		position:absolute;
-
-		.disabled {
-			background-color: $gray-lighter;
-		    cursor: auto;
-
-			strong {
-				color: $gray-dark;
-			}
-		}
-
-		a:hover {
-			background-color: darken($brand-primary, 20%);
-			color: $gray-lighter;
-		    border: 1px solid darken($brand-primary, 20%);
-		}
-	}
-
-	#shippingCountryList {
-	}
-
 
 }
 
@@ -147,17 +122,6 @@
 .wrapper-main {
 	#page-body {
 		margin-top: 131px;
-	}
-	& > nav.container-max {
-		padding-left:0;
-		padding-right:0;
-		position: absolute;
-	    z-index: 1000;
-	    display: block;
-	    width: 100%;
-	    left: 50%;
-	    transform: translateX(-50%);
-	    top:101px;
 	}
 	.navbar{
 		font-family:$font-family-heading;
@@ -246,6 +210,10 @@
 
   	img {
     	max-height: 3rem;
+  	}
+
+  	svg path {
+  		fill:$white;
   	}
 }
 

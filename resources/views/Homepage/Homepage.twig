@@ -1,10 +1,10 @@
 {% extends 'Ceres::Homepage.Homepage' %}
-{% set homepageHeadlineDE  = config("Ceres.homepage.homepageHeadlineDE") %}
-{% set homepageHeadlineEN  = config("Ceres.homepage.homepageHeadlineEN") %}
-{% set homepageSublineDE  = config("Ceres.homepage.homepageSublineDE") %}
-{% set homepageSublineEN  = config("Ceres.homepage.homepageSublineEN") %}
-{% set homepageSectionHeadingDE  = config("Ceres.homepage.homepageSectionHeadingDE") %}
-{% set homepageSectionHeadingEN  = config("Ceres.homepage.homepageSectionHeadingEN") %}
+{% set homepageHeadlineDE  = config("CeresHipster.homepage.homepageHeadlineDE") %}
+{% set homepageHeadlineEN  = config("CeresHipster.homepage.homepageHeadlineEN") %}
+{% set homepageSublineDE  = config("CeresHipster.homepage.homepageSublineDE") %}
+{% set homepageSublineEN  = config("CeresHipster.homepage.homepageSublineEN") %}
+{% set homepageSectionHeadingDE  = config("CeresHipster.homepage.homepageSectionHeadingDE") %}
+{% set homepageSectionHeadingEN  = config("CeresHipster.homepage.homepageSectionHeadingEN") %}
 
 {% block ThemeHomepage %}
 
@@ -21,7 +21,7 @@
                     {{ homepageHeadlineEN }}
                 {% endif %}
             </h1>
-            <h3>{{ trans("CeresHipster::Template.homepageSubline") }}</h3>
+            <h3>{{ homepageSublineDE }}</h3>
         </div>
     </div>
     <div class="row page-content categoriegrid">

@@ -14,10 +14,10 @@
     <div class="row teaser">
         <div class="col-xs-12 text-xs-center">
             <i class="fa fa-gg-circle fa-5x" aria-hidden="true"></i>
-            <h1>{{ services.sessionStorage.getLang() }}
-                {% if (services.sessionStorage.getLang() == "de") %}
+            <h1>
+                {% if services.sessionStorage.getLang() == "de" %}
                     {{ homepageHeadlineDE }}
-                {% elseif (services.sessionStorage.getLang() == "en") %}
+                {% elseif services.sessionStorage.getLang() == "en" %}
                     {{ homepageHeadlineEN }}
                 {% endif %}
             </h1>

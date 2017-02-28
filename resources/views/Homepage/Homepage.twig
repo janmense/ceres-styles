@@ -17,7 +17,7 @@
             <h1>
                 {% if (services.sessionStorage.getLang() == "de") %}
                     {{ homepageHeadlineDE }}
-                {% else if %}
+                {% elseif (services.sessionStorage.getLang() == "en") %}
                     {{ homepageHeadlineEN }}
                 {% endif %}
             </h1>

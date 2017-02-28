@@ -1,6 +1,6 @@
-# Release Notes for Kids Theme
+# Release Notes for Kids Ceres
 
-## v0.9.9 Beta-Status (2017-02-22)
+## v1.0.0 Beta-Status (2017-02-28)
 
 ### Features
 

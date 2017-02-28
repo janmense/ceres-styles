@@ -104,12 +104,13 @@
 //navigation scss
 .wrapper-main {
 	#page-body {
-		margin-top: 118px;
+		margin-top: 102px;
 	}
 	.navbar{
-		font-family:$font-family-heading;
+		font-family:$font-family-serif;
 		background:$navbar-background-color;
 		border-bottom:0;
+		text-transform: uppercase;
 		a {
 			color: $brand-primary;
 			&:hover {
@@ -155,6 +156,7 @@
 						    border-top: .5em solid;
 						    border-right: .5em solid transparent;
 						    border-left: .5em solid transparent;
+						    border-bottom:0;
 						    color: $brand-primary;
 						    position: absolute;
 						    top: 0;
@@ -163,10 +165,10 @@
 						}
 						.dropdown-item {
 							color: $gray-darker;
-							font-size: .9rem;
+							font-size: 1.5em;
 							padding: .75rem 1rem !important;
 							&:hover {
-								background: $brand-primary;
+								background: darken($brand-primary,10%);
 								color: white;
 							}
 						}
@@ -284,7 +286,11 @@
 
 
 @include media-breakpoint-up(sm){
-
+	.wrapper-main {
+		#page-body {
+			margin-top: 127px;
+		}
+	}
 	.top-bar{
 		.controls-list{
 			width: auto;
@@ -364,14 +370,6 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-	}
-
-	.navbar-nav{
-		&>.nav-item{
-			&>.nav-link{
-				padding: $nav-link-padding;
-			}
-		}
 	}
 }
 

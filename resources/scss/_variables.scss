@@ -132,15 +132,16 @@ $link-hover-color:      darken($link-color, 15%) !default;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Economica|Ubuntu');
 
 $font-family-sans-serif: 'Ubuntu', 'Open Sans', Helvetica, Arial, sans-serif;
 $font-family-helvetica: $font-family-sans-serif;
-$font-family-serif:     'Amatic SC', cursive;
+$font-family-serif:     'Economica', sans-serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:      $font-family-sans-serif;
 $font-family-heading:    $font-family-sans-serif;
+
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px !default;
@@ -457,15 +458,15 @@ $navbar-padding-x:                  $spacer;
 $navbar-padding-y:                  ($spacer / 2);
 $navbar-brand-padding-y:            .25rem;
 
-$navbar-dark-color:                 $gray;
-$navbar-dark-hover-color:           white;
-$navbar-dark-active-color:          white;
-$navbar-dark-disabled-color:        $gray-light;
+$navbar-dark-color:                 $gray !default;
+$navbar-dark-hover-color:           white !default;
+$navbar-dark-active-color:          white !default;
+$navbar-dark-disabled-color:        $gray-light !default;
 
-$navbar-light-color:                rgba(0,0,0,.3);
-$navbar-light-hover-color:          rgba(0,0,0,.6);
-$navbar-light-active-color:         rgba(0,0,0,.8);
-$navbar-light-disabled-color:       rgba(0,0,0,.15);
+$navbar-light-color:                rgba(0,0,0,.3) !default;
+$navbar-light-hover-color:          rgba(0,0,0,.6) !default;
+$navbar-light-active-color:         rgba(0,0,0,.8) !default;
+$navbar-light-disabled-color:       rgba(0,0,0,.15) !default;
 
 
 // Navs

@@ -9,7 +9,7 @@
 		    width: 100%;
 		    max-width: 100%;
 		    background:$breadcrumb-bg;
-		    top:96px;
+		    top:97px;
 		}
 		.breadcrumb{
 			margin-bottom: 0;
@@ -31,7 +31,7 @@
 @include media-breakpoint-up(lg){
 	.wrapper-main {
 		& > nav.container-max {
-		    top:88px;
+		    top:95px;
 		}
 	}
 }

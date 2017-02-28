@@ -5,5 +5,19 @@
 	    "label"     : "URL to your company logo",
 	    "type"      : "text",
 	    "default"   : "/layout/plugins/production/ceres/images/ceres-logo.svg"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageSectionHeadingDE",
+	    "label"     : "Text für die Produkt-Übersicht (DE)",
+	    "type"      : "text",
+	    "default"   : "Unsere beliebtesten Produkte"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageSectionHeadingEN",
+	    "label"     : "Text for product overview (EN)",
+	    "type"      : "text",
+	    "default"   : "Our favorite products"
 	}
 ]

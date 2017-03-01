@@ -71,7 +71,7 @@ $grid-gutter-width: 30px;
 //## Gray and brand colors for use across Bootstrap.
 
 
-$gray-darker:           #111;
+$gray-darker:           #111 !default;
 $gray-dark:             #383639;
 $gray:                  #484848;
 $gray-light:            #b2b1a7;
@@ -107,7 +107,7 @@ $availability_5:        $brand-danger;
 
 //** Background color for `<body>`.
 $body-bg:               $gray-dark;
-$body-color:            white;
+$body-color:            $white;
 //** Global text color on `<body>`.
 $text-color:            white;
 
@@ -126,6 +126,8 @@ $link-hover-color:      darken($link-color, 15%);
 
 //== Typography
 //
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Playfair+Display');
+
 //## Font, line-height, and color for body text, headings, and more.
 $font-family-sans-serif:'Open Sans', Helvetica, Arial, sans-serif;
 $font-family-helvetica: $font-family-sans-serif;

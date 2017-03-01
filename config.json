@@ -1,0 +1,37 @@
+[	
+	{
+	    "tab"       : "Header",
+	    "key"       : "header.company_logo",
+	    "label"     : "URL to your company logo",
+	    "type"      : "text",
+	    "default"   : "/layout/plugins/production/ceres/images/ceres-logo.svg"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageFirstSlideTitleDE",
+	    "label"     : "Text für den ersten Slide-Titel (DE)",
+	    "type"      : "text",
+	    "default"   : "Ein ansprechender Titel"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageFirstSlideTitleEN",
+	    "label"     : "Text for first slide title (EN)",
+	    "type"      : "text",
+	    "default"   : "A nice Heading"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageSecondSlideTitleDE",
+	    "label"     : "Text für den zweiten Slide-Titel (DE)",
+	    "type"      : "text",
+	    "default"   : "Ein noch ansprechenderer Titel"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageSecondSlideTitleEN",
+	    "label"     : "Text for second slide title (EN)",
+	    "type"      : "text",
+	    "default"   : "A niceer Heading"
+	}
+]

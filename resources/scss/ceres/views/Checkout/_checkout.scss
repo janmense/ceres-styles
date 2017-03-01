@@ -10,6 +10,23 @@
 		text-transform: uppercase;
 		text-align: center;
 	}
+	.error {
+		background: $brand-danger;
+		padding: .5em;
+		color: $white;
+		border-radius: .1rem;
+		transition: all .3s ease;
+		.method-list {color:$text-color;}
+		&.form-check-label {
+			padding: .5em 1.75rem;
+			a {
+				color: $white;
+				&:hover {
+					color: $gray-lighter2;
+				}
+			}
+		}
+	}
 
 	@include media-breakpoint-up(sm){
 		

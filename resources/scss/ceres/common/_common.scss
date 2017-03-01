@@ -31,18 +31,15 @@ hr {
     @extend .container-fluid;
     max-width: 1200px;
     z-index: auto;
+
+    &.login {
+        margin-top: 2rem;
+    }
 }
 
 .modal {
     color: $gray-darker;
 }
-
-
-
-// .shariff .orientation-horizontal li{
-//     min-width: 0;
-//     max-width: none;
-// }
 
 
 .rating{

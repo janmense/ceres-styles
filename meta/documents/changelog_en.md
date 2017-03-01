@@ -1,6 +1,11 @@
 # Release Notes for Coffee Ceres
 
-## v0.1.1 Beta-Status (2017-02-22)
+## v1.0.1 Beta-Status (2017-03-01)
+
+### Changes
+- Updated Plugin Icons
+
+## v1.0.0 Beta-Status (2017-02-22)
 
 ### Features
 

@@ -107,6 +107,7 @@
 		text-transform: uppercase;
 		background:$gray-dark;
 		border-bottom:1px solid $gray;
+		padding:0 1rem;
 		a {
 			color: $white;
 			&:hover {
@@ -231,6 +232,7 @@
 	top: 50%;
 	right: 1rem;
 	transform: translate(0, -50%);
+	color:$white;
 }
 
 // Mobile only

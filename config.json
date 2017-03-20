@@ -4,7 +4,7 @@
 	    "key"       : "homepage.homepageTopsellerID",
 	    "label"     : "Kategorie ID für die Topseller auf der Startseite",
 	    "type"      : "text",
-	    "default"   : "16"
+	    "default"   : "17"
 	},
 	{
 	    "tab"       : "Homepage",

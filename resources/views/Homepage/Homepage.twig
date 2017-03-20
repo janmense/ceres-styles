@@ -9,10 +9,9 @@
 {% set homepageSectionHeadingDE  = config("CeresRockstar.homepage.homepageSectionHeadingDE") %}
 {% set homepageSectionHeadingEN  = config("CeresRockstar.homepage.homepageSectionHeadingEN") %}
 
-{% set paginatedResultTop      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId': homepageTopsellerID, 'page':1, 'items':8, 'facets': facetParams, 'sorting': itemSort}) %}
-{% set itemListTop          = paginatedResultTop.documents %}
+{% set paginatedResult      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':homepageTopsellerID, 'page':1, 'items':8, 'facets': facetParams, 'sorting': itemSort}) %}
 
-{% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+{% set itemListTop             = paginatedResult.documents %}
 
 {% block ThemeHomepage %}
 
@@ -20,7 +19,7 @@
 {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
 
 <div class="home container-max">
-
+    <resource name="itemList" :data="{ total: {{  paginatedResult.total | json_encode() }} }"></resource>
 
     <div class="row teaser">
         <div class="col-xs-12 text-xs-center">
@@ -50,12 +49,14 @@
                     {{ homepageSectionHeadingEN }}
                 {% endif %}
             </h1>
-            <ul class="product-list row grid">
+            <ul id="twig-rendered-item-list" class="product-list row grid">
                 {% for item in itemListTop %}
-                    <li class="col-xs-12 col-sm-6 col-md-3">
+                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                         {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
                     </li>
                 {% endfor %}
             </ul>
+        </div>
+    </div>
 </div>
 {% endblock %}

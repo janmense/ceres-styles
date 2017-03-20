@@ -9,7 +9,7 @@
 {% set homepageSectionHeadingDE  = config("CeresRockstar.homepage.homepageSectionHeadingDE") %}
 {% set homepageSectionHeadingEN  = config("CeresRockstar.homepage.homepageSectionHeadingEN") %}
 
-{% set paginatedResultTop      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId': {{ homepageTopsellerID }}, 'page':1, 'items':8, 'facets': facetParams, 'sorting': itemSort}) %}
+{% set paginatedResultTop      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId': homepageTopsellerID, 'page':1, 'items':8, 'facets': facetParams, 'sorting': itemSort}) %}
 {% set itemListTop          = paginatedResultTop.documents %}
 
 {% block ThemeHomepage %}

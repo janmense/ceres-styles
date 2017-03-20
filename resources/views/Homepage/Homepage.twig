@@ -12,6 +12,8 @@
 {% set paginatedResultTop      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId': homepageTopsellerID, 'page':1, 'items':8, 'facets': facetParams, 'sorting': itemSort}) %}
 {% set itemListTop          = paginatedResultTop.documents %}
 
+{% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+
 {% block ThemeHomepage %}
 
 {{ component( "Ceres::ItemList.Components.ItemList") }}

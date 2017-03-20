@@ -7,12 +7,12 @@
 // --------------------------------------------------
 
 // Flags settings
-$flag-icon-css-path: '../images/flags' !default;
-$flag-icon-rect-path: '/4x3' !default;
-$flag-icon-square-path: '/1x1' !default;
+// $flag-icon-css-path: '../images/flags' !default;
+// $flag-icon-rect-path: '/4x3' !default;
+// $flag-icon-square-path: '/1x1' !default;
 
 //font awesome
-$fa-font-path: "../documents/fonts" !default;
+// $fa-font-path: "../documents/fonts" !default;
 
 // Spacing
 //
@@ -134,7 +134,7 @@ $link-hover-color:      darken($link-color, 15%);
 
 // font-family: 'Fjalla One', sans-serif;
 // font-family: 'Playfair Display', serif;
-@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
@@ -144,7 +144,7 @@ $font-family-serif:     'Playfair Display', Georgia, 'Times New Roman', Times, s
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:      $font-family-sans-serif;
-$font-family-heading:   'Rock Salt', sans-serif;
+$font-family-heading:   'Bree Serif', sans-serif;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px !default;

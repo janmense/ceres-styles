@@ -1,4 +1,12 @@
-# Release Notes für Rockstar Theme
+# Changelog für Rockstar Theme
+
+## v1.0.1 Beta-Status (2017-03-20)
+
+### Änderungen
+
+- Anpassungen Startseite (benutzerfreundlicher)
+- Anpassungen Schriftarten
+- Abstände und diverse optische Anpassungen
 
 ## v0.9.9 Beta-Status (2017-02-22)
 

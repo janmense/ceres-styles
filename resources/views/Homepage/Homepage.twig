@@ -9,17 +9,42 @@
 {% set homepageSectionHeadingDE  = config("CeresRockstar.homepage.homepageSectionHeadingDE") %}
 {% set homepageSectionHeadingEN  = config("CeresRockstar.homepage.homepageSectionHeadingEN") %}
 
+{% set itemSort             = request.get("sorting") %}
+{% set orderBy              = itemSort[0] %}
+{% set variationShowType    = config("Ceres.item.variation_show_type") %}
+{% set categoryParams = {
+'variationShowType' : config("Ceres.item.variation_show_type"),
+'itemsPerPage'      : request.get("items") | default( config('Ceres.pagination.defaultItemsPerPage') ),
+'orderBy'           : itemSort,
+'facetParams'       : request.get("facets")
+} %}
+
+{% set page = request.get("page") | default(1) %}
+
+{% set itemsPerPage = config("Ceres.pagination.defaultItemsPerPage") %}
+{% if request.get("items") %}
+    {% set itemsPerPage = request.get("items") %}
+{% endif %}
+
 {% set paginatedResult      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':17, 'page':1, 'items':8, 'facets': facetParams, 'sorting': itemSort}) %}
 
-{% set itemListTop             = paginatedResult.documents %}
+{% set itemList             = paginatedResult.documents %}
+{% set paginationType       = config("Ceres.pagination.position") %}
 
 {% block ThemeHomepage %}
 
-{{ component( "Ceres::ItemList.Components.ItemList") }}
-{{ component( "Ceres::Basket.Components.AddToBasket" ) }}
+    {{ component( "Ceres::ItemList.Components.Filter.ItemFilterList") }}
+    {{ component( "Ceres::ItemList.Components.Filter.ItemFilterTagList") }}
+    {{ component( "Ceres::ItemList.Components.ItemList") }}
+    {{ component( "Ceres::ItemList.Components.ItemListSorting") }}
+    {{ component( "Ceres::ItemList.Components.ItemsPerPage") }}
+    {{ component( "Ceres::ItemList.Components.Pagination") }}
+
+    <resource name="facetParams" :data="[]"></resource>
+    <resource name="facets" :data="{{ paginatedResult.facets | json_encode }} || []"></resource>
+    <resource name="itemList" :data="{ total: {{  paginatedResult.total | json_encode() }} }"></resource>
 
 <div class="home container-max">
-    <resource name="itemList" :data="{ total: {{  paginatedResult.total | json_encode() }} }"></resource>
 
     <div class="row teaser">
         <div class="col-xs-12 text-xs-center">
@@ -50,7 +75,7 @@
                 {% endif %}
             </h1>
             <ul id="twig-rendered-item-list" class="product-list row grid">
-                {% for item in itemListTop %}
+                {% for item in itemList %}
                     <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                         {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
                     </li>

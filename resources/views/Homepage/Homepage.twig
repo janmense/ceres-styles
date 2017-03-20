@@ -33,7 +33,7 @@
 
 {% block ThemeHomepage %}
 
-    <!-- {{ paginatedResult.documents | json_encode }} -->
+    <!-- {{ itemList | json_encode }} -->
     <resource name="facetParams" :data="[]"></resource>
     <resource name="facets" :data="{{ paginatedResult.facets | json_encode }} || []"></resource>
     <resource name="itemList" :data="{ total: {{  paginatedResult.total | json_encode() }} }"></resource>

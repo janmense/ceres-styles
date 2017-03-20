@@ -9,24 +9,8 @@
 {% set homepageSectionHeadingDE  = config("CeresRockstar.homepage.homepageSectionHeadingDE") %}
 {% set homepageSectionHeadingEN  = config("CeresRockstar.homepage.homepageSectionHeadingEN") %}
 
-{% set itemSort             = request.get("sorting") %}
-{% set orderBy              = itemSort[0] %}
-{% set variationShowType    = config("Ceres.item.variation_show_type") %}
-{% set categoryParams = {
-'variationShowType' : config("Ceres.item.variation_show_type"),
-'itemsPerPage'      : request.get("items") | default( config('Ceres.pagination.defaultItemsPerPage') ),
-'orderBy'           : itemSort,
-'facetParams'       : request.get("facets")
-} %}
 
-{% set page = request.get("page") | default(1) %}
-
-{% set itemsPerPage = config("Ceres.pagination.defaultItemsPerPage") %}
-{% if request.get("items") %}
-    {% set itemsPerPage = request.get("items") %}
-{% endif %}
-
-{% set paginatedResult      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':17, 'page':1, 'items':8, 'facets': facetParams, 'sorting': itemSort}) %}
+{% set paginatedResult      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':17, 'page':1, 'items':8}) %}
 
 {% set itemList             = paginatedResult.documents %}
 {% set paginationType       = config("Ceres.pagination.position") %}
@@ -34,8 +18,6 @@
 {% block ThemeHomepage %}
 
     <!-- {{ itemList | json_encode }} -->
-    <resource name="facetParams" :data="[]"></resource>
-    <resource name="facets" :data="{{ paginatedResult.facets | json_encode }} || []"></resource>
     <resource name="itemList" :data="{ total: {{  paginatedResult.total | json_encode() }} }"></resource>
 
 <div class="home container-max">

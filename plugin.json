@@ -1,5 +1,5 @@
 {
-    "version"           : "1.0.1",
+    "version"           : "1.0.2",
     "name"              : "CeresHipster",
     "description"       : "Das ist ein Hipster Theme (beta) für Ceres",
     "author"            : "Frontend Studios GmbH",
@@ -10,7 +10,7 @@
     "authorIcon"        : "icon_author_xs.png",
     "categories"        : ["3518"],
     "email"             : "dev@frontend-studios.de",
-    "phone"             : "+49 561 9885097-0",
+    "phone"             : "+49 40 851 792 84 30",
     "keywords"          : ["plentymarkets", "plugins", "layout", "theme", "ceres", "hipster", "frontend studios"],
     "type"              : "theme",
     "require"           : ["Ceres", "IO"],

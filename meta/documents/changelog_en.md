@@ -1,4 +1,10 @@
-# Release Notes for Hipster Ceres
+# Changelog for Hipster Theme
+
+## v1.0.2 Beta-Status (2017-03-23)
+
+### Changes
+- Text on Homepage, Background Image editable now
+- Favourite Products on Homepage editable now
 
 ## v1.0.1 Beta-Status (2017-02-28)
 

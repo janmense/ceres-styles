@@ -1,11 +1,11 @@
-[	
+[
 	{
-	    "tab"       : "Header",
-	    "key"       : "header.company_logo",
-	    "label"     : "URL to your company logo",
-	    "type"      : "text",
-	    "default"   : "/layout/plugins/production/ceres/images/ceres-logo.svg"
-	},
+        "tab"       : "Global",
+        "key"       : "global.globalBackgroundImage",
+        "label"     : "URL to global background image",
+        "type"      : "text",
+        "default"   : "https://unsplash.it/1200/1200?image=876"
+    },
 	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageHeadlineDE",

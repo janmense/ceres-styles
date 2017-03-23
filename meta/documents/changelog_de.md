@@ -1,4 +1,10 @@
-# Release Notes für Hipster Theme
+# Changelog für Hipster Theme
+
+## v1.0.2 Beta-Status (2017-03-23)
+
+### Änderungen
+- Texte Startseite, Hintergrundbild nun editierbar
+- Beliebteste Produkte auf der Startseite nun editierbar
 
 ## v1.0.1 Beta-Status (2017-02-28)
 

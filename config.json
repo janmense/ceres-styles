@@ -8,6 +8,13 @@
     },
 	{
         "tab"       : "Homepage",
+        "key"       : "homepage.homepageIcon",
+        "label"     : "Icon Klasse von Font-Awesome ('hidden', zum Ausblenden)",
+        "type"      : "text",
+        "default"   : "fa-gg-circle"
+    },
+    {
+        "tab"       : "Homepage",
         "key"       : "homepage.homepageTopsellerID",
         "label"     : "Kategorie ID für die Topseller auf der Startseite",
         "type"      : "text",

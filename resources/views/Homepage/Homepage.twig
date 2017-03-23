@@ -3,6 +3,9 @@
 {% set lang         = services.sessionStorage.getLang() %}
 
 {% set homepageTopsellerID  = config("CeresHipster.homepage.homepageTopsellerID") %}
+
+{% set homepageIcon  = config("CeresHipster.homepage.homepageIcon") %}
+
 {% set homepageHeadlineDE  = config("CeresHipster.homepage.homepageHeadlineDE") %}
 {% set homepageHeadlineEN  = config("CeresHipster.homepage.homepageHeadlineEN") %}
 {% set homepageSublineDE  = config("CeresHipster.homepage.homepageSublineDE") %}
@@ -27,7 +30,7 @@
 
     <div class="row teaser">
         <div class="col-xs-12 text-xs-center">
-            <i class="fa fa-gg-circle fa-5x" aria-hidden="true"></i>
+            <i class="fa {{ homepageIcon }} fa-5x" aria-hidden="true"></i>
             <h1>
                 {% if lang == "de" %}
                     {{ homepageHeadlineDE }}

@@ -7,12 +7,19 @@
         "default"   : "https://unsplash.it/1200/1200?image=876"
     },
 	{
-	    "tab"       : "Homepage",
-	    "key"       : "homepage.homepageHeadlineDE",
-	    "label"     : "Text für die große Headline auf der Startseite (DE)",
-	    "type"      : "text",
-	    "default"   : "Das ist ein Mega-Hipster Theme"
-	},
+        "tab"       : "Homepage",
+        "key"       : "homepage.homepageTopsellerID",
+        "label"     : "Kategorie ID für die Topseller auf der Startseite",
+        "type"      : "text",
+        "default"   : "17"
+    },
+    {
+        "tab"       : "Homepage",
+        "key"       : "homepage.homepageHeadlineDE",
+        "label"     : "Text für die große Headline auf der Startseite (DE)",
+        "type"      : "text",
+        "default"   : "Das ist ein Mega-Hipster Theme"
+    },
 	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageHeadlineEN",

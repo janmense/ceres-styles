@@ -32,5 +32,11 @@ class CeresTestServiceProvider extends ServiceProvider
             $container->setTemplate("CeresTest::Homepage.Homepage");
             return false;
         });
+
+        // provide template to use for homepage
+        $eventDispatcher->listen('IO.tpl.category.item', function(TemplateContainer $container, $templateData) {
+            $container->setTemplate("CeresTest::Category.Item.CategoryItem");
+            return false;
+        });
     }
 }

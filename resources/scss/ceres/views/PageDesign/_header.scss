@@ -1,23 +1,12 @@
 //header scss
-.wrapper-main.isSticky.sticky {
-	.top-bar {
-		background: rgba(0,0,0,.75);
-		transition: all .3s ease;
-		.navbar {
-			
-		}
-	}
-}
 .top-bar{
 	position: fixed;
 	width: 100%;
-	left: 50%;
-	transform: translateX(-50%);
 	
 	z-index: $zIndex-6;
-	color: $gray-dark;
+	color: $top-bar-color;
 	background-color: $top-bar-bg;
-	transition: all .3s ease;
+	box-shadow: 0 0 7px 0 rgba(0,0,0,.5);
 	a{
 		text-decoration: none;
 		transition: all 300ms;
@@ -39,12 +28,12 @@
 			a{
 				padding: 0.5rem .8rem;
 				display: inline-block;
-				color: $top-bar-color;
+				color: $gray-lighter;
 
 				&[aria-expanded="true"],
 				&:hover{
-					background:darken($top-bar-bg, 15%);
-					color: $top-bar-color;
+					background-color: $brand-primary;
+					color: #FFF;
 				}
 			}
 
@@ -53,9 +42,7 @@
 				font-size: 1.2rem;
 			}
 		}
-		.pipe {
-			border-left:1px solid $white;
-		}
+
 		.control-user{
 			flex: 1 0 auto;
 			margin-left: 1rem;
@@ -69,7 +56,7 @@
 						border:0;
 						border-top: 1px solid $gray-lighter;
 						display: block;
-						color: $top-bar-color;
+						color: $brand-primary;
 						&:first-child {
 							border-top:0;
 						}
@@ -91,16 +78,6 @@
 
 		}
 
-		.control-search{
-
-			& > a[aria-expanded=true] {
-				background:#000;
-			}
-			& > a[aria-expanded=false] {
-				background:transparent;
-			}
-		}
-
 		.control-basket{
 			.toggle-basket-preview{
 				background-color: $top-bar-basket-btn;
@@ -111,94 +88,92 @@
 				}
 
 				&:hover{
-					background-color: darken($top-bar-basket-btn, 20%);
+					background-color: darken($top-bar-basket-btn, 10%);
+				}
+			}
+		}
+	}
+
+
+}
+
+
+//navigation scss
+.wrapper-main {
+	#page-body {
+		margin-top: 118px;
+	}
+	.navbar{
+		font-family:$font-family-heading;
+		background:$navbar-background-color;
+		border-bottom:1px solid darken($gray-lighter2, 2%);
+		a {
+			color: $gray-dark;
+			&:hover {
+				color: $gray-darker;
+			}
+		}
+		.navbar-nav {
+			.nav-item {
+				& > .nav-link {
+					min-width: 140px;
+					border-right:1px solid $gray-lighter;
+					text-align: center;
+				}
+				&:last-child {
+					.nav-link {
+						border-right:0;
+					}
+				}
+				.nav-link.dropdown-toggle::after {
+					display: none;
+				}
+				&:hover {
+					.nav-link {
+						background:transparent;
+						color: $gray-darker;
+						cursor: pointer;
+						&.dropdown-toggle::after {
+							display: none;
+						}
+					}
+					.dropdown-menu {
+						background:$brand-primary;
+						border:0;
+						border-left:0;
+						border-right:0;
+						border-bottom:0;
+						text-align: center;
+						&::before {
+							display: inline-block;
+						    width: 0;
+						    height: 0;
+						    content: "";
+						    border-bottom: .5em solid;
+						    border-right: .5em solid transparent;
+						    border-left: .5em solid transparent;
+						    color: $brand-primary;
+						    position: absolute;
+						    top: -.5em;
+						    left: 50%;
+						    transform: translateX(-50%);
+						}
+						.dropdown-item {
+							color: $white;
+							font-size: .9rem;
+							padding: .75rem 1rem !important;
+							&:hover {
+								background: darken($brand-primary, 10%);
+								color: white;
+							}
+						}
+					}
 				}
 			}
 		}
 	}
 }
 
-.wrapper-main {
-	#page-body {
-		margin-top: 117px;
-	}
-	& > .top-bar {
-		.navbar{
-			& > .container-max {
-				padding-left:0;
-				padding-right:0;
-			}
-			font-family:$font-family-heading;
-			text-transform: uppercase;
-			background-color: $navbar-background-color;
-			border-bottom: 0;
-			a {
-				color: $white;
-				&:hover {
-					color: $white;
-				}
-			}
-			.navbar-nav {
-				.nav-item {
-					& > .nav-link {
-						min-width: 140px;
-						border-right:1px solid rgba(255,255,255,.3);
-						text-align: center;
-					}
-					&:last-child {
-						.nav-link {
-							border-right:0;
-						}
-					}
-					.nav-link.dropdown-toggle::after {
-						display: none;
-					}
-					&:hover {
-						.nav-link {
-							background: $brand-primary;
-							color:$white;
-							cursor: pointer;
-							&.dropdown-toggle::after {
-								display: none;
-							}
-						}
-						.dropdown-menu {
-							background:$white;
-							border:0;
-							border-left:1px solid $gray-lighter;
-							border-right:1px solid $gray-lighter;
-							border-bottom:1px solid $gray-lighter;
-							&::before {
-								display: inline-block;
-							    width: 0;
-							    height: 0;
-							    content: "";
-							    border-top: .5em solid;
-							    border-right: .5em solid transparent;
-							    border-left: .5em solid transparent;
-							    border-bottom:0;
-							    color: $brand-primary;
-							    position: absolute;
-							    top: 0;
-							    left: 50%;
-							    transform: translateX(-50%);
-							}
-							.dropdown-item {
-								color: $gray-darker;
-								font-size: .9rem;
-								padding: .75rem 1rem !important;
-								&:hover {
-									background:$brand-primary;
-									color: white;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
 
 
 //navigation scss
@@ -207,13 +182,14 @@
 	padding:0;
 	z-index: $zindex-navbar;
 	background-color: $navbar-background-color;
-	border-bottom: 0;
+	border-bottom: 1px solid $gray-lighter;
 
-	.navbar-nav {
+	.navbar {
 
 		border-radius: 0;
 		padding:0;
 		z-index: $zindex-navbar;
+		border-bottom: 1px solid $gray-lighter;
 
 		.dropdown:hover .dropdown-menu {
 			display: block !important;
@@ -224,19 +200,17 @@
 
 .brand-wrapper{
 	position: relative;
+	padding:0 15px;
 }
 
 .navbar-brand {
 
 	float: none;
-	padding: .5rem 1rem;
+	padding: .5rem 0;
   	display: inline-block;
 
   	img {
     	max-height: 3rem;
-  	}
-  	svg path {
-  		fill: $white;
   	}
 }
 
@@ -268,7 +242,6 @@
 	top: 50%;
 	right: 1rem;
 	transform: translate(0, -50%);
-	background: white;
 }
 
 // Mobile only
@@ -314,6 +287,7 @@
 	.wrapper-main .navbar .navbar-nav .nav-item:hover .dropdown-menu {
 		text-align: left;
 	}
+	
 	.sticky {
 		.header {
 			.navbar {
@@ -331,6 +305,7 @@
 	}
 
 	.top-bar {
+		box-shadow: none;
 		.list-inline {
 			.list-inline-item {
 				#login-change {
@@ -379,6 +354,9 @@
 }
 
 @include media-breakpoint-up(xl){
+	.brand-wrapper{
+		padding:0;
+	}
  	.sticky {
  		.header {
  			.navbar {

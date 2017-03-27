@@ -17,18 +17,17 @@
 .footer{
 	display: block;
 	background-color: $footer-bg;
-	color:$footer-color;
-
-
+	
 	a{
 		color: $footer-color;
 	}
+
 	.svg.plenty-brand {
-		padding:0 .5em;
-		path {
-			fill: $footer-color;
-		}
-	}
+ 		padding:0 .5em;
+ 		path {
+ 			fill: $gray-dark;
+ 		}
+ 	}
 
 	.footer-features{
 		border-top: 1px solid transparent;
@@ -114,6 +113,7 @@
 
 	}
 }
+
 .plenty-brand {
 	height: 30px;
 	margin: 2em 0 0.2em;
@@ -124,6 +124,6 @@
 }
 
 .static-link-list a {
-	color: $footer-color;
+	color: black;
 	margin-right: 10px;
 }

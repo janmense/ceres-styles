@@ -35,7 +35,7 @@
 @import "ceres/components/accordion";
 @import "ceres/components/alerts";
 @import "ceres/components/featured-category";
-@import "ceres/components/featured-sale";
+@import "ceres/components/featured-sale-new";
 
 // Forms
 @import "ceres/forms/input-groups";
@@ -68,8 +68,10 @@
 @import "ceres/views/Templates/ToggleCategoryListView/toggle-list-view";
 
 // Pages
+@import "ceres/views/Category/category-list";
+@import "ceres/views/Category/category-list-controls";
 @import "ceres/views/Home/home";
 @import "ceres/views/Checkout/checkout";
 @import "ceres/views/Item/single-item";
 @import "ceres/views/ItemList/loading-animation";
-@import "ceres/views/Category/category-list";
+@import "ceres/views/StaticPages/static-pages";

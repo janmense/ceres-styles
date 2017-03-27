@@ -1,6 +1,6 @@
 <?php
 
-namespace CeresHipster\Providers;
+namespace CeresDefault\Providers;
 
 use IO\Extensions\Functions\Partial;
 use IO\Helper\CategoryKey;
@@ -13,7 +13,7 @@ use Plenty\Plugin\ConfigRepository;
 use IO\Helper\ComponentContainer;
 
 
-class CeresHipsterServiceProvider extends ServiceProvider
+class CeresDefaultServiceProvider extends ServiceProvider
 {
     const EVENT_LISTENER_PRIORITY = 99;
     /**
@@ -29,12 +29,8 @@ class CeresHipsterServiceProvider extends ServiceProvider
 
         // provide template to use for homepage
         $eventDispatcher->listen('IO.tpl.home', function(TemplateContainer $container, $templateData) {
-            $container->setTemplate("CeresHipster::Homepage.Homepage");
+            $container->setTemplate("CeresDefault::Homepage.Homepage");
             return false;
         });
-
-        $eventDispatcher->listen('IO.init.templates', function (Partial $partial) {
-            $partial->set('page-design', 'CeresHipster::PageDesign.PageDesign');
-        }, self::EVENT_LISTENER_PRIORITY);
     }
 }

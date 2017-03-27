@@ -1,3 +1,5 @@
+//navigation scss
+
 @include media-breakpoint-up(md){
 	.wrapper-main {
 		& > nav.container-max {
@@ -17,12 +19,6 @@
 		    margin: 0 auto;
 		    background: transparent;
 		    padding: .5rem 15px;
-		    a {
-		    	color: $breadcrumb-color;
-		    	&:hover {
-		    		color: darken($breadcrumb-color,10%);
-		    	}
-		    }
 		}
 	}
 	

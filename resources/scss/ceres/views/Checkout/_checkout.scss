@@ -10,6 +10,7 @@
 		text-transform: uppercase;
 		text-align: center;
 	}
+
 	.cmp-address-list,
 	.form-check-label {
 		transition: all .3s ease;
@@ -21,7 +22,7 @@
 		color: $white;
 		border-radius: .1rem;
 		transition: all .3s ease;
-		.method-list {color:$text-color;}
+
 		&.form-check-label {
 			padding: .5em 1.75rem;
 			a {
@@ -34,15 +35,15 @@
 	}
 
 	@include media-breakpoint-up(sm){
-		
+
 	}
 
 	@include media-breakpoint-up(md){
-		
+
 	}
 
 	@include media-breakpoint-up(lg){
-		
+
 	}
 
 }

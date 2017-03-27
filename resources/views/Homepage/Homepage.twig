@@ -4,45 +4,45 @@
 
     
 
-    {% set heroExtra1Image  = config("CeresDefault.homepage.heroExtra1Image") %}
-    {% set heroExtra1Link  = config("CeresDefault.homepage.heroExtra1Link") %}
-    {% set heroExtra1Name  = config("CeresDefault.homepage.heroExtra1Name") %}
+    {% set heroExtra1Image  = config("CeresTest.homepage.heroExtra1Image") %}
+    {% set heroExtra1Link  = config("CeresTest.homepage.heroExtra1Link") %}
+    {% set heroExtra1Name  = config("CeresTest.homepage.heroExtra1Name") %}
 
-    {% set heroExtra2Image  = config("CeresDefault.homepage.heroExtra2Image") %}
-    {% set heroExtra2Link  = config("CeresDefault.homepage.heroExtra2Link") %}
-    {% set heroExtra2Name  = config("CeresDefault.homepage.heroExtra2Name") %}
+    {% set heroExtra2Image  = config("CeresTest.homepage.heroExtra2Image") %}
+    {% set heroExtra2Link  = config("CeresTest.homepage.heroExtra2Link") %}
+    {% set heroExtra2Name  = config("CeresTest.homepage.heroExtra2Name") %}
 
-    {% set featuredCategory1Image  = config("CeresDefault.homepage.featuredCategory1Image") %}
-    {% set featuredCategory1Link  = config("CeresDefault.homepage.featuredCategory1Link") %}
-    {% set featuredCategory1Name  = config("CeresDefault.homepage.featuredCategory1Name") %}
+    {% set featuredCategory1Image  = config("CeresTest.homepage.featuredCategory1Image") %}
+    {% set featuredCategory1Link  = config("CeresTest.homepage.featuredCategory1Link") %}
+    {% set featuredCategory1Name  = config("CeresTest.homepage.featuredCategory1Name") %}
 
-    {% set featuredCategory2Image  = config("CeresDefault.homepage.featuredCategory2Image") %}
-    {% set featuredCategory2Link  = config("CeresDefault.homepage.featuredCategory2Link") %}
-    {% set featuredCategory2Name  = config("CeresDefault.homepage.featuredCategory2Name") %}
+    {% set featuredCategory2Image  = config("CeresTest.homepage.featuredCategory2Image") %}
+    {% set featuredCategory2Link  = config("CeresTest.homepage.featuredCategory2Link") %}
+    {% set featuredCategory2Name  = config("CeresTest.homepage.featuredCategory2Name") %}
 
 
 
-    {% set homepageImageFirstSlide  = config("CeresDefault.homepage.homepageImageFirstSlide") %}
-    {% set homepageProductLinkFirstSlide  = config("CeresDefault.homepage.homepageProductLinkFirstSlide") %}
-    {% set homepageProductNameFirstSlide  = config("CeresDefault.homepage.homepageProductNameFirstSlide") %}
+    {% set homepageImageFirstSlide  = config("CeresTest.homepage.homepageImageFirstSlide") %}
+    {% set homepageProductLinkFirstSlide  = config("CeresTest.homepage.homepageProductLinkFirstSlide") %}
+    {% set homepageProductNameFirstSlide  = config("CeresTest.homepage.homepageProductNameFirstSlide") %}
 
-    {% set homepageImageSecondSlide  = config("CeresDefault.homepage.homepageImageSecondSlide") %}
-    {% set homepageProductLinkSecondSlide  = config("CeresDefault.homepage.homepageProductLinkSecondSlide") %}
-    {% set homepageProductNameSecondSlide  = config("CeresDefault.homepage.homepageProductNameSecondSlide") %}
+    {% set homepageImageSecondSlide  = config("CeresTest.homepage.homepageImageSecondSlide") %}
+    {% set homepageProductLinkSecondSlide  = config("CeresTest.homepage.homepageProductLinkSecondSlide") %}
+    {% set homepageProductNameSecondSlide  = config("CeresTest.homepage.homepageProductNameSecondSlide") %}
 
-    {% set homepageImageThirdSlide  = config("CeresDefault.homepage.homepageImageThirdSlide") %}
-    {% set homepageProductLinkThirdSlide  = config("CeresDefault.homepage.homepageProductLinkThirdSlide") %}
-    {% set homepageProductNameThirdSlide  = config("CeresDefault.homepage.homepageProductNameThirdSlide") %}
+    {% set homepageImageThirdSlide  = config("CeresTest.homepage.homepageImageThirdSlide") %}
+    {% set homepageProductLinkThirdSlide  = config("CeresTest.homepage.homepageProductLinkThirdSlide") %}
+    {% set homepageProductNameThirdSlide  = config("CeresTest.homepage.homepageProductNameThirdSlide") %}
 
-    {% set homepageCategoryTop  = config("CeresDefault.homepage.homepageCategoryTop") %}
+    {% set homepageCategoryTop  = config("CeresTest.homepage.homepageCategoryTop") %}
 
-    {% set homepageCategoryNew  = config("CeresDefault.homepage.homepageCategoryNew") %}
-    {% set homepageCategoryNewImage  = config("CeresDefault.homepage.homepageCategoryNewImage") %}
-    {% set homepageCategoryNewName  = config("CeresDefault.homepage.homepageCategoryNewName") %}
+    {% set homepageCategoryNew  = config("CeresTest.homepage.homepageCategoryNew") %}
+    {% set homepageCategoryNewImage  = config("CeresTest.homepage.homepageCategoryNewImage") %}
+    {% set homepageCategoryNewName  = config("CeresTest.homepage.homepageCategoryNewName") %}
 
-    {% set homepageCategorySale  = config("CeresDefault.homepage.homepageCategorySale") %}
-    {% set homepageCategorySaleImage  = config("CeresDefault.homepage.homepageCategorySaleImage") %}
-    {% set homepageCategorySaleName  = config("CeresDefault.homepage.homepageCategorySaleName") %}
+    {% set homepageCategorySale  = config("CeresTest.homepage.homepageCategorySale") %}
+    {% set homepageCategorySaleImage  = config("CeresTest.homepage.homepageCategorySaleImage") %}
+    {% set homepageCategorySaleName  = config("CeresTest.homepage.homepageCategorySaleName") %}
 
     {% set topsellerId = services.category.get(homepageCategoryTop, lang) %}
     {% set newId = services.category.get(homepageCategoryNew, lang) %}
@@ -68,7 +68,10 @@
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active">
-                                    <a class="hero-category" href="{{ homepageProductLinkFirstSlide }}">
+                                    <a class="hero-category" 
+
+                                    href="{{ homepageProductLinkFirstSlide }}">
+                                    
                                         <img src="{{ homepageImageFirstSlide }}" alt="{{ homepageProductNameFirstSlide }}" class="img-fluid">
                                         <div class="carousel-caption">
                                             <h1><i class="fa fa-angle-double-right" aria-hidden="true"></i> {{ homepageProductNameFirstSlide }}</h1>

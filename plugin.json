@@ -1,6 +1,6 @@
 {
     "version"           : "1.0.0",
-    "name"              : "CeresDefault",
+    "name"              : "CeresTest",
     "description"       : "Das ist ein Default Theme für Ceres",
     "author"            : "Frontend Studios GmbH",
     "license"           : "AGPL-3.0",
@@ -14,13 +14,13 @@
     "keywords"          : ["plentymarkets", "plugins", "layout", "theme", "ceres", "frontend studios"],
     "type"              : "theme",
     "require"           : ["Ceres", "IO"],
-    "namespace"         : "CeresDefault",
-    "serviceProvider"   : "CeresDefault\\Providers\\CeresDefaultServiceProvider",
+    "namespace"         : "CeresTest",
+    "serviceProvider"   : "CeresTest\\Providers\\CeresTestServiceProvider",
     "dataProviders"     :
     [
       {
-        "key":"CeresDefault\\Containers\\CeresDefault",
-        "name":"CeresDefault",
+        "key":"CeresTest\\Containers\\CeresTest",
+        "name":"CeresTest",
         "description":"Default Theme für Ceres"
       }
     ]

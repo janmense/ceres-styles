@@ -2,19 +2,19 @@
 // // ==========================================================================
 // // External Libs
 // // ==========================================================================
-// @import "../../node_modules/bootstrap/scss/bootstrap";
-// @import "../../node_modules/font-awesome/scss/font-awesome";
-// @import "../../node_modules/shariff/build/shariff.complete.css";
-// @import "../../node_modules/flag-icon-css/sass/flag-icon";
-// @import "../../node_modules/owl.carousel/dist/assets/owl.carousel.css";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/shariff/build/shariff.complete.css";
+@import "../../node_modules/flag-icon-css/sass/flag-icon";
+@import "../../node_modules/owl.carousel/dist/assets/owl.carousel.css";
 
 // // ==========================================================================
 // // Custom styles
 // // ==========================================================================
 
 // // global
-// @import "ceres/mixins/general-mixins";
-// @import "ceres/mixins/proportional-boxes";
+@import "ceres/mixins/general-mixins";
+@import "ceres/mixins/proportional-boxes";
 // @import "ceres/common/typography";
 // @import "ceres/common/common";
 // @import "ceres/common/structure";
@@ -34,8 +34,8 @@
 // @import "ceres/components/component-base";
 // @import "ceres/components/accordion";
 // @import "ceres/components/alerts";
-// @import "ceres/components/featured-category";
-// @import "ceres/components/featured-sale-new";
+@import "ceres/components/featured-category";
+@import "ceres/components/featured-sale-new";
 
 // // Forms
 // @import "ceres/forms/input-groups";
@@ -59,7 +59,7 @@
 // @import "ceres/views/Templates/BasketTotalSum/basket-total-sum";
 // @import "ceres/views/Templates/CategoryListItem/category-list-item";
 // @import "ceres/views/Templates/CategoryViewFilter/category-view-filter";
-// @import "ceres/views/Templates/Hero/component-hero";
+@import "ceres/views/Templates/Hero/component-hero";
 // @import "ceres/views/Templates/ItemListSort/pagination";
 // @import "ceres/views/Templates/ItemRating/item-rating-roll";
 // @import "ceres/views/Templates/ItemRating/item-rating-section";
@@ -70,7 +70,7 @@
 // // Pages
 // @import "ceres/views/Category/category-list";
 // @import "ceres/views/Category/category-list-controls";
-// @import "ceres/views/Home/home";
+@import "ceres/views/Home/home";
 // @import "ceres/views/Checkout/checkout";
 // @import "ceres/views/Item/single-item";
 // @import "ceres/views/ItemList/loading-animation";

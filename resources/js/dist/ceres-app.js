@@ -2703,7 +2703,7 @@ Vue.component("variation-select", {
                     {
                         // get variation data from remote
                         ApiService
-                            .get("/rest/io/variations/" + variationId)
+                            .get("/rest/io/variations/" + variationId, {template: "Ceres::Item.SingleItem"})
                             .done(function(response)
                             {
                                 // store received variation data for later reuse
@@ -2729,11 +2729,12 @@ Vue.component("variation-select", {
             var url = window.location.pathname;
             var title = document.getElementsByTagName("title")[0].innerHTML;
             // ItemURLs should match: "/<ITEM_NAME>/<ITEM_ID>/<VARIATION_ID>/"
-            var match = url.match(/\/([^\/]*)\/([\d]+)\/?([\d]*)/);
+            // var match = url.match(/\/([^\/]*)\/([\d]+)\/?([\d]*)/);
+            var match = url.match(/\/([^\/]*)_([\d]+)_([\d]*)/);
 
             if (match)
             {
-                url = "/" + match[1] + "/" + match[2] + "/" + newVariation.documents[0].id;
+                url = "/" + match[1] + "_" + match[2] + "_" + newVariation.documents[0].id;
             }
 
             window.history.replaceState({}, title, url);
@@ -4715,16 +4716,14 @@ Vue.filter("itemName", function(item, selectedName)
 },{}],64:[function(require,module,exports){
 Vue.filter("itemURL", function(item)
 {
+    var urlPath = item.texts[0].urlPath;
 
-    var urlContent = item.texts[0].urlPath.split("/");
-    var i          = urlContent.length - 1;
-
-    if (urlContent[i].length > 0)
+    if (urlPath.length > 0)
     {
-        return "/" + urlContent[i] + "/" + item.variation.itemId + "/" + item.variation.id;
+        return "/" + urlPath + "_" + item.item.id + "_" + item.variation.id;
     }
-    return "/" + item.variation.itemId + "/" + item.variation.id;
 
+    return "/" + item.item.id + "_" + item.variation.id;
 });
 
 },{}],65:[function(require,module,exports){
@@ -6583,7 +6582,7 @@ var init = (function($, window, document)
             }
         });
 
-        $("#detlef").on("click", function()
+        $("#to-top").on("click", function()
         {
             $("html, body").animate({scrollTop: 0}, "slow");
         });

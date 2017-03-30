@@ -20,19 +20,9 @@
                     <li class="btnClose"></li>
                 </ul>
                  <ul class="mainmenu">
-                     <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                      {% set categories = services.category.getNavigationTree("item", lang) %}
                      {% set level = 1 %}
                      {% include "Ceres::PageDesign.Partials.Header.NavigationList" with  { 'categories' : categories, 'level' : level } %}
-
-                     <li class="pull-lg-right isSearch">
-                        <a class="nav-link" data-toggle="collapse" href="#searchBox"
-                           aria-expanded="false"
-                           aria-controls="searchBox"
-                           data-parent="#controlsList">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </li>
                  </ul>
              </div>
         </div>

@@ -1,11 +1,11 @@
 [	
 	{
-	    "tab"       : "Header",
-	    "key"       : "header.company_logo",
-	    "label"     : "URL to your company logo",
-	    "type"      : "text",
-	    "default"   : "/layout/plugins/production/ceres/images/ceres-logo.svg"
-	},
+        "tab"       : "Global",
+        "key"       : "global.globalBackgroundImage",
+        "label"     : "URL to global background image",
+        "type"      : "text",
+        "default"   : "https://www.toptal.com/designers/subtlepatterns/patterns/halftone.png"
+    },
 	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageSectionHeadingDE",
@@ -19,5 +19,26 @@
 	    "label"     : "Text for product overview (EN)",
 	    "type"      : "text",
 	    "default"   : "Our favorite products"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageTopsellerID",
+	    "label"     : "Kategorie ID für Topseller",
+	    "type"      : "text",
+	    "default"   : "17"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageSlide1Img",
+	    "label"     : "Bild-Pfad für den ersten Slide",
+	    "type"      : "text",
+	    "default"   : "https://unsplash.it/1200/400?image=674"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageSlide2Img",
+	    "label"     : "Bild-Pfad für den zweiten Slide",
+	    "type"      : "text",
+	    "default"   : "https://unsplash.it/1200/400?image=1080"
 	}
 ]

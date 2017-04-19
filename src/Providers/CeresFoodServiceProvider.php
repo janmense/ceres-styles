@@ -2,14 +2,20 @@
 
 namespace CeresFood\Providers;
 
+use IO\Extensions\Functions\Partial;
+use IO\Helper\CategoryKey;
+use IO\Helper\CategoryMap;
 use IO\Helper\TemplateContainer;
-use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
+use Plenty\Plugin\Events\Dispatcher;
+use Plenty\Plugin\ConfigRepository;
+use IO\Helper\ComponentContainer;
+
 
 class CeresFoodServiceProvider extends ServiceProvider
 {
-
+    const EVENT_LISTENER_PRIORITY = 99;
     /**
      * Register the service provider.
      */
@@ -18,7 +24,7 @@ class CeresFoodServiceProvider extends ServiceProvider
          
     }
 
-    public function boot (Twig $twig, Dispatcher $eventDispatcher)
+    public function boot(Twig $twig, Dispatcher $eventDispatcher, ConfigRepository $config)
     {
 
         // provide template to use for homepage
@@ -26,5 +32,9 @@ class CeresFoodServiceProvider extends ServiceProvider
             $container->setTemplate("CeresFood::Homepage.Homepage");
             return false;
         });
+        
+        $eventDispatcher->listen('IO.init.templates', function (Partial $partial) {
+            $partial->set('page-design', 'CeresFood::PageDesign.PageDesign');
+        }, self::EVENT_LISTENER_PRIORITY);
     }
 }

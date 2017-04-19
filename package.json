@@ -1,10 +1,10 @@
 {
   "name": "CeresFood",
   "license": "AGPL-3.0",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/plentymarkets/callisto-4.git"
+    "url": "https://github.com/plentymarkets/ceres-styles"
   },
   "devDependencies": {
     "browserify": "^13.0.1",
@@ -44,7 +44,7 @@
     "jquery": "^2.2.4",
     "lightbox2": "^2.8.2",
     "moment": "^2.15.2",
-    "owlcarousel": "^1.3.3",
+    "owl.carousel": "^2.2.0",
     "shariff": "^1.24.0",
     "sticky-kit": "^1.1.3",
     "tether": "^1.3.2",

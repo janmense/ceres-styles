@@ -32,5 +32,9 @@ class CeresColorfulServiceProvider extends ServiceProvider
             $container->setTemplate("CeresColorful::Homepage.Homepage");
             return false;
         });
+        
+        $eventDispatcher->listen('IO.init.templates', function (Partial $partial) {
+            $partial->set('page-design', 'CeresColorful::PageDesign.PageDesign');
+        }, self::EVENT_LISTENER_PRIORITY);
     }
 }

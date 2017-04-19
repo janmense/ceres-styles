@@ -1,5 +1,12 @@
 [	
 	{
+        "tab"       : "Global",
+        "key"       : "global.globalBackgroundImage",
+        "label"     : "URL to global background image",
+        "type"      : "text",
+        "default"   : "https://images.pexels.com/photos/370/lights-night-dark-abstract.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+    },
+	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageSectionHeadingDE",
 	    "label"     : "Text für die Produkt-Übersicht (DE)",
@@ -18,20 +25,20 @@
 	    "key"       : "homepage.homepageTopsellerID",
 	    "label"     : "Kategorie ID für Topseller",
 	    "type"      : "text",
-	    "default"   : "16"
+	    "default"   : "17"
 	},
 	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageSlide1Img",
 	    "label"     : "Bild-Pfad für den ersten Slide",
 	    "type"      : "text",
-	    "default"   : "/layout/plugins/production/cerescolorful/images/c0.jpg"
+	    "default"   : "https://unsplash.it/1200/400?image=1069"
 	},
 	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageSlide2Img",
 	    "label"     : "Bild-Pfad für den zweiten Slide",
 	    "type"      : "text",
-	    "default"   : "/layout/plugins/production/cerescolorful/images/c1.jpg"
+	    "default"   : "https://unsplash.it/1200/400?image=976"
 	}
 ]

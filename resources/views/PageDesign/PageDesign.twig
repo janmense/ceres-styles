@@ -23,7 +23,7 @@
         {% endblock %}
     </head>
 
-    <body style="background: url(' {{ globalBackgroundImage }} ') no-repeat center center fixed; background-size:cover;">
+    <body style="background: url(' {{ globalBackgroundImage }} ') repeat center center;">
         <resource name="user" :data="{ isLoggedIn: {{ frontend.Account.getIsAccountLoggedIn | json_encode() }} }" ></resource>
         <resource name="basket" route="/rest/io/basket/" data="{{ services.basket.getBasket() | json_encode() }}" :events="['AfterBasketChanged!basket']"></resource>
         <resource name="itemSearch" :data="{}"></resource>

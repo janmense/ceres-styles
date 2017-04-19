@@ -12,5 +12,26 @@
 	    "label"     : "Text for product overview (EN)",
 	    "type"      : "text",
 	    "default"   : "Our favorite products"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageTopsellerID",
+	    "label"     : "Kategorie ID für Topseller",
+	    "type"      : "text",
+	    "default"   : "16"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageSlide1Img",
+	    "label"     : "Bild-Pfad für den ersten Slide",
+	    "type"      : "text",
+	    "default"   : "/layout/plugins/production/cerescolorful/images/c0.jpg"
+	},
+	{
+	    "tab"       : "Homepage",
+	    "key"       : "homepage.homepageSlide2Img",
+	    "label"     : "Bild-Pfad für den zweiten Slide",
+	    "type"      : "text",
+	    "default"   : "/layout/plugins/production/cerescolorful/images/c1.jpg"
 	}
 ]

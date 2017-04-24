@@ -1,12 +1,65 @@
 {% extends 'Ceres::Homepage.Homepage' %}
+{% set lang = services.sessionStorage.getLang() %}
 
 {% set homepageFirstSlideTitleDE  = config("CeresDark.homepage.homepageFirstSlideTitleDE") %}
-{% set homepageFirstSlideTitleEN  = config("CeresDark.homepage.homepageFirstSlideTitleDE") %}
+{% set homepageFirstSlideTitleEN  = config("CeresDark.homepage.homepageFirstSlideTitleEN") %}
+{% set homepageFirstSlideImgUrl  = config("CeresDark.homepage.homepageFirstSlideImgUrl") %}
+{% set homepageFirstSlideLink  = config("CeresDark.homepage.homepageFirstSlideLink") %}
+
 {% set homepageSecondSlideTitleDE  = config("CeresDark.homepage.homepageSecondSlideTitleDE") %}
-{% set homepageSecondSlideTitleEN  = config("CeresDark.homepage.homepageSecondSlideTitleDE") %}
+{% set homepageSecondSlideTitleEN  = config("CeresDark.homepage.homepageSecondSlideTitleEN") %}
+{% set homepageSecondSlideImgUrl  = config("CeresDark.homepage.homepageSecondSlideImgUrl") %}
+{% set homepageSecondSlideLink  = config("CeresDark.homepage.homepageSecondSlideLink") %}
+
+{% set homepageExtraHero1TitleDE = config("CeresDark.homepage.homepageExtraHero1TitleDE") %}
+{% set homepageExtraHero1TitleEN = config("CeresDark.homepage.homepageExtraHero1TitleEN") %}
+{% set homepageExtraHero1ImgUrl = config("CeresDark.homepage.homepageExtraHero1ImgUrl") %}
+{% set homepageExtraHero1Link = config("CeresDark.homepage.homepageExtraHero1Link") %}
+
+{% set homepageExtraHero2TitleDE = config("CeresDark.homepage.homepageExtraHero2TitleDE") %}
+{% set homepageExtraHero2TitleEN = config("CeresDark.homepage.homepageExtraHero2TitleEN") %}
+{% set homepageExtraHero2ImgUrl = config("CeresDark.homepage.homepageExtraHero2ImgUrl") %}
+{% set homepageExtraHero2Link = config("CeresDark.homepage.homepageExtraHero2Link") %}
+
+{% set homepageSale2TitleDE = config("CeresDark.homepage.homepageSale2TitleDE") %}
+{% set homepageSale2TitleEN = config("CeresDark.homepage.homepageSale2TitleEN") %}
+{% set homepageSaleImgUrl = config("CeresDark.homepage.homepageSaleImgUrl") %}
+{% set homepageSaleLink = config("CeresDark.homepage.homepageSaleLink") %}
+
+{% set homepageFeatCat1TitleDE = config("CeresDark.homepage.homepageFeatCat1TitleDE") %}
+{% set homepageFeatCat1TitleEN = config("CeresDark.homepage.homepageFeatCat1TitleEN") %}
+{% set homepageFeatCat1ImgUrl = config("CeresDark.homepage.homepageFeatCat1ImgUrl") %}
+{% set homepageFeatCat1Link = config("CeresDark.homepage.homepageFeatCat1Link") %}
+
+{% set homepageFeatCat2TitleDE = config("CeresDark.homepage.homepageFeatCat2TitleDE") %}
+{% set homepageFeatCat2TitleEN = config("CeresDark.homepage.homepageFeatCat2TitleEN") %}
+{% set homepageFeatCat2ImgUrl = config("CeresDark.homepage.homepageFeatCat2ImgUrl") %}
+{% set homepageFeatCat2Link = config("CeresDark.homepage.homepageFeatCat2Link") %}
+
+{% set homepageNewTitleDE = config("CeresDark.homepage.homepageNewTitleDE") %}
+{% set homepageNewTitleEN = config("CeresDark.homepage.homepageNewTitleEN") %}
+{% set homepageNewId = config("CeresDark.homepage.homepageNewId") %}
+
+{% set homepageTopsellerTitleDE = config("CeresDark.homepage.homepageTopsellerTitleDE") %}
+{% set homepageTopsellerTitleEN = config("CeresDark.homepage.homepageTopsellerTitleEN") %}
+{% set homepageTopsellerId = config("CeresDark.homepage.homepageTopsellerId") %}
+
+{% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+
+{% set paginatedResultNew      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':homepageNewId, 'page':1, 'items':4, 'facets': facetParams, 'sorting': itemSort}) %}
+
+{% set paginatedResultTop      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':homepageTopsellerId, 'page':1, 'items':4, 'facets': facetParams, 'sorting': itemSort}) %}
+
+
+{% set itemListNew             = paginatedResultNew.documents %}
+{% set itemListTop             = paginatedResultTop.documents %}
 
 
 {% block ThemeHomepage %}
+
+{{ component( "Ceres::ItemList.Components.ItemList") }}
+{{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
+{{ component( "Ceres::Basket.Components.AddToBasket" ) }}
 
 <div class="home container-max page-content">
     
@@ -16,36 +69,44 @@
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                        <a class="hero-category" href="">
-                            <img src="http://lorempixel.com/output/nature-q-g-800-450-6.jpg" alt="First slide" class="img-fluid">
+                        <a class="hero-category" href="{{ homepageFirstSlideLink }}">
+                            <img src="{{ homepageFirstSlideImgUrl }}" alt="{{ homepageFirstSlideTitleDE }}" class="img-fluid">
                             <div class="hero-category-inner">
                                 <h4 class="hero-category-headline">
-                                    {% if services.sessionStorage.getLang() == "de" %}
+                                    {% if lang == "de" %}
                                         {{ homepageFirstSlideTitleDE }}
-                                    {% elseif services.sessionStorage.getLang() == "en" %}
+                                    {% elseif lang == "en" %}
                                         {{ homepageFirstSlideTitleEN }}
                                     {% endif %}
                                 </h4>
                                 <div class="hero-category-cta">
-                                    {{ trans("CeresDark::Template.homepageCTA") }}
+                                    {% if lang == "de" %}
+                                        Ansehen
+                                    {% elseif lang == "en" %}
+                                        Show
+                                    {% endif %}
                                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="carousel-item">
-                        <a class="hero-category" href="">
-                            <img src="http://lorempixel.com/output/nature-q-g-800-450-1.jpg" alt="Second slide" class="img-fluid">
+                        <a class="hero-category" href="{{ homepageSecondSlideLink }}">
+                            <img src="{{ homepageSecondSlideImgUrl }}" alt="{{ homepageSecondSlideTitleDE }}" class="img-fluid">
                             <div class="hero-category-inner">
                                 <h4 class="hero-category-headline">
-                                    {% if services.sessionStorage.getLang() == "de" %}
+                                    {% if lang == "de" %}
                                         {{ homepageSecondSlideTitleDE }}
-                                    {% elseif services.sessionStorage.getLang() == "en" %}
+                                    {% elseif lang == "en" %}
                                         {{ homepageSecondSlideTitleEN }}
                                     {% endif %}
                                 </h4>
                                 <div class="hero-category-cta">
-                                    {{ trans("CeresDark::Template.homepageCTA") }}
+                                    {% if lang == "de" %}
+                                        Ansehen
+                                    {% elseif lang == "en" %}
+                                        Show
+                                    {% endif %}
                                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                                 </div>
                             </div>
@@ -62,21 +123,28 @@
         </div>
 
         <div class="hero-xtras">
-            <a class="hero-category" href="">
-                <img src="http://lorempixel.com/output/nature-q-g-400-300-4.jpg" alt="First slide">
+            <a class="hero-category" href="{{ homepageExtraHero1Link }}">
+                <img src="{{ homepageExtraHero1ImgUrl }}" alt="{{ homepageExtraHero1TitleDE }}">
                 <div class="hero-category-inner">
                     <h4 class="hero-category-headline">
-                        {{ trans("CeresDark::Template.homepageCatTitle") }}
+                        {% if lang == "de" %}
+                            {{ homepageExtraHero1TitleDE }}
+                        {% elseif lang == "en" %}
+                            {{ homepageExtraHero1TitleEN }}
+                        {% endif %}
                     </h4>
 
                 </div>
             </a>
-            <a class="hero-category" href="">
-                <img src="http://lorempixel.com/output/nature-q-g-400-300-10.jpg" alt="First slide">
-
+            <a class="hero-category" href="{{ homepageExtraHero2Link }}">
+                <img src="{{ homepageExtraHero2ImgUrl }}" alt="{{ homepageExtraHero2TitleDE }}">
                 <div class="hero-category-inner">
                     <h4 class="hero-category-headline">
-                        {{ trans("CeresDark::Template.homepageCatTitle") }}
+                        {% if lang == "de" %}
+                            {{ homepageExtraHero2TitleDE }}
+                        {% elseif lang == "en" %}
+                            {{ homepageExtraHero2TitleEN }}
+                        {% endif %}
                     </h4>
 
                 </div>
@@ -86,16 +154,19 @@
     </div>
 
     <!-- SALE -->
-
     <div class="row prop-row m-y-2">
         <div class="col-xs-12">
             <div class="prop-xs-2-1 prop-sm-4-1 prop-md-6-1">
                 <div class="prop-inner">
-                    <a class="featured-sale" href="">
-                        <img src="http://lorempixel.com/output/abstract-q-c-1200-600-4.jpg" alt="First slide">
+                    <a class="featured-sale" href="{{ homepageSaleLink }}">
+                        <img src="{{ homepageSaleImgUrl }}" alt="{{ homepageSale2TitleDE }}">
                         <div class="featured-category-inner">
                             <h4 class="featured-category-headline">
-                                {{ trans("CeresDark::Template.homepageSaleTitle") }}
+                                {% if lang == "de" %}
+                                    {{ homepageSale2TitleDE }}
+                                {% elseif lang == "en" %}
+                                    {{ homepageSale2TitleEN }}
+                                {% endif %}
                             </h4>
 
                         </div>
@@ -108,325 +179,42 @@
     <!-- END SALE -->
 
     <div class="m-b-2">
-        <h4 class="section-header">{{ trans("CeresDark::Template.homepageNewProducts") }}</h4>
+        <h4 class="section-header">
+            {% if lang == "de" %}
+                {{ homepageNewTitleDE }}
+            {% elseif lang == "en" %}
+                {{ homepageNewTitleEN }}
+            {% endif %}
+        </h4>
         <!-- crosssell start -->
         <div class="row">
             <div class="col-xs-12">
                 <ul class="product-list row grid">
-                                            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                            
-
-
-
-<article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-    <div class="thumb-inner">
-        <div class="thumb-background"></div>
-
-        <div>
-
-        <div class="btn-group" role="group" aria-label="Thumb Control">
-            <button type="button" class="btn btn-outline-primary">
-                <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
-            </button>
-                                                            </div>
-    </div>
-
-    
-
-        <div class="thumb-image">
-            <div class="square-container">
-                <div class="square-inner main-image">
-                    <a href="/sessel-king-george/124/1022">
-                        <img class="img-fluid lazy" data-original="https://fes-themes.plentymarkets-cloud01.com/item/images/124/370x450/124-Sessel-King-George.jpg" src="https://fes-themes.plentymarkets-cloud01.com/item/images/124/370x450/124-Sessel-King-George.jpg" style="display: block;">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- STORE SPECIALS -->
-
-        
-            
-            <div class="special-tags">
-                
-                    
-                
-                <span class="tag bg-success">
-                    Top-Artikel
-                </span>
-
-            </div>
-                <!-- ./STORE SPECIALS -->
-
-        <!-- ITEM DETAILS -->
-        <div class="thumb-content">
-            <a href="/sessel-king-george/124/1022" class="thumb-title small">
-                Sessel King George
-            </a>
-            <div class="thumb-meta">
-                                
-
-                <div class="prices">
-                                            <a href="/sessel-king-george/124/1022">
-                            <del class="crossprice">
-                                245,00&nbsp;€
-                            </del>
-                        </a>
-                    
-                    <a href="/sessel-king-george/124/1022">
-                        <div class="price">
-                            222,00&nbsp;€
-                        </div>
-                    </a>
-                </div>
-
-                                
-            </div>
-        </div>
-        <!-- ./ITEM DETAILS  -->
-    </div>
-</article>                        </li>
-                                            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                            
-
-
-
-<article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-    <div class="thumb-inner">
-        <div class="thumb-background"></div>
-
-        <div>
-
-        <div class="btn-group" role="group" aria-label="Thumb Control">
-            <button type="button" class="btn btn-outline-primary">
-                <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
-            </button>
-                                                            </div>
-    </div>
-
-    
-
-        <div class="thumb-image">
-            <div class="square-container">
-                <div class="square-inner main-image">
-                    <a href="/sessel-redlabel/125/1023">
-                        <img class="img-fluid lazy" data-original="https://fes-themes.plentymarkets-cloud01.com/item/images/125/370x450/125-Sessel-RedLabel.jpg" src="https://fes-themes.plentymarkets-cloud01.com/item/images/125/370x450/125-Sessel-RedLabel.jpg" style="display: block;">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- STORE SPECIALS -->
-
-        
-            
-            <div class="special-tags">
-                
-                                        
-                                                                                                                
-                
-                <span class="tag bg-danger">
-                    -12%
-                </span>
-
-            </div>
-                <!-- ./STORE SPECIALS -->
-
-        <!-- ITEM DETAILS -->
-        <div class="thumb-content">
-            <a href="/sessel-redlabel/125/1023" class="thumb-title small">
-                Sessel RedLabel
-            </a>
-            <div class="thumb-meta">
-                                
-
-                <div class="prices">
-                                            <a href="/sessel-redlabel/125/1023">
-                            <del class="crossprice">
-                                190,00&nbsp;€
-                            </del>
-                        </a>
-                    
-                    <a href="/sessel-redlabel/125/1023">
-                        <div class="price">
-                            169,00&nbsp;€
-                        </div>
-                    </a>
-                </div>
-
-                                
-            </div>
-        </div>
-        <!-- ./ITEM DETAILS  -->
-    </div>
-</article>                        </li>
-                                            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                            
-
-
-
-<article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-    <div class="thumb-inner">
-        <div class="thumb-background"></div>
-
-        <div>
-
-        <div class="btn-group" role="group" aria-label="Thumb Control">
-            <button type="button" class="btn btn-outline-primary">
-                <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
-            </button>
-                                                            </div>
-    </div>
-
-    
-
-        <div class="thumb-image">
-            <div class="square-container">
-                <div class="square-inner main-image">
-                    <a href="/sessel-relaxed-stacked-stones/126/1024">
-                        <img class="img-fluid lazy" data-original="https://fes-themes.plentymarkets-cloud01.com/item/images/126/370x450/126-Sessel-Relaxed-Stacked-Stones.jpg" src="https://fes-themes.plentymarkets-cloud01.com/item/images/126/370x450/126-Sessel-Relaxed-Stacked-Stones.jpg" style="display: block;">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- STORE SPECIALS -->
-
-                <!-- ./STORE SPECIALS -->
-
-        <!-- ITEM DETAILS -->
-        <div class="thumb-content">
-            <a href="/sessel-relaxed-stacked-stones/126/1024" class="thumb-title small">
-                Sessel Relaxed Stacked Stones
-            </a>
-            <div class="thumb-meta">
-                                
-
-                <div class="prices">
-                                            <a href="/sessel-relaxed-stacked-stones/126/1024">
-                            <del class="crossprice">
-                                350,00&nbsp;€
-                            </del>
-                        </a>
-                    
-                    <a href="/sessel-relaxed-stacked-stones/126/1024">
-                        <div class="price">
-                            329,00&nbsp;€
-                        </div>
-                    </a>
-                </div>
-
-                                
-            </div>
-        </div>
-        <!-- ./ITEM DETAILS  -->
-    </div>
-</article>                        </li>
-                                            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                            
-
-
-
-<article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-    <div class="thumb-inner">
-        <div class="thumb-background"></div>
-
-        <div>
-
-        <div class="btn-group" role="group" aria-label="Thumb Control">
-            <button type="button" class="btn btn-outline-primary">
-                <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
-            </button>
-                                                            </div>
-    </div>
-
-    
-
-        <div class="thumb-image">
-            <div class="square-container">
-                <div class="square-inner main-image">
-                    <a href="/sofa-2-sitzer-sunflower/127/1025">
-                        <img class="img-fluid lazy" data-original="https://fes-themes.plentymarkets-cloud01.com/item/images/127/370x450/127-Sofa-2-Sitzer-Sunflower.jpg" src="https://fes-themes.plentymarkets-cloud01.com/item/images/127/370x450/127-Sofa-2-Sitzer-Sunflower.jpg" style="display: block;">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- STORE SPECIALS -->
-
-        
-            
-            <div class="special-tags">
-                
-                    
-                
-                <span class="tag bg-primary">
-                    Neuheit
-                </span>
-
-            </div>
-                <!-- ./STORE SPECIALS -->
-
-        <!-- ITEM DETAILS -->
-        <div class="thumb-content">
-            <a href="/sofa-2-sitzer-sunflower/127/1025" class="thumb-title small">
-                Sofa 2-Sitzer Sunflower
-            </a>
-            <div class="thumb-meta">
-                                
-
-                <div class="prices">
-                                            <a href="/sofa-2-sitzer-sunflower/127/1025">
-                            <del class="crossprice">
-                                345,00&nbsp;€
-                            </del>
-                        </a>
-                    
-                    <a href="/sofa-2-sitzer-sunflower/127/1025">
-                        <div class="price">
-                            335,00&nbsp;€
-                        </div>
-                    </a>
-                </div>
-
-                                
-            </div>
-        </div>
-        <!-- ./ITEM DETAILS  -->
-    </div>
-</article>                        </li>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                    </ul>
+                    {% for item in itemListNew %}
+                        <li class="col-xs-12 col-sm-6 col-md-3">
+                            {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
 
     <!-- CATEGORIES -->
-    
+
     <div class="row prop-row m-b-2">
         <div class="col-xs-12 col-md-8">
             <div class="prop-xs-2-1">
                 <div class="prop-inner">
-                    <a class="featured-category" href="">
-                        <img src="http://lorempixel.com/output/abstract-q-c-800-400-8.jpg" alt="First slide">
+                    <a class="featured-category" href="{{ homepageFeatCat1Link }}">
+                        <img src="{{ homepageFeatCat1ImgUrl }}" alt="{{ homepageFeatCat1TitleDE }}">
                         <div class="featured-category-inner">
                             <h4 class="featured-category-headline">
-                                {{ trans("CeresDark::Template.homepageCatTitle") }}
+                                {% if lang == "de" %}
+                                    {{ homepageFeatCat1TitleDE }}
+                                {% elseif lang == "en" %}
+                                    {{ homepageFeatCat1TitleEN }}
+                                {% endif %}
                             </h4>
 
                         </div>
@@ -435,14 +223,18 @@
             </div>
         </div>
 
-        <div class="col-xs-6 col-md-4">
-            <div class="prop-xs-1-1">
+        <div class="col-xs-12 col-md-4">
+            <div class="prop-xs-2-1 prop-md-1-1">
                 <div class="prop-inner">
-                    <a class="featured-category" href="">
-                        <img src="http://lorempixel.com/output/abstract-q-c-800-400-10.jpg" alt="First slide">
+                    <a class="featured-category" href="{{ homepageFeatCat2Link }}">
+                        <img src="{{ homepageFeatCat2ImgUrl }}" alt="{{ homepageFeatCat2TitleDE }}">
                         <div class="featured-category-inner">
                             <h4 class="featured-category-headline">
-                               {{ trans("CeresDark::Template.homepageCatTitle") }}
+                                {% if lang == "de" %}
+                                    {{ homepageFeatCat2TitleDE }}
+                                {% elseif lang == "en" %}
+                                    {{ homepageFeatCat2TitleEN }}
+                                {% endif %}
                             </h4>
 
                         </div>
@@ -451,362 +243,29 @@
             </div>
         </div>
     
-        <div class="col-xs-6 col-md-4">
-            <div class="prop-xs-1-1">
-                <div class="prop-inner">
-                    <a class="featured-category" href="">
-                        <img src="http://lorempixel.com/output/abstract-q-c-800-400-5.jpg" alt="First slide">
-                        <div class="featured-category-inner">
-                            <h4 class="featured-category-headline">
-                                {{ trans("CeresDark::Template.homepageCatTitle") }}
-                            </h4>
-
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-6 col-md-4">
-            <div class="prop-xs-1-1">
-                <div class="prop-inner">
-                    <a class="featured-category" href="">
-                        <img src="http://lorempixel.com/output/abstract-q-c-800-400-3.jpg" alt="First slide">
-                        <div class="featured-category-inner">
-                            <h4 class="featured-category-headline">
-                                {{ trans("CeresDark::Template.homepageCatTitle") }}
-                            </h4>
-
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-6 col-md-4">
-            <div class="prop-xs-1-1">
-                <div class="prop-inner">
-                    <a class="featured-category" href="">
-                        <img src="http://lorempixel.com/output/nature-q-c-800-400-3.jpg" alt="First slide">
-                        <div class="featured-category-inner">
-                            <h4 class="featured-category-headline">
-                                {{ trans("CeresDark::Template.homepageCatTitle") }}
-                            </h4>
-
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+        
     </div>
 
     <!-- END CATEGORIES -->
 
     <div class="m-b-2">
-        <h4 class="section-header">{{ trans("CeresDark::Template.homepageCrosssellingTitle") }}</h4>
+        <h4 class="section-header">
+            {% if lang == "de" %}
+                {{ homepageTopsellerTitleDE }}
+            {% elseif lang == "en" %}
+                {{ homepageTopsellerTitleEN }}
+            {% endif %}
+        </h4>
         <!-- crosssell start -->
         <div class="row">    
             <div class="col-xs-12">
                <ul class="product-list row grid">
-                                            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                            
-
-
-
-<article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-    <div class="thumb-inner">
-        <div class="thumb-background"></div>
-
-        <div>
-
-        <div class="btn-group" role="group" aria-label="Thumb Control">
-            <button type="button" class="btn btn-outline-primary">
-                <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
-            </button>
-                                                            </div>
-    </div>
-
-    
-
-        <div class="thumb-image">
-            <div class="square-container">
-                <div class="square-inner main-image">
-                    <a href="/sessel-king-george/124/1022">
-                        <img class="img-fluid lazy" data-original="https://fes-themes.plentymarkets-cloud01.com/item/images/124/370x450/124-Sessel-King-George.jpg" src="https://fes-themes.plentymarkets-cloud01.com/item/images/124/370x450/124-Sessel-King-George.jpg" style="display: block;">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- STORE SPECIALS -->
-
-        
-            
-            <div class="special-tags">
-                
-                    
-                
-                <span class="tag bg-success">
-                    Top-Artikel
-                </span>
-
-            </div>
-                <!-- ./STORE SPECIALS -->
-
-        <!-- ITEM DETAILS -->
-        <div class="thumb-content">
-            <a href="/sessel-king-george/124/1022" class="thumb-title small">
-                Sessel King George
-            </a>
-            <div class="thumb-meta">
-                                
-
-                <div class="prices">
-                                            <a href="/sessel-king-george/124/1022">
-                            <del class="crossprice">
-                                245,00&nbsp;€
-                            </del>
-                        </a>
-                    
-                    <a href="/sessel-king-george/124/1022">
-                        <div class="price">
-                            222,00&nbsp;€
-                        </div>
-                    </a>
-                </div>
-
-                                
-            </div>
-        </div>
-        <!-- ./ITEM DETAILS  -->
-    </div>
-</article>                        </li>
-                                            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                            
-
-
-
-<article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-    <div class="thumb-inner">
-        <div class="thumb-background"></div>
-
-        <div>
-
-        <div class="btn-group" role="group" aria-label="Thumb Control">
-            <button type="button" class="btn btn-outline-primary">
-                <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
-            </button>
-                                                            </div>
-    </div>
-
-    
-
-        <div class="thumb-image">
-            <div class="square-container">
-                <div class="square-inner main-image">
-                    <a href="/sessel-redlabel/125/1023">
-                        <img class="img-fluid lazy" data-original="https://fes-themes.plentymarkets-cloud01.com/item/images/125/370x450/125-Sessel-RedLabel.jpg" src="https://fes-themes.plentymarkets-cloud01.com/item/images/125/370x450/125-Sessel-RedLabel.jpg" style="display: block;">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- STORE SPECIALS -->
-
-        
-            
-            <div class="special-tags">
-                
-                                        
-                                                                                                                
-                
-                <span class="tag bg-danger">
-                    -12%
-                </span>
-
-            </div>
-                <!-- ./STORE SPECIALS -->
-
-        <!-- ITEM DETAILS -->
-        <div class="thumb-content">
-            <a href="/sessel-redlabel/125/1023" class="thumb-title small">
-                Sessel RedLabel
-            </a>
-            <div class="thumb-meta">
-                                
-
-                <div class="prices">
-                                            <a href="/sessel-redlabel/125/1023">
-                            <del class="crossprice">
-                                190,00&nbsp;€
-                            </del>
-                        </a>
-                    
-                    <a href="/sessel-redlabel/125/1023">
-                        <div class="price">
-                            169,00&nbsp;€
-                        </div>
-                    </a>
-                </div>
-
-                                
-            </div>
-        </div>
-        <!-- ./ITEM DETAILS  -->
-    </div>
-</article>                        </li>
-                                            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                            
-
-
-
-<article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-    <div class="thumb-inner">
-        <div class="thumb-background"></div>
-
-        <div>
-
-        <div class="btn-group" role="group" aria-label="Thumb Control">
-            <button type="button" class="btn btn-outline-primary">
-                <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
-            </button>
-                                                            </div>
-    </div>
-
-    
-
-        <div class="thumb-image">
-            <div class="square-container">
-                <div class="square-inner main-image">
-                    <a href="/sessel-relaxed-stacked-stones/126/1024">
-                        <img class="img-fluid lazy" data-original="https://fes-themes.plentymarkets-cloud01.com/item/images/126/370x450/126-Sessel-Relaxed-Stacked-Stones.jpg" src="https://fes-themes.plentymarkets-cloud01.com/item/images/126/370x450/126-Sessel-Relaxed-Stacked-Stones.jpg" style="display: block;">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- STORE SPECIALS -->
-
-                <!-- ./STORE SPECIALS -->
-
-        <!-- ITEM DETAILS -->
-        <div class="thumb-content">
-            <a href="/sessel-relaxed-stacked-stones/126/1024" class="thumb-title small">
-                Sessel Relaxed Stacked Stones
-            </a>
-            <div class="thumb-meta">
-                                
-
-                <div class="prices">
-                                            <a href="/sessel-relaxed-stacked-stones/126/1024">
-                            <del class="crossprice">
-                                350,00&nbsp;€
-                            </del>
-                        </a>
-                    
-                    <a href="/sessel-relaxed-stacked-stones/126/1024">
-                        <div class="price">
-                            329,00&nbsp;€
-                        </div>
-                    </a>
-                </div>
-
-                                
-            </div>
-        </div>
-        <!-- ./ITEM DETAILS  -->
-    </div>
-</article>                        </li>
-                                            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                            
-
-
-
-<article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-    <div class="thumb-inner">
-        <div class="thumb-background"></div>
-
-        <div>
-
-        <div class="btn-group" role="group" aria-label="Thumb Control">
-            <button type="button" class="btn btn-outline-primary">
-                <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
-            </button>
-                                                            </div>
-    </div>
-
-    
-
-        <div class="thumb-image">
-            <div class="square-container">
-                <div class="square-inner main-image">
-                    <a href="/sofa-2-sitzer-sunflower/127/1025">
-                        <img class="img-fluid lazy" data-original="https://fes-themes.plentymarkets-cloud01.com/item/images/127/370x450/127-Sofa-2-Sitzer-Sunflower.jpg" src="https://fes-themes.plentymarkets-cloud01.com/item/images/127/370x450/127-Sofa-2-Sitzer-Sunflower.jpg" style="display: block;">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- STORE SPECIALS -->
-
-        
-            
-            <div class="special-tags">
-                
-                    
-                
-                <span class="tag bg-primary">
-                    Neuheit
-                </span>
-
-            </div>
-                <!-- ./STORE SPECIALS -->
-
-        <!-- ITEM DETAILS -->
-        <div class="thumb-content">
-            <a href="/sofa-2-sitzer-sunflower/127/1025" class="thumb-title small">
-                Sofa 2-Sitzer Sunflower
-            </a>
-            <div class="thumb-meta">
-                                
-
-                <div class="prices">
-                                            <a href="/sofa-2-sitzer-sunflower/127/1025">
-                            <del class="crossprice">
-                                345,00&nbsp;€
-                            </del>
-                        </a>
-                    
-                    <a href="/sofa-2-sitzer-sunflower/127/1025">
-                        <div class="price">
-                            335,00&nbsp;€
-                        </div>
-                    </a>
-                </div>
-
-                                
-            </div>
-        </div>
-        <!-- ./ITEM DETAILS  -->
-    </div>
-</article>                        </li>
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                            
-                                    </ul>
+                    {% for item in itemListTop %}
+                        <li class="col-xs-12 col-sm-6 col-md-3">
+                            {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>

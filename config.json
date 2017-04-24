@@ -195,9 +195,6 @@
 	    "type"      : "text",
 	    "default"   : "/"
 	},
-
-
-
 	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageNewTitleDE",
@@ -239,9 +236,5 @@
 	    "label"     : "Categorie ID for topseller Products",
 	    "type"      : "text",
 	    "default"   : "19"
-	},
-
-
-
-
+	}
 ]

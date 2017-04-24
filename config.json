@@ -172,21 +172,21 @@
 	    "key"       : "homepage.homepageFeatCat2TitleDE",
 	    "label"     : "Text für ersten featured Kategorie Teaser unter Crossseller (DE)",
 	    "type"      : "text",
-	    "default"   : "Featured Kategorie Groß"
+	    "default"   : "Featured Kategorie Klein"
 	},
 	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageFeatCat2TitleEN",
 	    "label"     : "Text for fist featured category teaser under crossseller (EN)",
 	    "type"      : "text",
-	    "default"   : "Featured Category Big"
+	    "default"   : "Featured Category Small"
 	},
 	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageFeatCat2ImgUrl",
 	    "label"     : "Image URL for first featured category-teaser",
 	    "type"      : "text",
-	    "default"   : "https://unsplash.it/800/400?image=1050"
+	    "default"   : "https://unsplash.it/800/400?image=1061"
 	},
 	{
 	    "tab"       : "Homepage",

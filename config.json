@@ -4,21 +4,21 @@
 	    "key"       : "homepage.homepageFirstSlideTitleDE",
 	    "label"     : "Text für den ersten Slide-Titel (DE)",
 	    "type"      : "text",
-	    "default"   : "Günstig, Schnell, Einfach"
+	    "default"   : "Exklusive Qualität, Hochwertige Produkte"
 	},
 	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageFirstSlideTitleEN",
 	    "label"     : "Text for first slide title (EN)",
 	    "type"      : "text",
-	    "default"   : "Cheap, Fast, Simple"
+	    "default"   : "Exclusive Products"
 	},
 	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageFirstSlideImgUrl",
 	    "label"     : "Image URL for first slide",
 	    "type"      : "text",
-	    "default"   : "https://unsplash.it/800/450?image=529"
+	    "default"   : "https://unsplash.it/800/450?image=839"
 	},
 	{
 	    "tab"       : "Homepage",
@@ -46,7 +46,7 @@
 	    "key"       : "homepage.homepageSecondSlideImgUrl",
 	    "label"     : "Image URL for second slide",
 	    "type"      : "text",
-	    "default"   : "https://unsplash.it/800/450?image=531"
+	    "default"   : "https://unsplash.it/800/450?image=778"
 	},
 	{
 	    "tab"       : "Homepage",
@@ -74,7 +74,7 @@
 	    "key"       : "homepage.homepageExtraHero1ImgUrl",
 	    "label"     : "Image URL for first category-teaser, next to main-slider",
 	    "type"      : "text",
-	    "default"   : "https://unsplash.it/400/300?image=532"
+	    "default"   : "https://unsplash.it/400/300?image=863"
 	},
 	{
 	    "tab"       : "Homepage",
@@ -102,7 +102,7 @@
 	    "key"       : "homepage.homepageExtraHero2ImgUrl",
 	    "label"     : "Image URL for second category-teaser, next to main-slider",
 	    "type"      : "text",
-	    "default"   : "https://unsplash.it/400/300?image=628"
+	    "default"   : "https://unsplash.it/400/300?image=856"
 	},
 	{
 	    "tab"       : "Homepage",
@@ -130,7 +130,7 @@
 	    "key"       : "homepage.homepageSaleImgUrl",
 	    "label"     : "Image URL for Sale Teaser",
 	    "type"      : "text",
-	    "default"   : "https://unsplash.it/1200/600?image=816"
+	    "default"   : "https://unsplash.it/1200/600?image=809"
 	},
 	{
 	    "tab"       : "Homepage",
@@ -158,7 +158,7 @@
 	    "key"       : "homepage.homepageFeatCat1ImgUrl",
 	    "label"     : "Image URL for first featured category-teaser",
 	    "type"      : "text",
-	    "default"   : "https://unsplash.it/800/400?image=823"
+	    "default"   : "https://unsplash.it/800/400?image=996"
 	},
 	{
 	    "tab"       : "Homepage",
@@ -184,9 +184,9 @@
 	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageFeatCat2ImgUrl",
-	    "label"     : "Image URL for first featured category-teaser",
+	    "label"     : "Image URL for second featured category-teaser",
 	    "type"      : "text",
-	    "default"   : "https://unsplash.it/800/400?image=486"
+	    "default"   : "https://unsplash.it/800/400?image=124"
 	},
 	{
 	    "tab"       : "Homepage",

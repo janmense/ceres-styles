@@ -1,5 +1,75 @@
 # Release Notes for Ceres
 
+## v1.1.2 (2017-04-24)
+
+### Added
+
+- A back-to-top button was added.
+- A list for **last seen items** was added and can be displayed in the online store by linking the list with a template container.
+- In the settings in the **Item view** tab, **Show variations by type** allows you to only display the sub-variations of a main variation.
+
+### Fixed
+
+- For every client (store), the categories will be displayed properly.
+- In the mobile view, categories will also be displayed correctly in the left navigation bar.
+- The settings for the image carousel of the category view will now be correctly read.
+- An error occurred when loading categories in different languages. This error was fixed.
+- Item data will now also be loaded in different languages.
+- The **technical details** of an item will be loaded correctly.
+- The item name (name 1 to 3) selected in the settings will now be used correctly.
+- In the item URL, the category will now also be displayed correctly.
+- A bug was fixed on the shopping cart page that resulted in items not being displayed.
+- The styling of the **Change password** page was updated to fit the style of Ceres.
+- A bug was fixed that resulted in the header of the online store being bigger than usually.
+- An error occurred when using the setting **Grouping items by main variation**. This has been fixed.
+- Smaller performance issues were fixed.
+
+### Known issues
+
+- Due to a sporadically occurring error, addresses cannot be edited at the moment.
+- The federal state (German: Bundesland) is not saved correctly for the address.
+- No shipping country is selected by default. When creating an address, input fields will only be displayed after selecting a shipping country.
+
+
+## v1.1.1 (2017-04-13)
+
+### Fixed
+
+- The `AfterBasketChanged` event is no longer triggered when loading a page. 
+- The `AfterBasketChanged` event will only be triggered once when the shopping cart is updated.
+
+## v1.1.0 (2017-04-12)
+
+### Added
+
+- The main category in the navigation bar will now forward to the respective category view.
+- A category tree has been added. This tree can be displayed in the online store optionally. The setting can be found in the configuration in the **Header** tab.
+- Multiple loading animations have been added for the category view. The setting can be found in the configuration in the **Item view** tab.
+
+### Changed
+
+- The performance of the categories has been improved.
+- The styling of the categories has been updated.
+- The categories will now be reloaded in the category view without reloading the entire page.
+- The pagination has been updated. In the settings in the **Pagination and sorting** tab, you can now select the rows and columns of the category view. The pagination values will be calculated and displayed automatically. 
+
+## v1.0.5 (2017-04-07)
+
+### Added
+
+- Added different sources for the company logo.
+
+## v1.0.4 (2017-04-06)
+
+### Added
+
+- Loading of files from CloudFront in **Productive** mode.
+- No caching of files in **stage** mode. For further information, refer to our [forum](https://forum.plentymarkets.com/t/ladezeiten-verbessert-und-workflow-optimiert/48990).
+
+### Fixed
+
+- Company logo path fixed.
+
 ## v1.0.3 (2017-03-24)
 
 ### Added
@@ -20,12 +90,6 @@
 - When adding an item to the shopping cart, the correct data will be sent after switching from the category view to the single item view
 - Cross selling links saved for an item won't cause an internal error anymore
 - An error in the template containers of the order overview has been fixed
-
-### Known issues
-
-- Due to a sporadically occurring error, addresses cannot be edited at the moment.
-- The federal state (German: Bundesland) is not saved correctly for the address.
-- No shipping country is selected by default. When creating an address, input fields will only be displayed after selecting a shipping country.
 
 ## v1.0.2 (2017-02-23)
 

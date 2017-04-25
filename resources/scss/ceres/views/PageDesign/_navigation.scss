@@ -37,10 +37,10 @@ $menu-li-bg-hover		: $brand-primary;
 $menu-li-color-hover	: $white;
 // bigmenu
 $menu-big-menu-bg 				: darken($brand-primary,10%);
-$menu-big-menu-li-bg			: transparent; 
-$menu-big-menu-li-bg-hover		: $brand-primary; 
-$menu-big-menu-li-color			: $white; 
-$menu-big-menu-li-color-hover	: $text-color; 
+$menu-big-menu-li-bg			: transparent;
+$menu-big-menu-li-bg-hover		: $brand-primary;
+$menu-big-menu-li-color			: $white;
+$menu-big-menu-li-color-hover	: $text-color;
 
 body.menu-is-visible { overflow-y : hidden; }
 #mainNavbarCollapsable {
@@ -52,44 +52,44 @@ body.menu-is-visible { overflow-y : hidden; }
 	opacity 	: .6;
 	overflow-y 	: auto;
 	position 	: fixed;
-	right 		: 0; 
+	right 		: 0;
 	top 		: 0;
 	transform 	: translateX(-100%);
 	transition 	: all .3s ease;
 
-	&.open { 
+	&.open {
 		opacity 	: 1;
 		transform 	: translateX(0);
 	}
 
 	ul.breadcrumb {
-		background : $menu-breadcrumb-bg; 
+		background : $menu-breadcrumb-bg;
 		max-width  : initial;
 		font-size  : .8em;
 		padding    : 0 calc(15px + .5em) 0 15px;
 
-		li { 
-			display : inline-block; 
+		li {
+			display : inline-block;
 			cursor 	: pointer;
 			padding : .8rem 0 .75rem;
 			&.btnClose {
 				float 		: right;
 				padding-top : .6em;
-				&:before { 
-					content 	: "\f00d"; 
-					font-family : "FontAwesome"; 
+				&:before {
+					content 	: "\f00d";
+					font-family : "FontAwesome";
 					font-size   : 1.2em;
 				}
 			}
-			&:not(:first-of-type) a:before { 
-			    content 		: "\f0da";
-			    font-family 	: FontAwesome;
-			    font-size 		: 1rem; 
-			    padding 		: 0 .3rem;
+			&:not(:first-of-type) a:before {
+				content 		: "\f0da";
+				font-family 	: FontAwesome;
+				font-size 		: 1rem;
+				padding 		: 0 .3rem;
 			}
 			&:first-of-type a:before { display : none!important; };
 		}
-	} 
+	}
 
 	ul.mainmenu {
 		list-style 	: none;
@@ -97,13 +97,13 @@ body.menu-is-visible { overflow-y : hidden; }
 		margin 		: 0;
 		padding 	: 0;
 		position 	: relative;
-		width 		: 100%;
-		
-		li 	{ 
-			width : 100%; 
 
-			a 	{ 
-				color 	: inherit; 
+		li 	{
+			width : 100%;
+			cursor: pointer;
+
+			a 	{
+				color 	: inherit;
 				display : inline-block;
 				padding : 1rem ;
 				width 	: 100%;
@@ -114,7 +114,7 @@ body.menu-is-visible { overflow-y : hidden; }
 				display 	: none;
 				left 		: 0;
 				list-style 	: none;
-				margin 		: 0; 
+				margin 		: 0;
 				min-height 	: 100%;
 				padding 	: 0;
 				position 	: absolute;
@@ -125,12 +125,12 @@ body.menu-is-visible { overflow-y : hidden; }
 			&.ddown>a:after {
 				border 			: none;
 				content			: "\f0da";
-			    float 			: right;
-			    font-family 	: FontAwesome;
-			    font-size 		: 1.5rem;
-			    height 			: auto; 
-			    padding 		: 0 .5em 0 1em;
-			    width 			: auto;
+				float 			: right;
+				font-family 	: FontAwesome;
+				font-size 		: 1.5rem;
+				height 			: auto;
+				padding 		: 0 .5em 0 1em;
+				width 			: auto;
 			}
 		}
 	}
@@ -139,7 +139,7 @@ body.menu-is-visible { overflow-y : hidden; }
 		background-color : transparent;
 		display 		 : block!important;
 		opacity 		 : 1;
-		overflow 		 : visible; 
+		overflow 		 : visible;
 		position 		 : relative;
 		transform 		 : translateX(0);
 		width 			 : 100%;
@@ -149,11 +149,10 @@ body.menu-is-visible { overflow-y : hidden; }
 		.breadcrumb { display : none!important; }
 		ul.mainmenu {
 			color : $menu-color-lg;
-			width : 100%;
 			text-align: right;
 			.open>ul { display : none!important; }
-			>li { 
-				display : inline-block; 
+			>li {
+				display : inline-block;
 				width 	: auto;
 				position: relative;
 				>a { padding: 1.3rem 1rem; }
@@ -163,17 +162,17 @@ body.menu-is-visible { overflow-y : hidden; }
 					visibility 		: hidden;
 					opacity 		: 0;
 					transition 		: all .1s ease;
-					background 		: $menu-big-menu-bg; 
+					background 		: $menu-big-menu-bg;
 					height 			: auto;
 					top 			: 100%;
 					width 			: 100%;
 					text-align 		: center;
-					
+
 					>li {
 						background 	: $menu-big-menu-li-bg;
 						color 		: $menu-big-menu-li-color;
 						transition  : all .1s ease;
-						width 		: 100%; 
+						width 		: 100%;
 
 						&:hover {
 							background  	: $menu-big-menu-li-bg-hover;
@@ -186,7 +185,7 @@ body.menu-is-visible { overflow-y : hidden; }
 				&:hover {
 					background-color : $menu-li-bg-hover;
 					color 			 : $menu-li-color-hover;
-					transition 		 : all .1s ease; 
+					transition 		 : all .1s ease;
 					>ul {
 						visibility 		: visible;
 						opacity 		: 1;

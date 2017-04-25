@@ -79,7 +79,7 @@ $gray-lighter:          #dcdbd8 !default;
 $gray-lighter2:         #f4f4f4 !default;
 $gray-lightest:         #f7f7f9 !default;
 
-$brand-primary:         #008ebd !default;
+$brand-primary:         #111 !default;
 $brand-secondary:       #d4021d !default;
 
 $brand-success:         #7ED321 !default;
@@ -94,16 +94,16 @@ $custom-colors: (
   "gelb": "#ffff00",
 ) !default;
 
-$top-bar-bg:            $gray-dark;
-$top-bar-color:         #fff;
+$top-bar-bg:            $white;
+$top-bar-color:         $gray-darker;
 $top-bar-basket-btn:    $brand-primary;
-$top-bar-basket-color:  #fff;
+$top-bar-basket-color:  $white;
 
-$footer-bg:             $gray-lightest;
+$footer-bg:             $white;
 $footer-color:          $gray-dark;
 
-$footer-features-bg:    darken($gray-lightest, 10%);
-$footer-features-color: $gray-dark;
+$footer-features-bg:    $gray-darker;
+$footer-features-color: $white;
 
 
 $availability_1:        $brand-success !default;
@@ -136,6 +136,9 @@ $link-hover-color:      darken($link-color, 15%) !default;
 
 //== Typography
 //
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+
 //## Font, line-height, and color for body text, headings, and more.
 $font-family-sans-serif:'Open Sans', Helvetica, Arial, sans-serif !default;
 $font-family-helvetica: $font-family-sans-serif !default;
@@ -143,7 +146,7 @@ $font-family-serif:     Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:      $font-family-sans-serif !default;
-$font-family-heading:   $font-family-base;
+$font-family-heading:   'Playfair Display', serif;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px !default;
@@ -746,7 +749,7 @@ $breadcrumb-padding-y:          .5rem !default;
 $breadcrumb-padding-x:          1rem !default;
 $breadcrumb-item-padding:       .5rem !default;
 
-$breadcrumb-bg:                 darken($gray-lighter2, 2%) !default;
+$breadcrumb-bg:                 $white!default;
 $breadcrumb-divider-color:      $gray-light !default;
 $breadcrumb-active-color:       $gray-light !default;
 $breadcrumb-divider:            "/" !default;

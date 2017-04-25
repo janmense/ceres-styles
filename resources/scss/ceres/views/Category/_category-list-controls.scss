@@ -1,7 +1,7 @@
 .list-controls {
   position:relative;
   .list-controls-inner {
-    background:darken($gray-lighter2, 2%);
+    background:$gray-lightest;
     padding:.5em;
   }
   .list-sort,

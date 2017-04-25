@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Abel");
-
 @import "variables";
 // ==========================================================================
 // External Libs
@@ -8,7 +6,6 @@
 @import "../../node_modules/font-awesome/scss/font-awesome";
 @import "../../node_modules/shariff/build/shariff.complete.css";
 @import "../../node_modules/flag-icon-css/sass/flag-icon";
-@import "../../node_modules/owl.carousel/dist/assets/owl.carousel.css";
 
 // ==========================================================================
 // Custom styles
@@ -70,9 +67,10 @@
 @import "ceres/views/Templates/ToggleCategoryListView/toggle-list-view";
 
 // Pages
+@import "ceres/views/Category/category-list";
+@import "ceres/views/Category/category-list-controls";
 @import "ceres/views/Home/home";
 @import "ceres/views/Checkout/checkout";
 @import "ceres/views/Item/single-item";
 @import "ceres/views/ItemList/loading-animation";
-@import "ceres/views/Category/category-list";
-@import "ceres/views/Category/category-menu";
+@import "ceres/views/StaticPages/static-pages";

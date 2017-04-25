@@ -1,27 +1,27 @@
 {
-    "version"           : "1.0.2",
-    "name"              : "CeresElectronic",
-    "description"       : "Das ist ein Electronic Theme für Ceres",
+    "version"           : "1.0.0",
+    "name"              : "CeresGlamour",
+    "description"       : "Das ist ein Glamour Theme für Ceres",
     "author"            : "Frontend Studios GmbH",
     "license"           : "AGPL-3.0",
     "pluginIcon"        : "icon_plugin_xs.png",
     "price"             : 0.00,
-    "shortDescription"  : {"de": "Das ist ein Electronic Theme für Ceres","en":"This is a Electronic Theme for Ceres"},
+    "shortDescription"  : {"de": "Das ist ein Glamour Theme für Ceres","en":"This is a Glamour Theme for Ceres"},
     "authorIcon"        : "icon_author_xs.png",
     "categories"        : ["3518"],
     "email"             : "dev@frontend-studios.de",
     "phone"             : "+49 40 851 792 84 30",
-    "keywords"          : ["plentymarkets", "plugins", "layout", "theme", "ceres", "electronic", "frontend studios"],
+    "keywords"          : ["plentymarkets", "plugins", "layout", "theme", "ceres", "glamour", "frontend studios"],
     "type"              : "theme",
     "require"           : ["Ceres", "IO"],
-    "namespace"         : "CeresElectronic",
-    "serviceProvider"   : "CeresElectronic\\Providers\\CeresElectronicServiceProvider",
+    "namespace"         : "CeresGlamour",
+    "serviceProvider"   : "CeresGlamour\\Providers\\CeresGlamourServiceProvider",
     "dataProviders"     :
     [
       {
-        "key":"CeresElectronic\\Containers\\CeresElectronic",
-        "name":"CeresElectronic",
-        "description":"Electronic Theme for Ceres"
+        "key":"CeresGlamour\\Containers\\CeresGlamour",
+        "name":"CeresGlamour",
+        "description":"Glamour Theme for Ceres"
       }
     ]
 }

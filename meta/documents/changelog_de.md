@@ -1,23 +1,9 @@
-# Release Notes für Electronic Theme
+# Release Notes für Glamour Theme
 
-## v1.0.2 (2017-04-24)
-
-### Änderungen
-- Starteite nun komplett anpassbar
-- Kategorie-Übersicht, Sidebar nun über Standard Ceres-Plugin-Konfiguration eingebunden
-- Update Single Item Ansicht
-- Bugfixes
-
-## v1.0.1 Beta-Status (2017-02-27)
-
-### Änderungen
-
-- Kategorie-Menü auf List-View CSS Anpassungen
-
-## v1.0.0 Beta-Status (2017-02-27)
+## v1.0.0 (2017-04-25)
 
 ### Funktionen
 
 - basiert auf dem Standard-Ceres
 - Komplett Update-fähig
-- Redesign des Ceres in Electronic-Style
+- Redesign des Ceres in Glamour-Style

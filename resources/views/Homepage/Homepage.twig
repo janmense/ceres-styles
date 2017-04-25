@@ -1,48 +1,48 @@
 {% extends 'Ceres::Homepage.Homepage' %}
 {% set lang = services.sessionStorage.getLang() %}
 
-{% set homepageFirstSlideTitleDE  = config("CeresElectronic.homepage.homepageFirstSlideTitleDE") %}
-{% set homepageFirstSlideTitleEN  = config("CeresElectronic.homepage.homepageFirstSlideTitleEN") %}
-{% set homepageFirstSlideImgUrl  = config("CeresElectronic.homepage.homepageFirstSlideImgUrl") %}
-{% set homepageFirstSlideLink  = config("CeresElectronic.homepage.homepageFirstSlideLink") %}
+{% set homepageFirstSlideTitleDE  = config("CeresGlamour.homepage.homepageFirstSlideTitleDE") %}
+{% set homepageFirstSlideTitleEN  = config("CeresGlamour.homepage.homepageFirstSlideTitleEN") %}
+{% set homepageFirstSlideImgUrl  = config("CeresGlamour.homepage.homepageFirstSlideImgUrl") %}
+{% set homepageFirstSlideLink  = config("CeresGlamour.homepage.homepageFirstSlideLink") %}
 
-{% set homepageSecondSlideTitleDE  = config("CeresElectronic.homepage.homepageSecondSlideTitleDE") %}
-{% set homepageSecondSlideTitleEN  = config("CeresElectronic.homepage.homepageSecondSlideTitleEN") %}
-{% set homepageSecondSlideImgUrl  = config("CeresElectronic.homepage.homepageSecondSlideImgUrl") %}
-{% set homepageSecondSlideLink  = config("CeresElectronic.homepage.homepageSecondSlideLink") %}
+{% set homepageSecondSlideTitleDE  = config("CeresGlamour.homepage.homepageSecondSlideTitleDE") %}
+{% set homepageSecondSlideTitleEN  = config("CeresGlamour.homepage.homepageSecondSlideTitleEN") %}
+{% set homepageSecondSlideImgUrl  = config("CeresGlamour.homepage.homepageSecondSlideImgUrl") %}
+{% set homepageSecondSlideLink  = config("CeresGlamour.homepage.homepageSecondSlideLink") %}
 
-{% set homepageExtraHero1TitleDE = config("CeresElectronic.homepage.homepageExtraHero1TitleDE") %}
-{% set homepageExtraHero1TitleEN = config("CeresElectronic.homepage.homepageExtraHero1TitleEN") %}
-{% set homepageExtraHero1ImgUrl = config("CeresElectronic.homepage.homepageExtraHero1ImgUrl") %}
-{% set homepageExtraHero1Link = config("CeresElectronic.homepage.homepageExtraHero1Link") %}
+{% set homepageExtraHero1TitleDE = config("CeresGlamour.homepage.homepageExtraHero1TitleDE") %}
+{% set homepageExtraHero1TitleEN = config("CeresGlamour.homepage.homepageExtraHero1TitleEN") %}
+{% set homepageExtraHero1ImgUrl = config("CeresGlamour.homepage.homepageExtraHero1ImgUrl") %}
+{% set homepageExtraHero1Link = config("CeresGlamour.homepage.homepageExtraHero1Link") %}
 
-{% set homepageExtraHero2TitleDE = config("CeresElectronic.homepage.homepageExtraHero2TitleDE") %}
-{% set homepageExtraHero2TitleEN = config("CeresElectronic.homepage.homepageExtraHero2TitleEN") %}
-{% set homepageExtraHero2ImgUrl = config("CeresElectronic.homepage.homepageExtraHero2ImgUrl") %}
-{% set homepageExtraHero2Link = config("CeresElectronic.homepage.homepageExtraHero2Link") %}
+{% set homepageExtraHero2TitleDE = config("CeresGlamour.homepage.homepageExtraHero2TitleDE") %}
+{% set homepageExtraHero2TitleEN = config("CeresGlamour.homepage.homepageExtraHero2TitleEN") %}
+{% set homepageExtraHero2ImgUrl = config("CeresGlamour.homepage.homepageExtraHero2ImgUrl") %}
+{% set homepageExtraHero2Link = config("CeresGlamour.homepage.homepageExtraHero2Link") %}
 
-{% set homepageSale2TitleDE = config("CeresElectronic.homepage.homepageSale2TitleDE") %}
-{% set homepageSale2TitleEN = config("CeresElectronic.homepage.homepageSale2TitleEN") %}
-{% set homepageSaleImgUrl = config("CeresElectronic.homepage.homepageSaleImgUrl") %}
-{% set homepageSaleLink = config("CeresElectronic.homepage.homepageSaleLink") %}
+{% set homepageSale2TitleDE = config("CeresGlamour.homepage.homepageSale2TitleDE") %}
+{% set homepageSale2TitleEN = config("CeresGlamour.homepage.homepageSale2TitleEN") %}
+{% set homepageSaleImgUrl = config("CeresGlamour.homepage.homepageSaleImgUrl") %}
+{% set homepageSaleLink = config("CeresGlamour.homepage.homepageSaleLink") %}
 
-{% set homepageFeatCat1TitleDE = config("CeresElectronic.homepage.homepageFeatCat1TitleDE") %}
-{% set homepageFeatCat1TitleEN = config("CeresElectronic.homepage.homepageFeatCat1TitleEN") %}
-{% set homepageFeatCat1ImgUrl = config("CeresElectronic.homepage.homepageFeatCat1ImgUrl") %}
-{% set homepageFeatCat1Link = config("CeresElectronic.homepage.homepageFeatCat1Link") %}
+{% set homepageFeatCat1TitleDE = config("CeresGlamour.homepage.homepageFeatCat1TitleDE") %}
+{% set homepageFeatCat1TitleEN = config("CeresGlamour.homepage.homepageFeatCat1TitleEN") %}
+{% set homepageFeatCat1ImgUrl = config("CeresGlamour.homepage.homepageFeatCat1ImgUrl") %}
+{% set homepageFeatCat1Link = config("CeresGlamour.homepage.homepageFeatCat1Link") %}
 
-{% set homepageFeatCat2TitleDE = config("CeresElectronic.homepage.homepageFeatCat2TitleDE") %}
-{% set homepageFeatCat2TitleEN = config("CeresElectronic.homepage.homepageFeatCat2TitleEN") %}
-{% set homepageFeatCat2ImgUrl = config("CeresElectronic.homepage.homepageFeatCat2ImgUrl") %}
-{% set homepageFeatCat2Link = config("CeresElectronic.homepage.homepageFeatCat2Link") %}
+{% set homepageFeatCat2TitleDE = config("CeresGlamour.homepage.homepageFeatCat2TitleDE") %}
+{% set homepageFeatCat2TitleEN = config("CeresGlamour.homepage.homepageFeatCat2TitleEN") %}
+{% set homepageFeatCat2ImgUrl = config("CeresGlamour.homepage.homepageFeatCat2ImgUrl") %}
+{% set homepageFeatCat2Link = config("CeresGlamour.homepage.homepageFeatCat2Link") %}
 
-{% set homepageNewTitleDE = config("CeresElectronic.homepage.homepageNewTitleDE") %}
-{% set homepageNewTitleEN = config("CeresElectronic.homepage.homepageNewTitleEN") %}
-{% set homepageNewId = config("CeresElectronic.homepage.homepageNewId") %}
+{% set homepageNewTitleDE = config("CeresGlamour.homepage.homepageNewTitleDE") %}
+{% set homepageNewTitleEN = config("CeresGlamour.homepage.homepageNewTitleEN") %}
+{% set homepageNewId = config("CeresGlamour.homepage.homepageNewId") %}
 
-{% set homepageTopsellerTitleDE = config("CeresElectronic.homepage.homepageTopsellerTitleDE") %}
-{% set homepageTopsellerTitleEN = config("CeresElectronic.homepage.homepageTopsellerTitleEN") %}
-{% set homepageTopsellerId = config("CeresElectronic.homepage.homepageTopsellerId") %}
+{% set homepageTopsellerTitleDE = config("CeresGlamour.homepage.homepageTopsellerTitleDE") %}
+{% set homepageTopsellerTitleEN = config("CeresGlamour.homepage.homepageTopsellerTitleEN") %}
+{% set homepageTopsellerId = config("CeresGlamour.homepage.homepageTopsellerId") %}
 
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 

@@ -1,21 +1,20 @@
 .cmp-search-box {
- background-color: $gray-darker;
+  background-color: $gray-darker;
   padding: 0px 15px;
+
   z-index: 1070;
   position: fixed;
   top: 30px;
   right: 0;
-  max-width: 1200px;
+  left: 0;
   width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
 
   .search-box-inner {
     display: flex;
     flex-flow: row nowrap;
-    padding: 1.3rem 0em;
+    padding: 1rem 0em;
 
-    position:relative;
+    position: relative;
     max-width: 1200px;
     margin:0 auto;
   }
@@ -54,6 +53,7 @@
     }
   }
 }
+
 .autocomplete-suggestions {
   box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08);
   background: #ffffff;

@@ -2,7 +2,7 @@
     padding: .8rem;
     width: 100%;
     overflow: hidden;
-    border: 1px solid $gray-lighter;
+    border: 1px solid #fff;
     background-color: #fff;
     margin-bottom: $grid-gutter-width/2;
 
@@ -40,10 +40,13 @@
         @include img-contain();
         position: absolute;
         background-color: #fff;
+        display: flex;
+        align-items: center;
     }
 
     //TODO create separate mixin
     .special-tags{
+        z-index: 100;
         position: absolute;
         top: 0;
         right: auto;
@@ -82,9 +85,6 @@
         font-weight: 700;
         color: $gray;
         line-height: 1.1em;
-        &:hover {
-            color: $brand-primary;
-        }
     }
 
     .thumb-meta{
@@ -113,7 +113,7 @@
     .btn-group {
         position: absolute;
         bottom: 0;
-        left: 105px;
+        left: calc(120px + 0.8rem);
         z-index: 1000;
         transition:all .3s ease;
         opacity: 1;
@@ -123,7 +123,6 @@
     @include media-breakpoint-up(sm){
         padding: 0;
         margin-bottom: $grid-gutter-width;
-
 
         .thumb-background{
             display: block;
@@ -149,32 +148,36 @@
             bottom: .8rem;
             left: auto;
             right: .8rem;
-            top:.3rem;
         }
 
         .thumb-title{
             font-weight: 400;
-            line-height: 1.5em;
+
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            line-height: 1.5em;
         }
 
         .thumb-image{
             width: 100%;
         }
 
-        .img-fluid{
+        .img-fluid {
             transition: transform .4s cubic-bezier(0, 0, .26, 1), opacity .3s cubic-bezier(0, 0, .26, 1), -webkit-transform .3s cubic-bezier(0, 0, .26, 1);
         }
 
         &:hover {
             z-index: 1000;
-            .img-fluid{
+
+            .img-fluid {
                 transform: scale(1.05);
             }
-        }
 
+            .owl-nav [class*='owl-'] {
+                opacity: 1;
+            }
+        }
     }
 
     @include media-breakpoint-up(md){

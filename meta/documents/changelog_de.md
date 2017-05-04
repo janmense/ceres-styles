@@ -1,4 +1,11 @@
-# Release Notes für Glamour Theme
+# Changelog für Glamour Theme
+
+## v1.0.1 (2017-05-04)
+
+### Änderungen
+
+- Plugin Bilder
+- Bugfixes
 
 ## v1.0.0 (2017-04-25)
 

@@ -59,7 +59,7 @@ Vue.component("item-search", {
             $(".search-input").autocomplete({
                 serviceUrl: "/rest/io/item/search/autocomplete",
                 paramName: "query",
-                params: {template: "Ceres::ItemList.Components.ItemSearch"},
+                params: {template: "Ceres::ItemList.Components.ItemSearch", variationShowType: App.config.variationShowType},
                 width: $(".search-box-shadow-frame").width(),
                 zIndex: 1070,
                 maxHeight: 310,
@@ -93,13 +93,13 @@ Vue.component("item-search", {
                 {
                     suggestions: $.map(result.data.documents, function(dataItem)
                     {
-                        var value = dataItem.data.texts.name1;
+                        var value = this.$options.filters.itemName(dataItem.data.texts, window.App.config.itemName);
 
                         return {
                             value: value,
                             data : value
                         };
-                    })
+                    }.bind(this))
                 };
 
             return suggestions;

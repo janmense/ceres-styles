@@ -60,7 +60,7 @@
         <div class="row">
             <div class="col-xs-12">
 
-                <div id="vue-rendered-item-list">
+                <div id="vue-rendered-item-list" class="item-list-frame">
                     <item-list template="#vue-item-list"></item-list>
                 </div>
 
@@ -76,4 +76,8 @@
 
     </div>
 
+{% endblock %}
+
+{% block PartialHead %}
+<script type="application/ld+json">{"@context": "http://schema.org","@type": "WebSite","url": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}","potentialAction":{"@type": "SearchAction","target": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}/search?query={search_term}","query-input": "required name=search_term"}}</script>
 {% endblock %}

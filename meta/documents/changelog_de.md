@@ -1,22 +1,76 @@
 # Release Notes für Ceres
 
-## v1.1.4
+## v1.2.3
 
 ### Behoben
 
-- Artikelverfügbarkeiten werden nun auch korrekt beim wechseln der Variante angezeigt.
+- Es wurde ein Fehler behoben, wodruch die Breadcrumbs/Menüpunkte nicht korrekt funktioniert hatten.
+- Es wurde ein Fehler behoben, dass Artikelbilder nicht richtig nach Position sortiert wurden, wenn eine Variante eigene Bilder hat.
 
-## v1.1.3 (2017-04-25)
+## v1.2.2 (2017-05-11)
+
+### Hinzugefügt
+
+- Die Artikelbilder werden nach ihrer im Backend [festgelegten Position](https://www.plentymarkets.eu/handbuch/artikel/artikel-verwalten/#14-8) sortiert. 
 
 ### Behoben
 
-- Artikelverfügbarkeiten funktionieren wieder.
+- In einigen Systemen wurde die Gruppierung nach Haupt- und Untervarianten in der Kategorieansicht ignoriert. Dieser Fehler wurde behoben.
+- Es wurde ein Fehler behoben, der die Breadcrumbs betraf und in der Browser-Konsole angezeigt wurde.
+- Manchmal konnten Benachrichtigungen und Meldungen nicht richtig ausgegeben werden. Dieser Fehler wurde behoben.
+- Die Bilder in der Warenkorbvorschau werden nun wieder richtig dargestellt.
+- Die Vorschläge der Autovervollständigung von Suchbegriffen berücksichtigen nun die Einstellung der Variantengruppierung.
 
 ### Bekannte Probleme
 
 - Adressen können aktuell durch einen sporadischen Fehler nicht editiert werden.
 - Das Bundesland wird an der Adresse falsch gespeichert.
 - Es ist bisher kein Lieferland standardmäßig vorausgewählt. Beim Anlegen einer Adresse werden Eingabefelder erst nach Auswahl des Lieferlandes angezeigt.
+
+## v1.2.1 (2017-05-08)
+
+### Hinzugefügt
+
+- Es wurde ein Template-Container hinzugefügt, um das komplette CSS von Ceres zu überschreiben (Template: Override style).
+
+### Geändert
+
+- Die Navigationsleiste oben wurde hinsichtlich Performance und SEO überarbeitet.
+- Die Navigationsleiste links wurde hinsichtlich Performance und SEO überarbeitet.
+- Die Breadcrumbs wurden hinsichtlich Performance und SEO überarbeitet.
+- Die Kategorien wurden weiter für Suchmaschinen optimiert und enthalten nun gültige Informationen über die Paginierung.
+
+### Behoben
+
+- Das Shop-Logo kann wieder angeklickt werden.
+- Auftrags- und Zahlungsstatus werden in der Auftragsübersicht wieder angezeigt.
+- Die Liste der Filter wird wieder korrekt angezeigt.
+- Die Kategorien werden nun mit der korrekten Standardsortierung geöffnet.
+- Die Navigation wird nun korrekt ausgegeben, wenn eine Kategorie nur eine Unterkategorie hat.
+
+## v1.2.0 (2017-04-28)
+
+### Hinzugefügt
+
+- Breadcrumbs in der Artikelansicht hinzugefügt.
+- Microdata Scheme hinzugefügt.
+- OG-Tags hinzugefügt für Social Media, IMessage etc.
+- Alternativtexte für Bilder hinzugefügt.
+
+### Behoben
+
+- Artikelverfügbarkeiten werden beim Wechseln der Variante korrekt angezeigt.
+- Inhalte auf statischen Seiten laufen nicht mehr aus der Seite raus.
+- Artikelnamen werden wieder im Warenkorb angezeigt.
+- Filter zeigen wieder Namen an.
+- Die Autovervollständigung in der Suche geht wieder.
+- Registrierungen mit einer E-Mail-Adresse, für die bereits ein Konto existiert, sind nun nicht mehr möglich.
+
+## v1.1.3 (2017-04-25)
+
+### Behoben
+
+- Artikelverfügbarkeiten funktionieren wieder.
 
 ## v1.1.2 (2017-04-24)
 

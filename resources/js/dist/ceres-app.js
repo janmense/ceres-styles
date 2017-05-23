@@ -13912,25 +13912,30 @@ Vue.filter("date", dateFilter);
 },{}],66:[function(require,module,exports){
 "use strict";
 
+Vue.filter("itemImage", function (item, baseUrl) {
+    var imageList = item.variationImageList;
+
+    baseUrl = baseUrl || "/";
+
+    if (baseUrl.charAt(baseUrl.length - 1) !== "/") {
+        baseUrl += "/";
+    }
+
+    if (!!imageList && imageList.length > 0) {
+        for (var i = 0; i < imageList.length; i++) {
+            var image = imageList[i];
+
+            if (!!image.path && image.path.length > 0) {
+                return baseUrl + image.path;
+            }
+        }
+    }
+
+    return "";
+});
+
 },{}],67:[function(require,module,exports){
 "use strict";
-
-Vue.filter("itemImages", function (images, accessor) {
-    var imageUrls = [];
-    var imagesAccessor = "all";
-
-    if (images.variation.length) {
-        imagesAccessor = "variation";
-    }
-
-    for (var i in images[imagesAccessor]) {
-        var imageUrl = images[imagesAccessor][i][accessor];
-
-        imageUrls.push({ url: imageUrl, position: images[imagesAccessor][i].position });
-    }
-
-    return imageUrls;
-});
 
 },{}],68:[function(require,module,exports){
 "use strict";

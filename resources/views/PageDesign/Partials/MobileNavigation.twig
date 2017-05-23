@@ -25,6 +25,8 @@
 </div>
 
 <!-- vue script -->
+<!-- TODO: this is not the right place for including .js -->
+<script src="{{ plugin_path('Ceres') }}/js/MobileNavigation.js"></script>
 <script>
 // we prevent this code from being executed multiple times (which actually happened while development)
 // by using the "initialized" variable.
@@ -35,22 +37,22 @@ function initMobileNavigation() {
 	// addItem() needs to be called for every item that should be visible in the navigation.
 	// note: every item needs a unique ID!
 	// TODO: use real items from CMS
-	window.document.MobileNavigation.addItem('root', 'ROOT');
+	MobileNavigation.addItem('root', 'ROOT');
 
-	window.document.MobileNavigation.addItem('sub-and-link', 'sub-and-link', 'root', '/foobar');
-	window.document.MobileNavigation.addItem('item1', 'item1', 'sub-and-link', '/item1');
-	window.document.MobileNavigation.addItem('item2', 'item2', 'sub-and-link', '/item2');
+	MobileNavigation.addItem('sub-and-link', 'sub-and-link', 'root', '/foobar');
+	MobileNavigation.addItem('item1', 'item1', 'sub-and-link', '/item1');
+	MobileNavigation.addItem('item2', 'item2', 'sub-and-link', '/item2');
 
-	window.document.MobileNavigation.addItem('sub-only', 'sub-only', 'root');
-	window.document.MobileNavigation.addItem('subitem1', 'subitem1', 'sub-only', '/item1');
-	window.document.MobileNavigation.addItem('subitem2', 'subitem2', 'sub-only', '/item2');
+	MobileNavigation.addItem('sub-only', 'sub-only', 'root');
+	MobileNavigation.addItem('subitem1', 'subitem1', 'sub-only', '/item1');
+	MobileNavigation.addItem('subitem2', 'subitem2', 'sub-only', '/item2');
 
-	window.document.MobileNavigation.addItem('subsub1', 'subsub1', 'subitem1', '/subsub1');
-	window.document.MobileNavigation.addItem('subsub2', 'subsub2', 'subitem1', '/subsub2');
+	MobileNavigation.addItem('subsub1', 'subsub1', 'subitem1', '/subsub1');
+	MobileNavigation.addItem('subsub2', 'subsub2', 'subitem1', '/subsub2');
 
-	window.document.MobileNavigation.addItem('link-only', 'link-only', 'root', '/link');
+	MobileNavigation.addItem('link-only', 'link-only', 'root', '/link');
 
-	window.document.MobileNavigation.setActiveItem('root');
+	MobileNavigation.setActiveItem('root');
 
 	initialized = true;
 }
